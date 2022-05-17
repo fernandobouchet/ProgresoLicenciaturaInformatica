@@ -8,10 +8,7 @@ const TablaMaterias = (props) => {
       <thead>
         <tr>
           <th>Asignatura</th>
-          {/* <th>Area</th>
-          <th>Hs Semanales</th>
-          <th>Hs Totales</th>
-          <th>Correlativas</th> */}
+          <th>Estado</th>
         </tr>
       </thead>
       {Materias.map((materia) => {
@@ -27,10 +24,7 @@ const TablaMaterias = (props) => {
                 return (
                   <tr>
                     <td>{mat.asignatura}</td>
-                    {/* <td>{mat.area}</td>
-                    <td>{mat.hsSemanales}</td>
-                    <td>{mat.cargaHorariaTotal}</td>
-                <td>{mat.correlativas.join('\n')}</td> */}
+                    <td>{mat.estado}</td>
                   </tr>
                 );
               })}

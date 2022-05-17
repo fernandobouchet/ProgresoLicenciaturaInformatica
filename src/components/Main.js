@@ -1,12 +1,14 @@
 import Button from 'react-bootstrap/Button';
 import TablaMaterias from './Table';
-import { MateriasTecnicaturas } from '../Utils/Tecnicaturas';
 import { useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { MateriasTecnicaturaInformatica } from '../Utils/TecnicaturaInformatica';
+import { MateriasTecnicaturaProgramacion } from '../Utils/TecnicaturaProgramacion';
+import { MateriasTecnicaturaRedes } from '../Utils/TecnicaturaRedes';
 
 const Main = () => {
   const [tecnicatura, setTecnicatura] = useState(
-    MateriasTecnicaturas[0].informatica
+    MateriasTecnicaturaInformatica
   );
 
   return (
@@ -14,22 +16,18 @@ const Main = () => {
       <header>Progreso de cursada Licenciatura Informática</header>
       <h2>Elegí la tecnicatura que estas cursando:</h2>
       <div className="d-grid gap-2">
-        <Button
-          onClick={() => setTecnicatura(MateriasTecnicaturas[0].informatica)}
-        >
+        <Button onClick={() => setTecnicatura(MateriasTecnicaturaInformatica)}>
           Tecnicatura en Informática
         </Button>
-        <Button
-          onClick={() => setTecnicatura(MateriasTecnicaturas[1].programacion)}
-        >
+        <Button onClick={() => setTecnicatura(MateriasTecnicaturaProgramacion)}>
           Tecnicatura en Programación
         </Button>
-        <Button onClick={() => setTecnicatura(MateriasTecnicaturas[2].redes)}>
+        <Button onClick={() => setTecnicatura(MateriasTecnicaturaRedes)}>
           Tecnicatura en Redes y Operaciones
         </Button>
-      </div>
-
-      <h2>Tecnicatura</h2>
+      </div>{' '}
+      <br />
+      <h2>Tecnicatura</h2> <br />
       <TablaMaterias Materias={tecnicatura} />
     </Container>
   );

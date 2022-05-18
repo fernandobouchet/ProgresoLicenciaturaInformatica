@@ -5,7 +5,7 @@ const Statistic = () => {
   return (
     <Container>
       <h1>Estadisticas</h1>
-      <Link to={'/Main'}>
+      <Link to={'/'}>
         <Button>Volver</Button>
       </Link>
     </Container>

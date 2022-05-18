@@ -8,6 +8,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: [],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Introducción a lógica y problemas computacionales',
@@ -15,6 +16,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: [],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Organización de computadoras I',
@@ -22,6 +24,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: [],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Nuevos entornos y lenguajes',
@@ -29,6 +32,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
+        estado: 'Pendiente',
       },
     ],
   },
@@ -41,6 +45,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: ['Introducción a lógica y problemas computacionales'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Programación estructurada',
@@ -48,6 +53,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Introducción a lógica y problemas computacionales'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Matemática para Informática II',
@@ -55,6 +61,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: ['Matemática para informática I'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Inglés I',
@@ -62,6 +69,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
+        estado: 'Pendiente',
       },
     ],
   },
@@ -74,6 +82,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Matemática para informática II'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Programación de objetos I',
@@ -81,6 +90,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '8',
         cargaHorariaTotal: '128',
         correlativas: ['Programación estructurada'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Estructuras de datos',
@@ -88,6 +98,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '8',
         cargaHorariaTotal: '128',
         correlativas: ['Programación estructurada'],
+        estado: 'Pendiente',
       },
     ],
   },
@@ -100,6 +111,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Programación de objetos II',
@@ -107,6 +119,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Programación de objetos I'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Electiva I',
@@ -114,6 +127,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: ['Programación estructurada', 'Estructuras de datos'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Electiva II',
@@ -121,6 +135,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: ['Organización de computadoras I'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Inglés II',
@@ -128,6 +143,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: ['Inglés I'],
+        estado: 'Pendiente',
       },
     ],
   },
@@ -140,6 +156,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Programación de objetos II'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Estrategias de persistencia',
@@ -147,6 +164,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Programación de objetos II', 'Bases de datos'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Elementos de ingeniería de software',
@@ -154,6 +172,7 @@ export const MateriasTecnicaturaProgramacion = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Programación de objetos II'],
+        estado: 'Pendiente',
       },
     ],
   },

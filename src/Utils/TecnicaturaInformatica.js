@@ -8,6 +8,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '8',
         cargaHorariaTotal: '128',
         correlativas: [],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Introducción a la Programación',
@@ -15,6 +16,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '8',
         cargaHorariaTotal: '128',
         correlativas: [],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Organización de computadoras',
@@ -22,6 +24,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: [],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Nuevos entornos y lenguajes',
@@ -29,6 +32,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
+        estado: 'Pendiente',
       },
     ],
   },
@@ -41,6 +45,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '8',
         cargaHorariaTotal: '128',
         correlativas: ['Introducción a la Programación'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Programación con Objetos I',
@@ -48,6 +53,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '8',
         cargaHorariaTotal: '128',
         correlativas: ['Introducción a la Programación'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Bases de Datos',
@@ -55,6 +61,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Matemática I'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Inglés I',
@@ -62,6 +69,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
+        estado: 'Pendiente',
       },
     ],
   },
@@ -74,6 +82,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: ['Matemática I'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Programación con Objetos II',
@@ -81,6 +90,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos I'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Redes de Computadoras',
@@ -88,6 +98,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Organización de Computadoras'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Sistemas Operativos',
@@ -98,6 +109,7 @@ export const MateriasTecnicaturaInformatica = [
           'Organización de Computadoras',
           'Introducción a la Programación',
         ],
+        estado: 'Pendiente',
       },
     ],
   },
@@ -110,6 +122,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Programación de objetos II'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Programación Concurrente',
@@ -117,6 +130,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: ['Estructuras de Datos'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Estrategias de Persistencia',
@@ -124,6 +138,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos II', 'Bases de Datos'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Elementos de Ingeniería de Software',
@@ -131,6 +146,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos II'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Inglés II',
@@ -138,6 +154,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: ['Inglés I'],
+        estado: 'Pendiente',
       },
     ],
   },
@@ -150,6 +167,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: ['Estructuras de Datos'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Laboratorio de Sistemas Operativos y Redes',
@@ -157,6 +175,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: ['Redes de Computadoras', 'Sistemas Operativos'],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Desarrollo de Aplicaciones',
@@ -169,6 +188,7 @@ export const MateriasTecnicaturaInformatica = [
           'Elementos de Ingeniería de Software',
           'Matemática II',
         ],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Complementaria',
@@ -180,6 +200,7 @@ export const MateriasTecnicaturaInformatica = [
           'Elementos de Ingeniería de Software',
           'Programación Concurrente',
         ],
+        estado: 'Pendiente',
       },
     ],
   },
@@ -198,6 +219,7 @@ export const MateriasTecnicaturaInformatica = [
           'Laboratorio de Sistemas',
           'Operativos y Redes',
         ],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Materia UNAHUR',
@@ -205,6 +227,7 @@ export const MateriasTecnicaturaInformatica = [
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
+        estado: 'Pendiente',
       },
       {
         asignatura: 'Complementaria',
@@ -216,6 +239,7 @@ export const MateriasTecnicaturaInformatica = [
           'Elementos de Ingeniería de Software',
           'Programación Concurrente',
         ],
+        estado: 'Pendiente',
       },
     ],
   },

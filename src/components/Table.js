@@ -1,10 +1,11 @@
 import Table from 'react-bootstrap/Table';
+import Buttons from './Buttons';
 
 const TablaMaterias = (props) => {
   const { Materias } = props;
 
   return (
-    <Table striped bordered hover size="sm">
+    <Table hover size="sm">
       <thead>
         <tr>
           <th>Asignatura</th>
@@ -24,7 +25,9 @@ const TablaMaterias = (props) => {
                 return (
                   <tr>
                     <td>{mat.asignatura}</td>
-                    <td>{mat.estado}</td>
+                    <td>
+                      <Buttons state={mat.estado}></Buttons>
+                    </td>
                   </tr>
                 );
               })}

@@ -1,14 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import Main from './components/Main';
 import Statistic from './components/Statistic';
 import { useState } from 'react';
 
 function App() {
-  const [tecnicatura, setTecnicatura] = useState(null);
+  const [career, setCareer] = useState(null);
 
   function changeCareer(tecnicatura) {
-    setTecnicatura(tecnicatura);
+    setCareer(tecnicatura);
   }
 
   return (
@@ -18,11 +17,10 @@ function App() {
         element={
           <Home
             changeCareer={(career) => changeCareer(career)}
-            career={tecnicatura}
+            career={career}
           />
         }
       />
-      <Route path="main" element={<Main career={tecnicatura} />} />
       <Route path="estadisticas" element={<Statistic />} />
     </Routes>
   );

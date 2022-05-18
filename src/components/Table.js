@@ -1,5 +1,7 @@
 import Table from 'react-bootstrap/Table';
 import Buttons from './Buttons';
+import { nanoid } from 'nanoid';
+import React from 'react';
 
 const TablaMaterias = (props) => {
   const { Materias } = props;
@@ -14,7 +16,7 @@ const TablaMaterias = (props) => {
       </thead>
       {Materias.map((materia) => {
         return (
-          <>
+          <React.Fragment key={nanoid()}>
             <thead>
               <tr>
                 <th colSpan={1}>{materia.cuatrimestre} cuatrimestre</th>
@@ -23,7 +25,7 @@ const TablaMaterias = (props) => {
             <tbody>
               {materia.materias.map((mat) => {
                 return (
-                  <tr>
+                  <tr key={nanoid()}>
                     <td>{mat.asignatura}</td>
                     <td>
                       <Buttons state={mat.estado}></Buttons>
@@ -32,7 +34,7 @@ const TablaMaterias = (props) => {
                 );
               })}
             </tbody>
-          </>
+          </React.Fragment>
         );
       })}
     </Table>

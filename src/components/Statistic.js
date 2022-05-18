@@ -1,14 +1,14 @@
-import { Button } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Statistic = () => {
   return (
-    <div>
+    <Container>
       <h1>Estadisticas</h1>
-      <Button>
-        <Link to={'/Main'}>Volver</Link>
-      </Button>
-    </div>
+      <Link to={'/Main'}>
+        <Button>Volver</Button>
+      </Link>
+    </Container>
   );
 };
 

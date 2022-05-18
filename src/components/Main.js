@@ -7,13 +7,26 @@ const Main = (props) => {
 
   return (
     <Container>
-      <h2>Tecnicatura</h2> <br />
-      <TablaMaterias Materias={career} />
-      <div>
-        <Button>
-          <Link to={'/estadisticas'}>Ver estadisticas</Link>
-        </Button>
-      </div>
+      {career ? (
+        <>
+          <h2>Tecnicatura</h2> <br />
+          <TablaMaterias Materias={career} />
+          <div>
+            <Link to={'/estadisticas'}>
+              <Button>Ver estadisticas</Button>
+            </Link>
+          </div>
+        </>
+      ) : (
+        <>
+          <h2>Por favor elije una tecnicatura</h2>
+          <div>
+            <Link to={'/'}>
+              <Button>Volver al menú de selección</Button>
+            </Link>
+          </div>
+        </>
+      )}
     </Container>
   );
 };

@@ -26,9 +26,9 @@ const Home = (props) => {
       </div>
       <br />
       {career && (
-        <Button>
-          <Link to={'Main'}> Ir</Link>
-        </Button>
+        <Link to={'Main'}>
+          <Button>Ir</Button>
+        </Link>
       )}
     </Container>
   );

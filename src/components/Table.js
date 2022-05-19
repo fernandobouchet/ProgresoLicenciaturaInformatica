@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 import React from 'react';
 
 const TablaMaterias = (props) => {
-  const { Materias } = props;
+  const { Materias, changeCourseState } = props;
 
   return (
     <Table hover size="sm">
@@ -28,7 +28,12 @@ const TablaMaterias = (props) => {
                   <tr key={nanoid()}>
                     <td>{mat.asignatura}</td>
                     <td>
-                      <Buttons state={mat.estado}></Buttons>
+                      <Buttons
+                        state={mat.estado}
+                        changeCourseState={changeCourseState}
+                        month={materia.cuatrimestre}
+                        course={mat.asignatura}
+                      ></Buttons>
                     </td>
                   </tr>
                 );

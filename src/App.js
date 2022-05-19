@@ -10,6 +10,28 @@ function App() {
     setCareer(tecnicatura);
   }
 
+  function changeCourseState(months, courses, state) {
+    setCareer(
+      career.map((month) => {
+        if (month.cuatrimestre === months) {
+          return {
+            ...month,
+            materias: month.materias.map((course) => {
+              if (course.asignatura === courses) {
+                return {
+                  ...course,
+                  estado: state,
+                };
+              }
+              return course;
+            }),
+          };
+        }
+        return month;
+      })
+    );
+  }
+
   return (
     <Routes>
       <Route
@@ -18,6 +40,9 @@ function App() {
           <Home
             changeCareer={(career) => changeCareer(career)}
             career={career}
+            changeCourseState={(month, course, state) =>
+              changeCourseState(month, course, state)
+            }
           />
         }
       />

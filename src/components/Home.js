@@ -5,7 +5,7 @@ import { MateriasTecnicaturaRedes } from '../Utils/TecnicaturaRedes';
 import Main from './Main';
 
 const Home = (props) => {
-  const { changeCareer, career } = props;
+  const { changeCareer, career, changeCourseState } = props;
 
   return (
     <>
@@ -33,7 +33,11 @@ const Home = (props) => {
           <br />
         </Container>
       ) : (
-        <Main career={career} changeCareer={changeCareer} />
+        <Main
+          career={career}
+          changeCareer={changeCareer}
+          changeCourseState={changeCourseState}
+        />
       )}
     </>
   );

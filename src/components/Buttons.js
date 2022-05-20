@@ -10,7 +10,17 @@ const Buttons = (props) => {
 
   return (
     <>
-      <DropdownButton id="dropdown-item-button" title={state}>
+      <DropdownButton
+        id="dropdown-item-button"
+        title={state}
+        variant={
+          state === 'Pendiente'
+            ? 'primary'
+            : state === 'Aprobada'
+            ? 'success'
+            : 'warning'
+        }
+      >
         <Dropdown.Item
           as="button"
           value={'Pendiente'}

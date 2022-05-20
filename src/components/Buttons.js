@@ -14,11 +14,11 @@ const Buttons = (props) => {
         id="dropdown-item-button"
         title={state}
         variant={
-          state === 'Pendiente'
+          state === 'En curso'
             ? 'primary'
             : state === 'Aprobada'
             ? 'success'
-            : 'warning'
+            : 'secondary'
         }
       >
         <Dropdown.Item

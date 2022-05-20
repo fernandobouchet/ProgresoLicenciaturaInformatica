@@ -2,6 +2,7 @@ import Table from 'react-bootstrap/Table';
 import Buttons from './Buttons';
 import { nanoid } from 'nanoid';
 import React from 'react';
+import styled from 'styled-components';
 
 const TablaMaterias = (props) => {
   const { Materias, changeCourseState } = props;
@@ -25,8 +26,8 @@ const TablaMaterias = (props) => {
             <tbody>
               {materia.materias.map((mat) => {
                 return (
-                  <tr key={nanoid()}>
-                    <td>{mat.asignatura}</td>
+                  <StyledTrCourses key={nanoid()} state={mat.estado}>
+                    <StyledTCourses>{mat.asignatura}</StyledTCourses>
                     <td>
                       <Buttons
                         state={mat.estado}
@@ -35,7 +36,7 @@ const TablaMaterias = (props) => {
                         course={mat.asignatura}
                       ></Buttons>
                     </td>
-                  </tr>
+                  </StyledTrCourses>
                 );
               })}
             </tbody>
@@ -47,3 +48,23 @@ const TablaMaterias = (props) => {
 };
 
 export default TablaMaterias;
+
+const StyledTrCourses = styled.tr`
+  background-color: ${(props) =>
+    props.state === 'Aprobada'
+      ? '#d1e7dd'
+      : props.state === 'En curso'
+      ? '#cfe2ff'
+      : '#e2e3e5'};
+  color: ${(props) =>
+    props.state === 'Aprobada'
+      ? '#295c3e'
+      : props.state === 'En curso'
+      ? '#1e4298'
+      : '#4d5257'};
+`;
+
+const StyledTCourses = styled.td`
+  vertical-align: middle;
+  text-align: left;
+`;

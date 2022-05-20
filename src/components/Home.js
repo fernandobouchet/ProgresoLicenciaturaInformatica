@@ -1,11 +1,11 @@
-import { Container, Button } from 'react-bootstrap';
+import { Container, Button, Stack } from 'react-bootstrap';
 import { MateriasTecnicaturaInformatica } from '../Utils/TecnicaturaInformatica';
 import { MateriasTecnicaturaProgramacion } from '../Utils/TecnicaturaProgramacion';
 import { MateriasTecnicaturaRedes } from '../Utils/TecnicaturaRedes';
 import Main from './Main';
 
 const Home = (props) => {
-  const { changeCareer, career, changeCourseState } = props;
+  const { changeCareer, career, changeCourseState, careerName } = props;
 
   return (
     <>
@@ -15,21 +15,21 @@ const Home = (props) => {
             <h1>Progreso de cursada Licenciatura Informática</h1>
           </header>
           <h2>Elegí la tecnicatura que estas cursando:</h2>
-          <div className="d-grid gap-2">
+          <Stack gap={2} className="col-md-5 mx-auto">
             <Button
-              onClick={() => changeCareer(MateriasTecnicaturaInformatica)}
+              onClick={(e) => changeCareer(e, MateriasTecnicaturaInformatica)}
             >
               Tecnicatura en Informática
             </Button>
             <Button
-              onClick={() => changeCareer(MateriasTecnicaturaProgramacion)}
+              onClick={(e) => changeCareer(e, MateriasTecnicaturaProgramacion)}
             >
               Tecnicatura en Programación
             </Button>
-            <Button onClick={() => changeCareer(MateriasTecnicaturaRedes)}>
+            <Button onClick={(e) => changeCareer(e, MateriasTecnicaturaRedes)}>
               Tecnicatura en Redes y Operaciones
             </Button>
-          </div>
+          </Stack>
           <br />
         </Container>
       ) : (
@@ -37,6 +37,7 @@ const Home = (props) => {
           career={career}
           changeCareer={changeCareer}
           changeCourseState={changeCourseState}
+          careerName={careerName}
         />
       )}
     </>

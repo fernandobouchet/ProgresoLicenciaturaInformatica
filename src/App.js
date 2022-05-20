@@ -6,7 +6,16 @@ import { useState } from 'react';
 function App() {
   const [career, setCareer] = useState(null);
 
-  function changeCareer(tecnicatura) {
+  const [careerName, setCareerName] = useState('');
+
+  function handleClick(e) {
+    e.preventDefault();
+    setCareerName(e.target.innerText);
+  }
+  console.log(careerName);
+
+  function changeCareer(e, tecnicatura) {
+    handleClick(e);
     setCareer(tecnicatura);
   }
 
@@ -38,11 +47,12 @@ function App() {
         path="/"
         element={
           <Home
-            changeCareer={(career) => changeCareer(career)}
+            changeCareer={(e, career) => changeCareer(e, career)}
             career={career}
             changeCourseState={(month, course, state) =>
               changeCourseState(month, course, state)
             }
+            careerName={careerName}
           />
         }
       />

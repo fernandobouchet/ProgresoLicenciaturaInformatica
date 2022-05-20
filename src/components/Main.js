@@ -3,11 +3,11 @@ import { Container, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Main = (props) => {
-  const { career, changeCareer, changeCourseState } = props;
+  const { career, changeCareer, changeCourseState, careerName } = props;
 
   return (
     <Container>
-      <h2>Tecnicatura</h2> <br />
+      <h2>{careerName}</h2> <br />
       <TablaMaterias
         Materias={career}
         changeCareer={changeCareer}

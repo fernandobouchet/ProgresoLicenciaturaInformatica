@@ -1,18 +1,22 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Statistic from './components/Statistic';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { SaveCareer, LoadCareers, LoadCareerName } from './Utils/Functions';
 
 function App() {
-  const [career, setCareer] = useState(null);
+  const [career, setCareer] = useState(LoadCareers());
 
-  const [careerName, setCareerName] = useState('');
+  const [careerName, setCareerName] = useState(LoadCareerName());
+
+  useEffect(() => {
+    SaveCareer(career, careerName);
+  }, [career, careerName]);
 
   function handleClick(e) {
     e.preventDefault();
     setCareerName(e.target.innerText);
   }
-  console.log(careerName);
 
   function changeCareer(e, tecnicatura) {
     handleClick(e);

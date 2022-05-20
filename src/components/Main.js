@@ -20,7 +20,7 @@ const Main = (props) => {
       </div>
       <br />
       <div>
-        <Button onClick={() => changeCareer(null)}>Reset</Button>
+        <Button onClick={(e) => changeCareer(e, null)}>Reset</Button>
       </div>
     </Container>
   );

@@ -8,7 +8,7 @@ const TablaMaterias = (props) => {
   const { Materias, changeCourseState } = props;
 
   return (
-    <Table hover size="sm">
+    <StyledTable hover size="sm">
       <thead>
         <tr>
           <th>Asignatura</th>
@@ -43,7 +43,7 @@ const TablaMaterias = (props) => {
           </React.Fragment>
         );
       })}
-    </Table>
+    </StyledTable>
   );
 };
 
@@ -53,13 +53,13 @@ const StyledTrCourses = styled.tr`
   background-color: ${(props) =>
     props.state === 'Aprobada'
       ? '#d1e7dd'
-      : props.state === 'En curso'
+      : props.state === 'Cursando'
       ? '#cfe2ff'
       : '#e2e3e5'};
   color: ${(props) =>
     props.state === 'Aprobada'
       ? '#295c3e'
-      : props.state === 'En curso'
+      : props.state === 'Cursando'
       ? '#1e4298'
       : '#4d5257'};
 `;
@@ -67,4 +67,12 @@ const StyledTrCourses = styled.tr`
 const StyledTCourses = styled.td`
   vertical-align: middle;
   text-align: left;
+`;
+
+const StyledTable = styled(Table)`
+  max-width: 800px;
+  margin: auto;
+  background: #376ffd;
+  color: white;
+  font-weight: 400;
 `;

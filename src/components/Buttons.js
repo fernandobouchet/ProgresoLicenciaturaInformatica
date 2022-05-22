@@ -14,11 +14,11 @@ const Buttons = (props) => {
         id="dropdown-item-button"
         title={state}
         variant={
-          state === 'En curso'
-            ? 'primary'
+          state === 'Cursando'
+            ? 'outline-primary'
             : state === 'Aprobada'
-            ? 'success'
-            : 'secondary'
+            ? 'outline-success'
+            : 'outline-secondary'
         }
       >
         <Dropdown.Item
@@ -30,10 +30,10 @@ const Buttons = (props) => {
         </Dropdown.Item>
         <Dropdown.Item
           as="button"
-          value={'En curso'}
+          value={'Cursando'}
           onClick={(e) => handleClick(e)}
         >
-          En curso
+          Cursando
         </Dropdown.Item>
         <Dropdown.Item
           as="button"

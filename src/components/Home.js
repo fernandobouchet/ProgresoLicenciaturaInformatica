@@ -3,6 +3,7 @@ import { MateriasTecnicaturaInformatica } from '../Utils/TecnicaturaInformatica'
 import { MateriasTecnicaturaProgramacion } from '../Utils/TecnicaturaProgramacion';
 import { MateriasTecnicaturaRedes } from '../Utils/TecnicaturaRedes';
 import Main from './Main';
+import styled from 'styled-components';
 
 const Home = (props) => {
   const { changeCareer, career, changeCourseState, careerName } = props;
@@ -11,11 +12,11 @@ const Home = (props) => {
     <>
       {!career ? (
         <Container>
-          <header>
+          <Header>
             <h1>Progreso de cursada Licenciatura Informática</h1>
-          </header>
-          <h2>Elegí la tecnicatura que estas cursando:</h2>
-          <Stack gap={2} className="col-md-5 mx-auto">
+          </Header>
+          <SubTitle>Elegí la tecnicatura que estas cursando:</SubTitle>
+          <StyledStack gap={2}>
             <Button
               onClick={(e) => changeCareer(e, MateriasTecnicaturaInformatica)}
             >
@@ -29,8 +30,7 @@ const Home = (props) => {
             <Button onClick={(e) => changeCareer(e, MateriasTecnicaturaRedes)}>
               Tecnicatura en Redes y Operaciones
             </Button>
-          </Stack>
-          <br />
+          </StyledStack>
         </Container>
       ) : (
         <Main
@@ -45,3 +45,16 @@ const Home = (props) => {
 };
 
 export default Home;
+
+const StyledStack = styled(Stack)`
+  max-width: 300px;
+  margin: auto;
+`;
+
+const Header = styled.header`
+  margin: 2rem 0;
+`;
+
+const SubTitle = styled.h2`
+  margin: 5rem 0;
+`;

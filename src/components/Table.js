@@ -74,5 +74,4 @@ const StyledTable = styled(Table)`
   margin: auto;
   background: #376ffd;
   color: white;
-  font-weight: 400;
 `;

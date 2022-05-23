@@ -1,6 +1,7 @@
 import TablaMaterias from './Table';
-import { Container, Button } from 'react-bootstrap';
+import { Container, Button, Stack } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const Main = (props) => {
   const { career, changeCareer, changeCourseState, careerName } = props;
@@ -13,17 +14,19 @@ const Main = (props) => {
         changeCareer={changeCareer}
         changeCourseState={changeCourseState}
       />
-      <div>
+      <StyledStack gap={3}>
         <Link to={'/estadisticas'}>
-          <Button>Ver estadisticas</Button>
+          <Button>Ver estadísticas</Button>
         </Link>
-      </div>
-      <br />
-      <div>
         <Button onClick={(e) => changeCareer(e, null)}>Reset</Button>
-      </div>
+      </StyledStack>
     </Container>
   );
 };
 
 export default Main;
+
+const StyledStack = styled(Stack)`
+  max-width: 140px;
+  margin: 30px auto;
+`;

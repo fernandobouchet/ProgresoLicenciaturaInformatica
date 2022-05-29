@@ -23,24 +23,21 @@ function App() {
     setCareer(tecnicatura);
   }
 
-  function changeCourseState(months, courses, state) {
+  function changeCourseState(courses, state) {
     setCareer(
       career.map((month) => {
-        if (month.cuatrimestre === months) {
-          return {
-            ...month,
-            materias: month.materias.map((course) => {
-              if (course.asignatura === courses) {
-                return {
-                  ...course,
-                  estado: state,
-                };
-              }
-              return course;
-            }),
-          };
-        }
-        return month;
+        return {
+          ...month,
+          materias: month.materias.map((course) => {
+            if (course.asignatura === courses) {
+              return {
+                ...course,
+                estado: state,
+              };
+            }
+            return course;
+          }),
+        };
       })
     );
   }
@@ -53,8 +50,8 @@ function App() {
           <Home
             changeCareer={(e, career) => changeCareer(e, career)}
             career={career}
-            changeCourseState={(month, course, state) =>
-              changeCourseState(month, course, state)
+            changeCourseState={(course, state) =>
+              changeCourseState(course, state)
             }
             careerName={careerName}
           />

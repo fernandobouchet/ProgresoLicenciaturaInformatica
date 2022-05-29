@@ -14,24 +14,23 @@ const Statistic = (props) => {
     <Container>
       <h1>Estadísticas</h1>
       <PorcentageContainer>
-        <h6>Porcentaje de materias aprobadas</h6>
-        <ProgressBar
-          variant="success"
-          now={approved}
-          label={`${approved}%`}
-        ></ProgressBar>
-        <h6>Porcentaje de materias en curso</h6>
-        <ProgressBar
-          variant="primary"
-          now={inProgress}
-          label={`${inProgress}%`}
-        ></ProgressBar>
-        <h6>Porcentaje de materias pendientes</h6>
-        <ProgressBar
-          variant="secondary"
-          now={pending}
-          label={`${pending}%`}
-        ></ProgressBar>
+        <ProgressBar>
+          <ProgressBar
+            variant="success"
+            now={approved}
+            label={`${approved}%`}
+          />
+          <ProgressBar
+            variant="primary"
+            now={inProgress}
+            label={`${inProgress}%`}
+          />
+          <ProgressBar
+            variant="secondary"
+            now={pending}
+            label={`${pending}%`}
+          />
+        </ProgressBar>
       </PorcentageContainer>
       <Link to={'/'}>
         <Button>Volver</Button>

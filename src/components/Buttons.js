@@ -1,11 +1,14 @@
 import { DropdownButton, Dropdown } from 'react-bootstrap';
 
 const Buttons = (props) => {
-  const { state, changeCourseState, month, course } = props;
+  const { state, setCurrent } = props;
 
   function handleClick(e) {
     e.preventDefault();
-    changeCourseState(month, course, e.target.value);
+    setCurrent((prevState) => ({
+      ...prevState,
+      estado: e.target.value,
+    }));
   }
 
   return (
@@ -15,10 +18,10 @@ const Buttons = (props) => {
         title={state}
         variant={
           state === 'Cursando'
-            ? 'outline-primary'
+            ? 'primary'
             : state === 'Aprobada'
-            ? 'outline-success'
-            : 'outline-secondary'
+            ? 'success'
+            : 'secondary'
         }
       >
         <Dropdown.Item

@@ -1,4 +1,4 @@
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button, Row, Col } from 'react-bootstrap';
 import Buttons from './Buttons';
 
 const ModalEdit = (props) => {
@@ -16,9 +16,14 @@ const ModalEdit = (props) => {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Estado:</h4>
-        <Buttons state={current.estado} setCurrent={setCurrent} />
-        <h4>Nota Final:</h4>
+        <Row>
+          <Col>
+            <h4>Estado:</h4>
+          </Col>
+          <Col>
+            <Buttons state={current.estado} setCurrent={setCurrent} />
+          </Col>
+        </Row>
       </Modal.Body>
       <Modal.Footer>
         <Button

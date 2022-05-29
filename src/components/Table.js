@@ -33,16 +33,15 @@ const TablaMaterias = (props) => {
               <tbody>
                 {materia.materias.map((mat) => {
                   return (
-                    <tr key={nanoid()}>
-                      <StyledTCourses
-                        style={{ cursor: 'pointer' }}
-                        onClick={() => {
-                          setCurrent(mat);
-                          setModalShow(true);
-                        }}
-                      >
-                        {mat.asignatura}
-                      </StyledTCourses>
+                    <tr
+                      key={nanoid()}
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => {
+                        setCurrent(mat);
+                        setModalShow(true);
+                      }}
+                    >
+                      <StyledTCourses>{mat.asignatura}</StyledTCourses>
                       <td>
                         <Badge
                           pill

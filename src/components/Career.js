@@ -3,28 +3,26 @@ import { Container, Button, Stack } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Main = (props) => {
-  const { career, changeCareer, changeCourseState, careerName } = props;
+const Career = (props) => {
+  const { career, changeCourseState, careerName } = props;
 
   return (
     <Container>
       <h2>{careerName}</h2> <br />
-      <TablaMaterias
-        Materias={career}
-        changeCareer={changeCareer}
-        changeCourseState={changeCourseState}
-      />
+      <TablaMaterias Materias={career} changeCourseState={changeCourseState} />
       <StyledStack gap={3}>
         <Link to={'/estadisticas'}>
           <Button>Ver estadísticas</Button>
         </Link>
-        <Button onClick={(e) => changeCareer(e, null)}>Reset</Button>
+        <Link to={'/'}>
+          <Button>Volver</Button>
+        </Link>
       </StyledStack>
     </Container>
   );
 };
 
-export default Main;
+export default Career;
 
 const StyledStack = styled(Stack)`
   max-width: 140px;

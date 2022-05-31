@@ -1,6 +1,6 @@
 export const MateriasTecnicaturaRedes = [
   {
-    cuatrimestre: 'Primer',
+    bloque: 'Primer Cuatrimestre',
     materias: [
       {
         asignatura: 'Matemática para Informática I',
@@ -28,7 +28,7 @@ export const MateriasTecnicaturaRedes = [
       },
       {
         asignatura: 'Nuevos entornos y lenguajes',
-        area: 'Gral.',
+        area: 'Gral',
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
@@ -37,7 +37,7 @@ export const MateriasTecnicaturaRedes = [
     ],
   },
   {
-    cuatrimestre: 'Segundo',
+    bloque: 'Segundo Cuatrimestre',
     materias: [
       {
         asignatura: 'Taller de intérpretes de comandos',
@@ -65,7 +65,7 @@ export const MateriasTecnicaturaRedes = [
       },
       {
         asignatura: 'Inglés I',
-        area: 'Gral.',
+        area: 'Gral',
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
@@ -74,7 +74,7 @@ export const MateriasTecnicaturaRedes = [
     ],
   },
   {
-    cuatrimestre: 'Tercer',
+    bloque: 'Tercer Cuatrimestre',
     materias: [
       {
         asignatura: 'Bases de Datos',
@@ -117,11 +117,11 @@ export const MateriasTecnicaturaRedes = [
     ],
   },
   {
-    cuatrimestre: 'Cuarto',
+    bloque: 'Cuarto Cuatrimestre',
     materias: [
       {
         asignatura: 'Materia UNAHUR',
-        area: 'Gral.',
+        area: 'Gral',
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
@@ -137,7 +137,7 @@ export const MateriasTecnicaturaRedes = [
       },
       {
         asignatura: 'Electiva I',
-        area: 'Elec.',
+        area: 'Elec',
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: [
@@ -148,7 +148,7 @@ export const MateriasTecnicaturaRedes = [
       },
       {
         asignatura: 'Electiva II',
-        area: 'Elec.',
+        area: 'Elec',
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: [
@@ -159,7 +159,7 @@ export const MateriasTecnicaturaRedes = [
       },
       {
         asignatura: 'Inglés II',
-        area: 'Gral.',
+        area: 'Gral',
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: ['Inglés I'],
@@ -168,7 +168,7 @@ export const MateriasTecnicaturaRedes = [
     ],
   },
   {
-    cuatrimestre: 'Quinto',
+    bloque: 'Quinto Cuatrimestre',
     materias: [
       {
         asignatura: 'Seguridad de la Información',

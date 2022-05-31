@@ -1,6 +1,6 @@
 export const MateriasTecnicaturaProgramacion = [
   {
-    cuatrimestre: 'Primer',
+    bloque: 'Primer Cuatrimestre',
     materias: [
       {
         asignatura: 'Matemática para Informática I',
@@ -28,7 +28,7 @@ export const MateriasTecnicaturaProgramacion = [
       },
       {
         asignatura: 'Nuevos entornos y lenguajes',
-        area: 'Gral.',
+        area: 'Gral',
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
@@ -37,7 +37,7 @@ export const MateriasTecnicaturaProgramacion = [
     ],
   },
   {
-    cuatrimestre: 'Segundo',
+    bloque: 'Segundo Cuatrimestre',
     materias: [
       {
         asignatura: 'Taller de lenguajes de marcado y tecnologías web',
@@ -65,7 +65,7 @@ export const MateriasTecnicaturaProgramacion = [
       },
       {
         asignatura: 'Inglés I',
-        area: 'Gral.',
+        area: 'Gral',
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
@@ -74,7 +74,7 @@ export const MateriasTecnicaturaProgramacion = [
     ],
   },
   {
-    cuatrimestre: 'Tercer',
+    bloque: 'Tercer Cuatrimestre',
     materias: [
       {
         asignatura: 'Bases de Datos',
@@ -103,11 +103,11 @@ export const MateriasTecnicaturaProgramacion = [
     ],
   },
   {
-    cuatrimestre: 'Cuarto',
+    bloque: 'Cuarto Cuatrimestre',
     materias: [
       {
         asignatura: 'Materia UNAHUR',
-        area: 'Gral.',
+        area: 'Gral',
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
@@ -123,7 +123,7 @@ export const MateriasTecnicaturaProgramacion = [
       },
       {
         asignatura: 'Electiva I',
-        area: 'Elec.',
+        area: 'Elec',
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: ['Programación estructurada', 'Estructuras de datos'],
@@ -131,7 +131,7 @@ export const MateriasTecnicaturaProgramacion = [
       },
       {
         asignatura: 'Electiva II',
-        area: 'Elec.',
+        area: 'Elec',
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: ['Organización de computadoras I'],
@@ -139,7 +139,7 @@ export const MateriasTecnicaturaProgramacion = [
       },
       {
         asignatura: 'Inglés II',
-        area: 'Gral.',
+        area: 'Gral',
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: ['Inglés I'],
@@ -148,7 +148,7 @@ export const MateriasTecnicaturaProgramacion = [
     ],
   },
   {
-    cuatrimestre: 'Quinto',
+    bloque: 'Quinto Cuatrimestre',
     materias: [
       {
         asignatura: 'Construcción de interfaces de usuario',

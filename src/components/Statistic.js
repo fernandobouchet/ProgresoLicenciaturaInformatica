@@ -1,10 +1,11 @@
 import { Button, Container, ProgressBar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { getPorcentajeOfCourses } from '../Utils/StatisticFunctions';
 import styled from 'styled-components';
 
 const Statistic = (props) => {
   const { career } = props;
+  const navigate = useNavigate();
 
   const approved = getPorcentajeOfCourses(career, 'Aprobada');
   const inProgress = getPorcentajeOfCourses(career, 'Cursando');
@@ -32,9 +33,7 @@ const Statistic = (props) => {
           />
         </ProgressBar>
       </PorcentageContainer>
-      <Link to={'/'}>
-        <Button>Volver</Button>
-      </Link>
+      <Button onClick={() => navigate(-1)}>Volver</Button>
     </Container>
   );
 };

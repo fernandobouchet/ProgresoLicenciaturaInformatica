@@ -1,13 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
+import Career from './components/Career';
 import Statistic from './components/Statistic';
 import { useEffect, useState } from 'react';
 import { SaveCareer, LoadCareers, LoadCareerName } from './Utils/Functions';
+import Degree from './components/Degree';
+import { MateriasLicenciaturaInformatica } from './Utils/Licenciatura';
 
 function App() {
   const [career, setCareer] = useState(LoadCareers());
 
   const [careerName, setCareerName] = useState(LoadCareerName());
+
+  const [degree, setDegree] = useState(MateriasLicenciaturaInformatica);
 
   useEffect(() => {
     SaveCareer(career, careerName);
@@ -23,12 +28,12 @@ function App() {
     setCareer(tecnicatura);
   }
 
-  function changeCourseState(courses, state) {
-    setCareer(
-      career.map((month) => {
+  function changeCourseStateDegree(courses, state) {
+    setDegree(
+      degree.map((bloque) => {
         return {
-          ...month,
-          materias: month.materias.map((course) => {
+          ...bloque,
+          materias: bloque.materias.map((course) => {
             if (course.asignatura === courses) {
               return {
                 ...course,
@@ -42,6 +47,26 @@ function App() {
     );
   }
 
+  function changeCourseStateCareer(courses, state) {
+    setCareer(
+      career.map((bloque) => {
+        return {
+          ...bloque,
+          materias: bloque.materias.map((course) => {
+            if (course.asignatura === courses) {
+              return {
+                ...course,
+                estado: state,
+              };
+            }
+            return course;
+          }),
+        };
+      })
+    );
+    changeCourseStateDegree(courses, state);
+  }
+
   return (
     <Routes>
       <Route
@@ -50,14 +75,35 @@ function App() {
           <Home
             changeCareer={(e, career) => changeCareer(e, career)}
             career={career}
-            changeCourseState={(course, state) =>
-              changeCourseState(course, state)
-            }
             careerName={careerName}
           />
         }
       />
       <Route path="estadisticas" element={<Statistic career={career} />} />
+      <Route
+        path="tecnicatura"
+        element={
+          <Career
+            career={career}
+            careerName={careerName}
+            changeCourseState={(course, state) =>
+              changeCourseStateCareer(course, state)
+            }
+          />
+        }
+      />
+      <Route
+        path="licenciatura"
+        element={
+          <Degree
+            degree={degree}
+            careerName={'Licenciatura en Informática'}
+            changeCourseStateDegree={(course, state) =>
+              changeCourseStateDegree(course, state)
+            }
+          />
+        }
+      />
     </Routes>
   );
 }

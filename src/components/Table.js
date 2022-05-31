@@ -27,7 +27,7 @@ const TablaMaterias = (props) => {
             <React.Fragment key={nanoid()}>
               <thead>
                 <tr>
-                  <th colSpan={2}>{materia.cuatrimestre} cuatrimestre</th>
+                  <th colSpan={2}>{materia.bloque}</th>
                 </tr>
               </thead>
               <tbody>

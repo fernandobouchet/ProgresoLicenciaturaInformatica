@@ -1,6 +1,6 @@
 export const MateriasTecnicaturaInformatica = [
   {
-    cuatrimestre: 'Primer',
+    bloque: 'Primer Cuatrimestre',
     materias: [
       {
         asignatura: 'Matemática I',
@@ -28,7 +28,7 @@ export const MateriasTecnicaturaInformatica = [
       },
       {
         asignatura: 'Nuevos entornos y lenguajes',
-        area: 'Gral.',
+        area: 'Gral',
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
@@ -37,7 +37,7 @@ export const MateriasTecnicaturaInformatica = [
     ],
   },
   {
-    cuatrimestre: 'Segundo',
+    bloque: 'Segundo Cuatrimestre',
     materias: [
       {
         asignatura: 'Estructuras de Datos',
@@ -65,7 +65,7 @@ export const MateriasTecnicaturaInformatica = [
       },
       {
         asignatura: 'Inglés I',
-        area: 'Gral.',
+        area: 'Gral',
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
@@ -74,7 +74,7 @@ export const MateriasTecnicaturaInformatica = [
     ],
   },
   {
-    cuatrimestre: 'Tercer',
+    bloque: 'Tercer Cuatrimestre',
     materias: [
       {
         asignatura: 'Matemática II',
@@ -114,11 +114,11 @@ export const MateriasTecnicaturaInformatica = [
     ],
   },
   {
-    cuatrimestre: 'Cuarto',
+    bloque: 'Cuarto Cuatrimestre',
     materias: [
       {
         asignatura: 'Construcción de Interfaces de Usuario',
-        area: 'ISBDySI.',
+        area: 'ISBDySI',
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Programación de objetos II'],
@@ -134,7 +134,7 @@ export const MateriasTecnicaturaInformatica = [
       },
       {
         asignatura: 'Estrategias de Persistencia',
-        area: 'ISBDySI.',
+        area: 'ISBDySI',
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos II', 'Bases de Datos'],
@@ -142,7 +142,7 @@ export const MateriasTecnicaturaInformatica = [
       },
       {
         asignatura: 'Elementos de Ingeniería de Software',
-        area: 'ISBDySI.',
+        area: 'ISBDySI',
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos II'],
@@ -150,7 +150,7 @@ export const MateriasTecnicaturaInformatica = [
       },
       {
         asignatura: 'Inglés II',
-        area: 'Gral.',
+        area: 'Gral',
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: ['Inglés I'],
@@ -159,7 +159,7 @@ export const MateriasTecnicaturaInformatica = [
     ],
   },
   {
-    cuatrimestre: 'Quinto',
+    bloque: 'Quinto Cuatrimestre',
     materias: [
       {
         asignatura: 'Programación Funcional',
@@ -192,7 +192,7 @@ export const MateriasTecnicaturaInformatica = [
       },
       {
         asignatura: 'Complementaria',
-        area: 'Compl.',
+        area: 'Compl',
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: [
@@ -205,7 +205,7 @@ export const MateriasTecnicaturaInformatica = [
     ],
   },
   {
-    cuatrimestre: 'Sexto',
+    bloque: 'Sexto Cuatrimestre',
     materias: [
       {
         asignatura: 'Práctica Profesional Supervisada',
@@ -223,7 +223,7 @@ export const MateriasTecnicaturaInformatica = [
       },
       {
         asignatura: 'Materia UNAHUR',
-        area: 'Gral.',
+        area: 'Gral',
         hsSemanales: '2',
         cargaHorariaTotal: '32',
         correlativas: [],
@@ -231,7 +231,7 @@ export const MateriasTecnicaturaInformatica = [
       },
       {
         asignatura: 'Complementaria',
-        area: 'Compl.',
+        area: 'Compl',
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: [

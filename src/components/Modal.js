@@ -18,7 +18,45 @@ const ModalEdit = (props) => {
       <Modal.Body>
         <Row>
           <Col>
-            <h4>Estado:</h4>
+            <h5>Area:</h5>
+          </Col>
+          <Col>
+            <p>{current.area}</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h5>Hs Semanales:</h5>
+          </Col>
+          <Col>
+            <p>{current.hsSemanales}</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h5>Carga Horaria:</h5>
+          </Col>
+          <Col>
+            <p>{current.cargaHorariaTotal}</p>
+          </Col>
+        </Row>
+        {current.correlativas && (
+          <Row>
+            <Col>
+              <h5>Correlativas:</h5>
+            </Col>
+            <Col>
+              <ul style={{ padding: 0 }}>
+                {current.correlativas.map((correlativa) => (
+                  <li style={{ listStyle: 'none' }}>{correlativa}</li>
+                ))}
+              </ul>
+            </Col>
+          </Row>
+        )}
+        <Row>
+          <Col>
+            <h5>Estado:</h5>
           </Col>
           <Col>
             <Buttons state={current.estado} setCurrent={setCurrent} />

@@ -4,9 +4,13 @@ import { MateriasTecnicaturaProgramacion } from '../Utils/TecnicaturaProgramacio
 import { MateriasTecnicaturaRedes } from '../Utils/TecnicaturaRedes';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import ResetButton from './ResetButton';
+import { useState } from 'react';
 
 const Home = (props) => {
   const { changeCareer, career, careerName } = props;
+
+  const [modalShow, setModalShow] = useState(false);
 
   return (
     <>
@@ -50,9 +54,14 @@ const Home = (props) => {
               </StyledStack>
             </Container>
             <ResetButtonContainer>
-              <Button onClick={(e) => changeCareer(e, null)}>
+              <Button variant="primary" onClick={() => setModalShow(true)}>
                 Borrar Datos
               </Button>
+              <ResetButton
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                changeCareer={changeCareer}
+              />
             </ResetButtonContainer>
           </>
         )}

@@ -92,7 +92,7 @@ function App() {
           />
         }
       />
-      <Route path="estadisticas" element={<Statistic career={career} />} />
+      <Route path="estadisticas" element={<Statistic />} />
       <Route
         path="tecnicatura"
         element={

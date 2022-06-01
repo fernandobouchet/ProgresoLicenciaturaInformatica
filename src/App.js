@@ -3,7 +3,12 @@ import Home from './components/Home';
 import Career from './components/Career';
 import Statistic from './components/Statistic';
 import { useEffect, useState } from 'react';
-import { SaveCareer, LoadCareers, LoadCareerName } from './Utils/Functions';
+import {
+  SaveData,
+  LoadCareers,
+  LoadDegree,
+  LoadCareerName,
+} from './Utils/Functions';
 import Degree from './components/Degree';
 import { MateriasLicenciaturaInformatica } from './Utils/Licenciatura';
 
@@ -12,11 +17,11 @@ function App() {
 
   const [careerName, setCareerName] = useState(LoadCareerName());
 
-  const [degree, setDegree] = useState(MateriasLicenciaturaInformatica);
+  const [degree, setDegree] = useState(LoadDegree());
 
   useEffect(() => {
-    SaveCareer(career, careerName);
-  }, [career, careerName]);
+    SaveData(career, degree, careerName);
+  }, [career, degree, careerName]);
 
   function handleClick(e) {
     e.preventDefault();
@@ -26,6 +31,13 @@ function App() {
   function changeCareer(e, tecnicatura) {
     handleClick(e);
     setCareer(tecnicatura);
+    setDegree(MateriasLicenciaturaInformatica);
+  }
+
+  function resetData() {
+    setCareer(null);
+    setCareerName('');
+    setDegree(null);
   }
 
   function changeCourseStateDegree(courses, state) {
@@ -73,7 +85,8 @@ function App() {
         path="/"
         element={
           <Home
-            changeCareer={(e, career) => changeCareer(e, career)}
+            changeCareer={(e, tecnicatura) => changeCareer(e, tecnicatura)}
+            resetData={() => resetData()}
             career={career}
             careerName={careerName}
           />

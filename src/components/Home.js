@@ -8,7 +8,7 @@ import ResetButton from './ResetButton';
 import { useState } from 'react';
 
 const Home = (props) => {
-  const { changeCareer, career, careerName } = props;
+  const { changeCareer, career, careerName, resetData } = props;
 
   const [modalShow, setModalShow] = useState(false);
 
@@ -60,7 +60,7 @@ const Home = (props) => {
               <ResetButton
                 show={modalShow}
                 onHide={() => setModalShow(false)}
-                changeCareer={changeCareer}
+                resetData={resetData}
               />
             </ResetButtonContainer>
           </>

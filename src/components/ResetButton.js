@@ -1,7 +1,7 @@
 import { Modal, Button, Stack } from 'react-bootstrap';
 
 const ResetButton = (props) => {
-  const { changeCareer, ...otherProps } = props;
+  const { resetData, ...otherProps } = props;
 
   return (
     <>
@@ -23,9 +23,9 @@ const ResetButton = (props) => {
           >
             <Button
               variant="danger"
-              onClick={(e) => {
+              onClick={() => {
                 props.onHide();
-                changeCareer(e, null);
+                resetData();
               }}
             >
               Borrar Datos

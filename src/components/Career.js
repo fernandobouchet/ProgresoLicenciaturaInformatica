@@ -8,9 +8,9 @@ const Career = (props) => {
 
   return (
     <Container>
-      <Container>
+      <TitleContainer>
         <h2>{careerName}</h2>
-      </Container>
+      </TitleContainer>
       <TablaMaterias Materias={career} changeCourseState={changeCourseState} />
       <StyledStack gap={3}>
         <Link to={'/estadisticas'} state={career}>
@@ -29,4 +29,8 @@ export default Career;
 const StyledStack = styled(Stack)`
   max-width: 140px;
   margin: 30px auto;
+`;
+
+const TitleContainer = styled(Container)`
+  margin: 2rem 0;
 `;

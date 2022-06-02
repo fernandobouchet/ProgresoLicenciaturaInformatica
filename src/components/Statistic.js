@@ -1,11 +1,4 @@
-import {
-  Button,
-  Badge,
-  Container,
-  ProgressBar,
-  Row,
-  Stack,
-} from 'react-bootstrap';
+import { Button, Badge, Container, ProgressBar, Stack } from 'react-bootstrap';
 import {
   getPercentageOfCourses,
   getAverageQualification,
@@ -25,37 +18,39 @@ const Statistic = () => {
 
   return (
     <StatisticContainer>
-      <h4>Estadísticas</h4>
-      <Row>
+      <h5>Porcentaje</h5>
+      <Container>
         <StyledStack direction="horizontal" gap={1}>
-          <Badge bg="success">Aprobadas</Badge>
           <Badge bg="secondary">Pendientes</Badge>
           <Badge bg="primary">Cursando</Badge>
+          <Badge bg="success">Aprobadas</Badge>
         </StyledStack>
-      </Row>
-      <Row>
+      </Container>
+      <Container>
         <PorcentageContainer>
           <ProgressBar>
             <ProgressBar
-              variant="success"
-              now={approved}
-              label={`${approved}%`}
-            />
+              variant="secondary"
+              now={pending}
+              label={`${pending}%`}
+            />{' '}
             <ProgressBar
               variant="primary"
               now={inProgress}
               label={`${inProgress}%`}
             />
             <ProgressBar
-              variant="secondary"
-              now={pending}
-              label={`${pending}%`}
+              variant="success"
+              now={approved}
+              label={`${approved}%`}
             />
           </ProgressBar>
         </PorcentageContainer>
-      </Row>
-      <h4>Promedio</h4>
-      <h5>{average}/10</h5>
+      </Container>
+      <AverageContainer>
+        <h5>Promedio</h5>
+        <h5>{average}/10</h5>
+      </AverageContainer>
       <Button onClick={() => navigate(-1)}>Volver</Button>
     </StatisticContainer>
   );
@@ -66,12 +61,15 @@ export default Statistic;
 const PorcentageContainer = styled(Container)`
   max-width: 500px;
   margin: 1rem auto;
-  padding: 1rem 0;
 `;
 
 const StatisticContainer = styled(Container)`
   padding: 1rem 0;
   max-width: 800px;
+`;
+
+const AverageContainer = styled(Container)`
+  padding: 1rem 0;
 `;
 
 const StyledStack = styled(Stack)`

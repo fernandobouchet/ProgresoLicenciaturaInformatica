@@ -8,9 +8,9 @@ const Degree = (props) => {
 
   return (
     <Container>
-      <Container>
+      <TitleContainer>
         <h2>{careerName}</h2>
-      </Container>
+      </TitleContainer>
       <TablaMaterias
         Materias={degree}
         changeCourseState={changeCourseStateDegree}
@@ -32,4 +32,8 @@ export default Degree;
 const StyledStack = styled(Stack)`
   max-width: 140px;
   margin: 30px auto;
+`;
+
+const TitleContainer = styled(Container)`
+  margin: 2rem 0;
 `;

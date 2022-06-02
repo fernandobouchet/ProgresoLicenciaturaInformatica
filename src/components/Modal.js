@@ -18,48 +18,32 @@ const ModalEdit = (props) => {
       <Modal.Body>
         <Row>
           <Col>
-            <h5>Area:</h5>
-          </Col>
-          <Col>
-            <p>{current.area}</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <h5>Hs Semanales:</h5>
-          </Col>
-          <Col>
-            <p>{current.hsSemanales}</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <h5>Carga Horaria:</h5>
-          </Col>
-          <Col>
-            <p>{current.cargaHorariaTotal}</p>
-          </Col>
-        </Row>
-        {current.correlativas && (
-          <Row>
-            <Col>
-              <h5>Correlativas:</h5>
-            </Col>
-            <Col>
-              <ul style={{ padding: 0 }}>
-                {current.correlativas.map((correlativa) => (
-                  <li style={{ listStyle: 'none' }}>{correlativa}</li>
-                ))}
-              </ul>
-            </Col>
-          </Row>
-        )}
-        <Row>
-          <Col>
             <h5>Estado:</h5>
           </Col>
           <Col>
             <Buttons state={current.estado} setCurrent={setCurrent} />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <h5>Nota Final:</h5>
+          </Col>
+          <Col>
+            <input
+              type="number"
+              name=""
+              id=""
+              disabled={current.estado === 'Aprobada' ? false : true}
+              min={0}
+              max={10}
+              value={current.estado !== 'Aprobada' ? '' : current.calificacion}
+              onChange={(e) =>
+                setCurrent((prevState) => ({
+                  ...prevState,
+                  calificacion: e.target.value,
+                }))
+              }
+            />
           </Col>
         </Row>
       </Modal.Body>
@@ -67,7 +51,11 @@ const ModalEdit = (props) => {
         <Button
           onClick={() => {
             props.onHide();
-            changeCourseState(current.asignatura, current.estado);
+            changeCourseState(
+              current.asignatura,
+              current.estado,
+              current.calificacion
+            );
           }}
         >
           Guardar y cerrar

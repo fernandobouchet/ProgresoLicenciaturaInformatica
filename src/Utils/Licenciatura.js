@@ -9,6 +9,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Introducción a la Programación',
@@ -17,6 +18,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Organización de computadoras',
@@ -25,6 +27,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Nuevos entornos y lenguajes',
@@ -33,6 +36,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Estructuras de Datos',
@@ -41,6 +45,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: ['Introducción a la Programación'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Programación con Objetos I',
@@ -49,6 +54,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: ['Introducción a la Programación'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Bases de Datos',
@@ -57,6 +63,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Matemática I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Inglés I',
@@ -65,6 +72,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -78,6 +86,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Matemática I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Programación con Objetos II',
@@ -86,6 +95,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Redes de Computadoras',
@@ -94,6 +104,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Organización de Computadoras'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Sistemas Operativos',
@@ -105,6 +116,7 @@ export const MateriasLicenciaturaInformatica = [
           'Introducción a la Programación',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Programación Funcional',
@@ -113,6 +125,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Estructuras de Datos'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Construcción de Interfaces de Usuario',
@@ -121,6 +134,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación de objetos II'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Algoritmos',
@@ -129,6 +143,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Estrategias de Persistencia',
@@ -137,6 +152,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos II', 'Bases de Datos'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Laboratorio de Sistemas Operativos y Redes',
@@ -145,6 +161,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Redes de Computadoras', 'Sistemas Operativos'],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -158,6 +175,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Lógica y Programación',
@@ -166,6 +184,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Elementos de Ingeniería de Software',
@@ -174,6 +193,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos II'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Seguridad de la Información',
@@ -182,6 +202,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Inglés I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Materia UNAHUR',
@@ -190,6 +211,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Inglés II',
@@ -198,6 +220,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: ['Inglés I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Matemática III',
@@ -206,6 +229,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Matemática II'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Programación Concurrente',
@@ -214,6 +238,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Estructuras de Datos'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Ingeniería de Requerimientos',
@@ -222,6 +247,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Desarrollo de Aplicaciones',
@@ -235,6 +261,7 @@ export const MateriasLicenciaturaInformatica = [
           'Matemática II',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -248,6 +275,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Gestión de Proyectos de Desarrollo de Software',
@@ -256,6 +284,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Lenguajes Formales y Autómatas',
@@ -264,6 +293,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Programación con Objetos III',
@@ -272,6 +302,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Materia UNAHUR II',
@@ -280,6 +311,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Práctica Profesional Supervisada',
@@ -294,6 +326,7 @@ export const MateriasLicenciaturaInformatica = [
           'Operativos y Redes',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Teoría de la Computación',
@@ -302,6 +335,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Arquitectura de Software I',
@@ -310,6 +344,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Sistemas Distribuidos y Tiempo Real',
@@ -318,6 +353,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -331,6 +367,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '160',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Complementaria',
@@ -344,6 +381,7 @@ export const MateriasLicenciaturaInformatica = [
           'Programación Concurrente',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Características de Lenguajes de Programación',
@@ -352,6 +390,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Arquitectura de Software II',
@@ -360,6 +399,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Arquitectura de Computadoras',
@@ -368,6 +408,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Complementaria II',
@@ -381,6 +422,7 @@ export const MateriasLicenciaturaInformatica = [
           'Programación Concurrente',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Parseo y generación de código',
@@ -389,6 +431,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Ejercicio Profesional',
@@ -397,6 +440,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '48',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Tecnología y Sociedad',
@@ -405,6 +449,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '48',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },

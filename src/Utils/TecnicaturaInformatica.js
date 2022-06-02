@@ -9,6 +9,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Introducción a la Programación',
@@ -17,6 +18,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Organización de computadoras',
@@ -25,6 +27,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Nuevos entornos y lenguajes',
@@ -33,6 +36,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -46,6 +50,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: ['Introducción a la Programación'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Programación con Objetos I',
@@ -54,6 +59,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: ['Introducción a la Programación'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Bases de Datos',
@@ -62,6 +68,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Matemática I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Inglés I',
@@ -70,6 +77,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -83,6 +91,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Matemática I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Programación con Objetos II',
@@ -91,6 +100,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Redes de Computadoras',
@@ -99,6 +109,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Organización de Computadoras'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Sistemas Operativos',
@@ -110,6 +121,7 @@ export const MateriasTecnicaturaInformatica = [
           'Introducción a la Programación',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -123,6 +135,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación de objetos II'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Programación Concurrente',
@@ -131,6 +144,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Estructuras de Datos'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Estrategias de Persistencia',
@@ -139,6 +153,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos II', 'Bases de Datos'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Elementos de Ingeniería de Software',
@@ -147,6 +162,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos II'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Inglés II',
@@ -155,6 +171,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: ['Inglés I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -168,6 +185,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Estructuras de Datos'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Laboratorio de Sistemas Operativos y Redes',
@@ -176,6 +194,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Redes de Computadoras', 'Sistemas Operativos'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Desarrollo de Aplicaciones',
@@ -189,6 +208,7 @@ export const MateriasTecnicaturaInformatica = [
           'Matemática II',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Complementaria',
@@ -201,6 +221,7 @@ export const MateriasTecnicaturaInformatica = [
           'Programación Concurrente',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -220,6 +241,7 @@ export const MateriasTecnicaturaInformatica = [
           'Operativos y Redes',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Materia UNAHUR',
@@ -228,6 +250,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Complementaria',
@@ -240,6 +263,7 @@ export const MateriasTecnicaturaInformatica = [
           'Programación Concurrente',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },

@@ -8,6 +8,7 @@ const Buttons = (props) => {
     setCurrent((prevState) => ({
       ...prevState,
       estado: e.target.value,
+      calificacion: e.target.value !== 'Aprobada' || '',
     }));
   }
 

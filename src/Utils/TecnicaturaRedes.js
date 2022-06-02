@@ -9,6 +9,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Introducción a lógica y problemas computacionales',
@@ -17,6 +18,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Organización de computadoras I',
@@ -25,6 +27,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '64',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Nuevos entornos y lenguajes',
@@ -33,6 +36,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -46,6 +50,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '64',
         correlativas: ['Introducción a lógica y problemas computacionales'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Organización de computadoras II',
@@ -54,6 +59,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '96',
         correlativas: ['Organización de computadoras I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Sistemas de comunicación',
@@ -62,6 +68,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '64',
         correlativas: ['Organización de computadoras I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Inglés I',
@@ -70,6 +77,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -83,6 +91,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '96',
         correlativas: ['Matemática para informática I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Redes de Computadoras',
@@ -94,6 +103,7 @@ export const MateriasTecnicaturaRedes = [
           'Sistemas de comunicación',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Sistemas Operativos',
@@ -105,6 +115,7 @@ export const MateriasTecnicaturaRedes = [
           'Organización de computadoras II',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Operaciones I',
@@ -113,6 +124,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '96',
         correlativas: ['Taller de intérpretes de comandos'],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -126,6 +138,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Redes avanzadas',
@@ -134,6 +147,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '96',
         correlativas: ['Redes de computadoras'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Electiva I',
@@ -145,6 +159,7 @@ export const MateriasTecnicaturaRedes = [
           'Sistemas comunicación',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Electiva II',
@@ -156,6 +171,7 @@ export const MateriasTecnicaturaRedes = [
           'Taller de intérpretes de comandos',
         ],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Inglés II',
@@ -164,6 +180,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '32',
         correlativas: ['Inglés I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },
@@ -177,6 +194,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '96',
         correlativas: ['Redes avanzadas', 'Operaciones I'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Laboratorio de sistemas operativos y redes',
@@ -185,6 +203,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '64',
         correlativas: ['Redes de computadoras', 'Sistemas operativos'],
         estado: 'Pendiente',
+        calificacion: '',
       },
       {
         asignatura: 'Operaciones II',
@@ -193,6 +212,7 @@ export const MateriasTecnicaturaRedes = [
         cargaHorariaTotal: '96',
         correlativas: ['Operaciones I', 'Sistemas operativos'],
         estado: 'Pendiente',
+        calificacion: '',
       },
     ],
   },

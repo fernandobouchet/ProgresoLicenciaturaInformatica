@@ -40,7 +40,7 @@ function App() {
     setDegree(null);
   }
 
-  function changeCourseStateDegree(courses, state) {
+  function changeCourseStateDegree(courses, state, note) {
     setDegree(
       degree.map((bloque) => {
         return {
@@ -50,6 +50,7 @@ function App() {
               return {
                 ...course,
                 estado: state,
+                calificacion: note,
               };
             }
             return course;
@@ -59,7 +60,7 @@ function App() {
     );
   }
 
-  function changeCourseStateCareer(courses, state) {
+  function changeCourseStateCareer(courses, state, note) {
     setCareer(
       career.map((bloque) => {
         return {
@@ -69,6 +70,7 @@ function App() {
               return {
                 ...course,
                 estado: state,
+                calificacion: note,
               };
             }
             return course;
@@ -76,7 +78,7 @@ function App() {
         };
       })
     );
-    changeCourseStateDegree(courses, state);
+    changeCourseStateDegree(courses, state, note);
   }
 
   return (
@@ -99,8 +101,8 @@ function App() {
           <Career
             career={career}
             careerName={careerName}
-            changeCourseState={(course, state) =>
-              changeCourseStateCareer(course, state)
+            changeCourseState={(course, state, note) =>
+              changeCourseStateCareer(course, state, note)
             }
           />
         }
@@ -111,8 +113,8 @@ function App() {
           <Degree
             degree={degree}
             careerName={'Licenciatura en Informática'}
-            changeCourseStateDegree={(course, state) =>
-              changeCourseStateDegree(course, state)
+            changeCourseStateDegree={(course, state, note) =>
+              changeCourseStateDegree(course, state, note)
             }
           />
         }

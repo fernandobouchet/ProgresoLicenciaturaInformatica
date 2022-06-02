@@ -17,11 +17,22 @@ const getStateCourses = (coursesArray, state) => {
   return getCourses(coursesArray).filter((course) => course.estado === state);
 };
 
-const getPorcentajeOfCourses = (coursesArray, state) => {
+const getPercentageOfCourses = (coursesArray, state) => {
   var porcentaje =
     (getStateCourses(coursesArray, state).length * 100) /
     getCoursesSize(coursesArray);
   return Math.round(porcentaje);
 };
 
-export { getPorcentajeOfCourses };
+const getAverageQualification = (coursesArray, state) => {
+  var aproved = getStateCourses(coursesArray, state);
+  var qualifications = aproved.reduce(
+    (x, mat) => x + Number(mat.calificacion),
+    0
+  );
+  var result =
+    aproved.length >= 1 ? (qualifications / aproved.length).toFixed(1) : 0;
+  return result;
+};
+
+export { getPercentageOfCourses, getAverageQualification };

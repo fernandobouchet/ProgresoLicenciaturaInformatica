@@ -6,18 +6,22 @@ import {
   Row,
   Stack,
 } from 'react-bootstrap';
-import { getPorcentajeOfCourses } from '../Utils/StatisticFunctions';
+import {
+  getPercentageOfCourses,
+  getAverageQualification,
+} from '../Utils/StatisticFunctions';
 import styled from 'styled-components';
 import { useNavigate, useLocation } from 'react-router-dom';
 
-const Statistic = (props) => {
+const Statistic = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const data = location?.state;
 
-  const approved = getPorcentajeOfCourses(data, 'Aprobada');
-  const inProgress = getPorcentajeOfCourses(data, 'Cursando');
-  const pending = getPorcentajeOfCourses(data, 'Pendiente');
+  const approved = getPercentageOfCourses(data, 'Aprobada');
+  const inProgress = getPercentageOfCourses(data, 'Cursando');
+  const pending = getPercentageOfCourses(data, 'Pendiente');
+  const average = getAverageQualification(data, 'Aprobada');
 
   return (
     <StatisticContainer>
@@ -50,6 +54,8 @@ const Statistic = (props) => {
           </ProgressBar>
         </PorcentageContainer>
       </Row>
+      <h4>Promedio</h4>
+      <h5>{average}/10</h5>
       <Button onClick={() => navigate(-1)}>Volver</Button>
     </StatisticContainer>
   );

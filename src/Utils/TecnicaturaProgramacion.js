@@ -3,7 +3,7 @@ export const MateriasTecnicaturaProgramacion = [
     bloque: 'Primer Cuatrimestre',
     materias: [
       {
-        asignatura: 'Matemática para Informática I',
+        asignatura: 'Matemática para informática I',
         area: 'CB',
         hsSemanales: '4',
         cargaHorariaTotal: '64',
@@ -85,7 +85,7 @@ export const MateriasTecnicaturaProgramacion = [
     bloque: 'Tercer Cuatrimestre',
     materias: [
       {
-        asignatura: 'Bases de Datos',
+        asignatura: 'Bases de datos',
         area: 'ISBDySI',
         hsSemanales: '6',
         cargaHorariaTotal: '96',
@@ -94,7 +94,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
-        asignatura: 'Programación de objetos I',
+        asignatura: 'Programación con objetos I',
         area: 'AyL',
         hsSemanales: '8',
         cargaHorariaTotal: '128',
@@ -126,11 +126,11 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
-        asignatura: 'Programación de objetos II',
+        asignatura: 'Programación con objetos II',
         area: 'AyL',
         hsSemanales: '6',
         cargaHorariaTotal: '96',
-        correlativas: ['Programación de objetos I'],
+        correlativas: ['Programación con objetos I'],
         estado: 'Pendiente',
         calificacion: '',
       },
@@ -171,7 +171,7 @@ export const MateriasTecnicaturaProgramacion = [
         area: 'ISBDySI',
         hsSemanales: '6',
         cargaHorariaTotal: '96',
-        correlativas: ['Programación de objetos II'],
+        correlativas: ['Programación con objetos II'],
         estado: 'Pendiente',
         calificacion: '',
       },
@@ -180,7 +180,7 @@ export const MateriasTecnicaturaProgramacion = [
         area: 'ISBDySI',
         hsSemanales: '6',
         cargaHorariaTotal: '96',
-        correlativas: ['Programación de objetos II', 'Bases de datos'],
+        correlativas: ['Programación con objetos II', 'Bases de datos'],
         estado: 'Pendiente',
         calificacion: '',
       },
@@ -189,7 +189,7 @@ export const MateriasTecnicaturaProgramacion = [
         area: 'ISBDySI',
         hsSemanales: '6',
         cargaHorariaTotal: '96',
-        correlativas: ['Programación de objetos II'],
+        correlativas: ['Programación con objetos II'],
         estado: 'Pendiente',
         calificacion: '',
       },

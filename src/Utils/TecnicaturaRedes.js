@@ -3,7 +3,7 @@ export const MateriasTecnicaturaRedes = [
     bloque: 'Primer Cuatrimestre',
     materias: [
       {
-        asignatura: 'Matemática para Informática I',
+        asignatura: 'Matemática para informática I',
         area: 'CB',
         hsSemanales: '4',
         cargaHorariaTotal: '64',
@@ -85,7 +85,7 @@ export const MateriasTecnicaturaRedes = [
     bloque: 'Tercer Cuatrimestre',
     materias: [
       {
-        asignatura: 'Bases de Datos',
+        asignatura: 'Bases de datos',
         area: 'ISBDySI',
         hsSemanales: '6',
         cargaHorariaTotal: '96',
@@ -94,7 +94,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
-        asignatura: 'Redes de Computadoras',
+        asignatura: 'Redes de computadoras',
         area: 'ASOyR',
         hsSemanales: '6',
         cargaHorariaTotal: '96',
@@ -106,7 +106,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
-        asignatura: 'Sistemas Operativos',
+        asignatura: 'Sistemas operativos',
         area: 'ASOyR',
         hsSemanales: '6',
         cargaHorariaTotal: '96',
@@ -167,7 +167,7 @@ export const MateriasTecnicaturaRedes = [
         hsSemanales: '4',
         cargaHorariaTotal: '64',
         correlativas: [
-          'Matemática para Informática I',
+          'Matemática para informática I',
           'Taller de intérpretes de comandos',
         ],
         estado: 'Pendiente',
@@ -188,7 +188,7 @@ export const MateriasTecnicaturaRedes = [
     bloque: 'Quinto Cuatrimestre',
     materias: [
       {
-        asignatura: 'Seguridad de la Información',
+        asignatura: 'Seguridad de la información',
         area: 'ASOyR',
         hsSemanales: '6',
         cargaHorariaTotal: '96',

@@ -1,5 +1,6 @@
-import { Modal, Button, Row, Col } from 'react-bootstrap';
+import { Modal, Button, Row, Col, Container } from 'react-bootstrap';
 import Buttons from './Buttons';
+import styled from 'styled-components';
 
 const ModalEdit = (props) => {
   const { current, changeCourseState, setCurrent, ...other } = props;
@@ -10,26 +11,26 @@ const ModalEdit = (props) => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
+      <ModalHeader closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           {current.asignatura}
         </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <Row>
-          <Col>
-            <h5>Estado:</h5>
-          </Col>
-          <Col>
+      </ModalHeader>
+      <ModalBody>
+        <StyledRow md={2}>
+          <StyledCol>
+            <StyledH5>Estado:</StyledH5>
+          </StyledCol>
+          <StyledCol>
             <Buttons state={current.estado} setCurrent={setCurrent} />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <h5>Nota Final:</h5>
-          </Col>
-          <Col>
-            <input
+          </StyledCol>
+        </StyledRow>
+        <StyledRow md={2}>
+          <StyledCol>
+            <StyledH5>Calificación:</StyledH5>
+          </StyledCol>
+          <StyledCol>
+            <StyledInput
               type="number"
               name=""
               id=""
@@ -44,9 +45,9 @@ const ModalEdit = (props) => {
                 }))
               }
             />
-          </Col>
-        </Row>
-      </Modal.Body>
+          </StyledCol>
+        </StyledRow>
+      </ModalBody>
       <Modal.Footer>
         <Button
           onClick={() => {
@@ -66,3 +67,35 @@ const ModalEdit = (props) => {
 };
 
 export default ModalEdit;
+
+const ModalHeader = styled(Modal.Header)`
+  .modal-title {
+    margin: auto;
+  }
+  .btn-close {
+    margin: 0;
+  }
+`;
+
+const StyledRow = styled(Row)`
+  margin: auto;
+  align-items: center;
+`;
+
+const StyledCol = styled(Col)`
+  min-width: 7.3rem;
+  margin: 1rem auto;
+`;
+
+const ModalBody = styled(Modal.Body)`
+  margin: auto;
+`;
+
+const StyledInput = styled.input`
+  padding: 0;
+  text-align: center;
+`;
+
+const StyledH5 = styled.h5`
+  margin: 0;
+`;

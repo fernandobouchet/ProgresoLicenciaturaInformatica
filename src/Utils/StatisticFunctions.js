@@ -1,11 +1,9 @@
 const getCourses = (career) => {
   var coursesArray = [];
   const ca = career.map((careers) => careers.materias);
-  for (let i = 0; i < ca.length; i++) {
-    for (let j = 0; j < ca[i].length; j++) {
-      coursesArray.push(ca[i][j]);
-    }
-  }
+  ca.forEach((element) => {
+    element.forEach((course) => coursesArray.push(course));
+  });
   return coursesArray;
 };
 

@@ -1,8 +1,10 @@
 export const MateriasTecnicaturaInformatica = [
   {
     bloque: 'Primer Cuatrimestre',
+    id: 1,
     materias: [
       {
+        id: 1,
         asignatura: 'Matemática I',
         area: 'CB',
         hsSemanales: '8',
@@ -12,6 +14,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 2,
         asignatura: 'Introducción a la programación',
         area: 'AyL',
         hsSemanales: '8',
@@ -21,6 +24,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 3,
         asignatura: 'Organización de computadoras',
         area: 'ASOyR',
         hsSemanales: '6',
@@ -30,6 +34,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 4,
         asignatura: 'Nuevos entornos y lenguajes',
         area: 'Gral',
         hsSemanales: '2',
@@ -42,8 +47,10 @@ export const MateriasTecnicaturaInformatica = [
   },
   {
     bloque: 'Segundo Cuatrimestre',
+    id: 2,
     materias: [
       {
+        id: 5,
         asignatura: 'Estructuras de datos',
         area: 'TC',
         hsSemanales: '8',
@@ -53,6 +60,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 6,
         asignatura: 'Programación con Objetos I',
         area: 'AyL',
         hsSemanales: '8',
@@ -62,6 +70,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 7,
         asignatura: 'Bases de datos',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -71,6 +80,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 8,
         asignatura: 'Inglés I',
         area: 'Gral',
         hsSemanales: '2',
@@ -83,8 +93,10 @@ export const MateriasTecnicaturaInformatica = [
   },
   {
     bloque: 'Tercer Cuatrimestre',
+    id: 3,
     materias: [
       {
+        id: 9,
         asignatura: 'Matemática II',
         area: 'CB',
         hsSemanales: '4',
@@ -94,6 +106,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 10,
         asignatura: 'Programación con Objetos II',
         area: 'AyL',
         hsSemanales: '6',
@@ -103,6 +116,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 11,
         asignatura: 'Redes de computadoras',
         area: 'ASOyR',
         hsSemanales: '6',
@@ -112,6 +126,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 12,
         asignatura: 'Sistemas operativos',
         area: 'ASOyR',
         hsSemanales: '6',
@@ -127,8 +142,10 @@ export const MateriasTecnicaturaInformatica = [
   },
   {
     bloque: 'Cuarto Cuatrimestre',
+    id: 4,
     materias: [
       {
+        id: 13,
         asignatura: 'Construcción de interfaces de usuario',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -138,6 +155,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 14,
         asignatura: 'Programación concurrente',
         area: 'AyL',
         hsSemanales: '4',
@@ -147,6 +165,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 15,
         asignatura: 'Estrategias de persistencia',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -156,6 +175,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 16,
         asignatura: 'Elementos de ingeniería de software',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -165,6 +185,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 17,
         asignatura: 'Inglés II',
         area: 'Gral',
         hsSemanales: '2',
@@ -177,8 +198,10 @@ export const MateriasTecnicaturaInformatica = [
   },
   {
     bloque: 'Quinto Cuatrimestre',
+    id: 5,
     materias: [
       {
+        id: 18,
         asignatura: 'Programación funcional',
         area: 'AyL',
         hsSemanales: '4',
@@ -188,6 +211,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 19,
         asignatura: 'Laboratorio de sistemas operativos y redes',
         area: 'ASOyR',
         hsSemanales: '4',
@@ -197,6 +221,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 20,
         asignatura: 'Desarrollo de aplicaciones',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -211,6 +236,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 21,
         asignatura: 'Complementaria',
         area: 'Compl',
         hsSemanales: '4',
@@ -227,8 +253,10 @@ export const MateriasTecnicaturaInformatica = [
   },
   {
     bloque: 'Sexto Cuatrimestre',
+    id: 6,
     materias: [
       {
+        id: 22,
         asignatura: 'Práctica profesional supervisada',
         area: '',
         hsSemanales: '6',
@@ -244,6 +272,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 23,
         asignatura: 'Materia UNAHUR',
         area: 'Gral',
         hsSemanales: '2',
@@ -253,6 +282,7 @@ export const MateriasTecnicaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 24,
         asignatura: 'Complementaria',
         area: 'Compl',
         hsSemanales: '4',

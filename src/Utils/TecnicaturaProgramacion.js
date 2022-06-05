@@ -1,8 +1,10 @@
 export const MateriasTecnicaturaProgramacion = [
   {
     bloque: 'Primer Cuatrimestre',
+    id: 1,
     materias: [
       {
+        id: 1,
         asignatura: 'Matemática para informática I',
         area: 'CB',
         hsSemanales: '4',
@@ -12,6 +14,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 2,
         asignatura: 'Introducción a lógica y problemas computacionales',
         area: 'AyL',
         hsSemanales: '4',
@@ -21,6 +24,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 3,
         asignatura: 'Organización de computadoras I',
         area: 'ASOyR',
         hsSemanales: '4',
@@ -30,6 +34,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 4,
         asignatura: 'Nuevos entornos y lenguajes',
         area: 'Gral',
         hsSemanales: '2',
@@ -42,8 +47,10 @@ export const MateriasTecnicaturaProgramacion = [
   },
   {
     bloque: 'Segundo Cuatrimestre',
+    id: 2,
     materias: [
       {
+        id: 5,
         asignatura: 'Taller de lenguajes de marcado y tecnologías web',
         area: 'TC',
         hsSemanales: '4',
@@ -53,6 +60,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 6,
         asignatura: 'Programación estructurada',
         area: 'AyL',
         hsSemanales: '6',
@@ -62,6 +70,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 7,
         asignatura: 'Matemática para Informática II',
         area: 'CB',
         hsSemanales: '4',
@@ -71,6 +80,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 8,
         asignatura: 'Inglés I',
         area: 'Gral',
         hsSemanales: '2',
@@ -83,8 +93,10 @@ export const MateriasTecnicaturaProgramacion = [
   },
   {
     bloque: 'Tercer Cuatrimestre',
+    id: 3,
     materias: [
       {
+        id: 9,
         asignatura: 'Bases de datos',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -94,6 +106,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 10,
         asignatura: 'Programación con objetos I',
         area: 'AyL',
         hsSemanales: '8',
@@ -103,6 +116,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 11,
         asignatura: 'Estructuras de datos',
         area: 'TC',
         hsSemanales: '8',
@@ -115,8 +129,10 @@ export const MateriasTecnicaturaProgramacion = [
   },
   {
     bloque: 'Cuarto Cuatrimestre',
+    id: 4,
     materias: [
       {
+        id: 12,
         asignatura: 'Materia UNAHUR',
         area: 'Gral',
         hsSemanales: '2',
@@ -126,6 +142,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 13,
         asignatura: 'Programación con objetos II',
         area: 'AyL',
         hsSemanales: '6',
@@ -135,6 +152,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 14,
         asignatura: 'Electiva I',
         area: 'Elec',
         hsSemanales: '4',
@@ -144,6 +162,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 15,
         asignatura: 'Electiva II',
         area: 'Elec',
         hsSemanales: '4',
@@ -153,6 +172,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 16,
         asignatura: 'Inglés II',
         area: 'Gral',
         hsSemanales: '2',
@@ -165,8 +185,10 @@ export const MateriasTecnicaturaProgramacion = [
   },
   {
     bloque: 'Quinto Cuatrimestre',
+    id: 5,
     materias: [
       {
+        id: 17,
         asignatura: 'Construcción de interfaces de usuario',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -176,6 +198,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 18,
         asignatura: 'Estrategias de persistencia',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -185,6 +208,7 @@ export const MateriasTecnicaturaProgramacion = [
         calificacion: '',
       },
       {
+        id: 19,
         asignatura: 'Elementos de ingeniería de software',
         area: 'ISBDySI',
         hsSemanales: '6',

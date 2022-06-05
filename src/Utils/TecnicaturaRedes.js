@@ -1,8 +1,10 @@
 export const MateriasTecnicaturaRedes = [
   {
     bloque: 'Primer Cuatrimestre',
+    id: 1,
     materias: [
       {
+        id: 1,
         asignatura: 'Matemática para informática I',
         area: 'CB',
         hsSemanales: '4',
@@ -12,6 +14,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 2,
         asignatura: 'Introducción a lógica y problemas computacionales',
         area: 'AyL',
         hsSemanales: '4',
@@ -21,6 +24,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 3,
         asignatura: 'Organización de computadoras I',
         area: 'ASOyR',
         hsSemanales: '4',
@@ -30,6 +34,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 4,
         asignatura: 'Nuevos entornos y lenguajes',
         area: 'Gral',
         hsSemanales: '2',
@@ -42,8 +47,10 @@ export const MateriasTecnicaturaRedes = [
   },
   {
     bloque: 'Segundo Cuatrimestre',
+    id: 2,
     materias: [
       {
+        id: 5,
         asignatura: 'Taller de intérpretes de comandos',
         area: 'AyL',
         hsSemanales: '4',
@@ -53,6 +60,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 6,
         asignatura: 'Organización de computadoras II',
         area: 'ASOyR',
         hsSemanales: '6',
@@ -62,6 +70,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 7,
         asignatura: 'Sistemas de comunicación',
         area: 'ASOyR',
         hsSemanales: '4',
@@ -71,6 +80,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 8,
         asignatura: 'Inglés I',
         area: 'Gral',
         hsSemanales: '2',
@@ -83,8 +93,10 @@ export const MateriasTecnicaturaRedes = [
   },
   {
     bloque: 'Tercer Cuatrimestre',
+    id: 3,
     materias: [
       {
+        id: 9,
         asignatura: 'Bases de datos',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -94,6 +106,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 10,
         asignatura: 'Redes de computadoras',
         area: 'ASOyR',
         hsSemanales: '6',
@@ -106,6 +119,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 11,
         asignatura: 'Sistemas operativos',
         area: 'ASOyR',
         hsSemanales: '6',
@@ -118,6 +132,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 12,
         asignatura: 'Operaciones I',
         area: 'TC',
         hsSemanales: '6',
@@ -130,8 +145,10 @@ export const MateriasTecnicaturaRedes = [
   },
   {
     bloque: 'Cuarto Cuatrimestre',
+    id: 4,
     materias: [
       {
+        id: 13,
         asignatura: 'Materia UNAHUR',
         area: 'Gral',
         hsSemanales: '2',
@@ -141,6 +158,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 14,
         asignatura: 'Redes avanzadas',
         area: 'ASOyR',
         hsSemanales: '6',
@@ -150,6 +168,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 15,
         asignatura: 'Electiva I',
         area: 'Elec',
         hsSemanales: '4',
@@ -162,6 +181,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 16,
         asignatura: 'Electiva II',
         area: 'Elec',
         hsSemanales: '4',
@@ -174,6 +194,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 17,
         asignatura: 'Inglés II',
         area: 'Gral',
         hsSemanales: '2',
@@ -186,8 +207,10 @@ export const MateriasTecnicaturaRedes = [
   },
   {
     bloque: 'Quinto Cuatrimestre',
+    id: 5,
     materias: [
       {
+        id: 18,
         asignatura: 'Seguridad de la información',
         area: 'ASOyR',
         hsSemanales: '6',
@@ -197,6 +220,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 19,
         asignatura: 'Laboratorio de sistemas operativos y redes',
         area: 'ASOyR',
         hsSemanales: '4',
@@ -206,6 +230,7 @@ export const MateriasTecnicaturaRedes = [
         calificacion: '',
       },
       {
+        id: 20,
         asignatura: 'Operaciones II',
         area: 'TC',
         hsSemanales: '6',

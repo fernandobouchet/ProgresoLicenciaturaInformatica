@@ -1,8 +1,10 @@
 export const MateriasLicenciaturaInformatica = [
   {
     bloque: 'Primer Año',
+    id: 1,
     materias: [
       {
+        id: 1,
         asignatura: 'Matemática I',
         area: 'CB',
         hsSemanales: '8',
@@ -12,6 +14,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 2,
         asignatura: 'Introducción a la programación',
         area: 'AyL',
         hsSemanales: '8',
@@ -21,6 +24,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 3,
         asignatura: 'Organización de computadoras',
         area: 'ASOyR',
         hsSemanales: '6',
@@ -30,6 +34,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 4,
         asignatura: 'Nuevos entornos y lenguajes',
         area: 'Gral',
         hsSemanales: '2',
@@ -39,6 +44,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 5,
         asignatura: 'Estructuras de datos',
         area: 'TC',
         hsSemanales: '8',
@@ -48,6 +54,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 6,
         asignatura: 'Programación con objetos I',
         area: 'AyL',
         hsSemanales: '8',
@@ -57,6 +64,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 7,
         asignatura: 'Bases de datos',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -66,6 +74,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 8,
         asignatura: 'Inglés I',
         area: 'Gral',
         hsSemanales: '2',
@@ -78,8 +87,10 @@ export const MateriasLicenciaturaInformatica = [
   },
   {
     bloque: 'Segundo Año',
+    id: 2,
     materias: [
       {
+        id: 9,
         asignatura: 'Matemática II',
         area: 'CB',
         hsSemanales: '4',
@@ -89,6 +100,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 10,
         asignatura: 'Programación con objetos II',
         area: 'AyL',
         hsSemanales: '6',
@@ -98,6 +110,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 11,
         asignatura: 'Redes de computadoras',
         area: 'ASOyR',
         hsSemanales: '6',
@@ -107,6 +120,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 12,
         asignatura: 'Sistemas operativos',
         area: 'ASOyR',
         hsSemanales: '6',
@@ -119,6 +133,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 13,
         asignatura: 'Programación funcional',
         area: 'AyL',
         hsSemanales: '4',
@@ -128,6 +143,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 14,
         asignatura: 'Construcción de interfaces de usuario',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -137,6 +153,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 15,
         asignatura: 'Algoritmos',
         area: 'AyL',
         hsSemanales: '6',
@@ -146,6 +163,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 16,
         asignatura: 'Estrategias de persistencia',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -155,6 +173,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 17,
         asignatura: 'Laboratorio de sistemas operativos y redes',
         area: 'ASOyR',
         hsSemanales: '4',
@@ -167,8 +186,10 @@ export const MateriasLicenciaturaInformatica = [
   },
   {
     bloque: 'Tercer Año',
+    id: 3,
     materias: [
       {
+        id: 18,
         asignatura: 'Análisis matemático',
         area: 'CB',
         hsSemanales: '6',
@@ -178,6 +199,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 19,
         asignatura: 'Lógica y programación',
         area: 'TC',
         hsSemanales: '6',
@@ -187,6 +209,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 20,
         asignatura: 'Elementos de ingeniería de software',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -196,6 +219,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 21,
         asignatura: 'Seguridad de la información',
         area: 'ASOyR',
         hsSemanales: '4',
@@ -205,6 +229,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 22,
         asignatura: 'Materia UNAHUR',
         area: 'Gral',
         hsSemanales: '2',
@@ -214,6 +239,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 23,
         asignatura: 'Inglés II',
         area: 'Gral',
         hsSemanales: '2',
@@ -223,6 +249,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 24,
         asignatura: 'Matemática III',
         area: 'CB',
         hsSemanales: '4',
@@ -232,6 +259,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 25,
         asignatura: 'Programación concurrente',
         area: 'AyL',
         hsSemanales: '4',
@@ -241,6 +269,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 26,
         asignatura: 'Ingeniería de requerimientos',
         area: 'ISBDySI',
         hsSemanales: '4',
@@ -250,6 +279,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 27,
         asignatura: 'Desarrollo de aplicaciones',
         area: 'ISBDySI',
         hsSemanales: '6',
@@ -267,8 +297,10 @@ export const MateriasLicenciaturaInformatica = [
   },
   {
     bloque: 'Cuarto Año',
+    id: 4,
     materias: [
       {
+        id: 28,
         asignatura: 'Probabilidad y Estadística',
         area: 'CB',
         hsSemanales: '6',
@@ -278,6 +310,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 29,
         asignatura: 'Gestión de Proyectos de Desarrollo de Software',
         area: 'ISBDySI',
         hsSemanales: '4',
@@ -287,6 +320,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 30,
         asignatura: 'Lenguajes Formales y Autómatas',
         area: 'TC',
         hsSemanales: '4',
@@ -296,6 +330,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 31,
         asignatura: 'Programación con Objetos III',
         area: 'AyL',
         hsSemanales: '4',
@@ -305,6 +340,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 32,
         asignatura: 'Materia UNAHUR II',
         area: 'Gral',
         hsSemanales: '2',
@@ -314,6 +350,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 33,
         asignatura: 'Práctica Profesional Supervisada',
         area: '',
         hsSemanales: '6',
@@ -329,6 +366,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 34,
         asignatura: 'Teoría de la Computación',
         area: 'TC',
         hsSemanales: '4',
@@ -338,6 +376,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 35,
         asignatura: 'Arquitectura de Software I',
         area: 'ISBDySI',
         hsSemanales: '4',
@@ -347,6 +386,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 36,
         asignatura: 'Sistemas Distribuidos y Tiempo Real',
         area: 'ASOyR',
         hsSemanales: '6',
@@ -359,8 +399,10 @@ export const MateriasLicenciaturaInformatica = [
   },
   {
     bloque: 'Quinto Año',
+    id: 5,
     materias: [
       {
+        id: 37,
         asignatura: 'Tesina de Licenciatura',
         area: 'Otros',
         hsSemanales: '5',
@@ -370,6 +412,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 38,
         asignatura: 'Complementaria',
         area: 'Compl',
         hsSemanales: '4',
@@ -384,6 +427,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 39,
         asignatura: 'Características de Lenguajes de Programación',
         area: 'AyL',
         hsSemanales: '4',
@@ -393,6 +437,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 40,
         asignatura: 'Arquitectura de Software II',
         area: 'ISBDySI',
         hsSemanales: '4',
@@ -402,6 +447,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 41,
         asignatura: 'Arquitectura de Computadoras',
         area: 'ASOyR',
         hsSemanales: '4',
@@ -411,6 +457,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 42,
         asignatura: 'Complementaria II',
         area: 'Compl',
         hsSemanales: '4',
@@ -425,6 +472,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 43,
         asignatura: 'Parseo y generación de código',
         area: 'AyL',
         hsSemanales: '4',
@@ -434,6 +482,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 44,
         asignatura: 'Ejercicio Profesional',
         area: 'APyS',
         hsSemanales: '3',
@@ -443,6 +492,7 @@ export const MateriasLicenciaturaInformatica = [
         calificacion: '',
       },
       {
+        id: 45,
         asignatura: 'Tecnología y Sociedad',
         area: 'APyS',
         hsSemanales: '3',

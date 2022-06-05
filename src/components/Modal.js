@@ -1,9 +1,9 @@
-import { Modal, Button, Row, Col, Container } from 'react-bootstrap';
+import { Modal, Button, Row, Col } from 'react-bootstrap';
 import Buttons from './Buttons';
 import styled from 'styled-components';
 
 const ModalEdit = (props) => {
-  const { current, changeCourseState, setCurrent, ...other } = props;
+  const { current, changeState, setCurrent, ...other } = props;
   return (
     <Modal
       {...other}
@@ -52,7 +52,7 @@ const ModalEdit = (props) => {
         <Button
           onClick={() => {
             props.onHide();
-            changeCourseState(
+            changeState(
               current.asignatura,
               current.estado,
               current.calificacion

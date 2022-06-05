@@ -1,15 +1,12 @@
-import { Button, Badge, Container, ProgressBar, Stack } from 'react-bootstrap';
+import { Badge, Container, ProgressBar, Stack } from 'react-bootstrap';
 import {
   getPercentageOfCourses,
   getAverageQualification,
 } from '../Utils/StatisticFunctions';
 import styled from 'styled-components';
-import { useNavigate, useLocation } from 'react-router-dom';
 
-const Statistic = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const data = location?.state;
+const Statistic = (props) => {
+  const { data } = props;
 
   const approved = getPercentageOfCourses(data, 'Aprobada');
   const inProgress = getPercentageOfCourses(data, 'Cursando');
@@ -18,7 +15,7 @@ const Statistic = () => {
 
   return (
     <StatisticContainer>
-      <h5>Porcentaje</h5>
+      <h2>Estadísticas</h2>
       <Container>
         <StyledStack direction="horizontal" gap={1}>
           <Badge bg="secondary">Pendientes</Badge>
@@ -51,7 +48,6 @@ const Statistic = () => {
         <h5>Promedio</h5>
         <h5>{average}/10</h5>
       </AverageContainer>
-      <Button onClick={() => navigate(-1)}>Volver</Button>
     </StatisticContainer>
   );
 };

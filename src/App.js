@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import Career from './components/Career';
 import Statistic from './components/Statistic';
 import { useEffect, useState } from 'react';
 import {
@@ -9,7 +8,7 @@ import {
   LoadDegree,
   LoadCareerName,
 } from './Utils/Functions';
-import Degree from './components/Degree';
+import Main from './components/Main';
 import { MateriasLicenciaturaInformatica } from './Utils/Licenciatura';
 
 function App() {
@@ -98,10 +97,10 @@ function App() {
       <Route
         path="tecnicatura"
         element={
-          <Career
-            career={career}
+          <Main
+            state={career}
             careerName={careerName}
-            changeCourseState={(course, state, note) =>
+            changeState={(course, state, note) =>
               changeCourseStateCareer(course, state, note)
             }
           />
@@ -110,10 +109,10 @@ function App() {
       <Route
         path="licenciatura"
         element={
-          <Degree
-            degree={degree}
+          <Main
+            state={degree}
             careerName={'Licenciatura en Informática'}
-            changeCourseStateDegree={(course, state, note) =>
+            changeState={(course, state, note) =>
               changeCourseStateDegree(course, state, note)
             }
           />

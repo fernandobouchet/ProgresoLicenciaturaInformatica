@@ -16,7 +16,7 @@ const Statistic = (props) => {
 
   return (
     <StatisticContainer>
-      <PorcentageContainer>
+      <Container>
         <ProgressBar>
           <ProgressBar
             variant="success"
@@ -34,7 +34,7 @@ const Statistic = (props) => {
             label={`${pending}%`}
           />
         </ProgressBar>
-      </PorcentageContainer>
+      </Container>
       <Container>
         <Container>
           <StyledStack direction="horizontal" gap={1}>
@@ -54,21 +54,18 @@ const Statistic = (props) => {
             </StyledSpan>
           </StyledStack>
         </Container>
-        <AverageContainer>
-          <h6>Promedio</h6>
-          <h6>{average}/10</h6>
-        </AverageContainer>
+        {average >= 1 && (
+          <AverageContainer>
+            <h6>Promedio</h6>
+            <h6>{average}/10</h6>
+          </AverageContainer>
+        )}
       </Container>
     </StatisticContainer>
   );
 };
 
 export default Statistic;
-
-const PorcentageContainer = styled(Container)`
-  max-width: 500px;
-  margin: 1rem auto;
-`;
 
 const StatisticContainer = styled(Container)`
   padding: 1rem 0;
@@ -86,5 +83,5 @@ const StyledStack = styled(Stack)`
 `;
 
 const StyledSpan = styled.span`
-  font-size: 1rem;
+  font-size: 0.8rem;
 `;

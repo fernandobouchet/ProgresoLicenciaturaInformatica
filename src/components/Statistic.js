@@ -2,6 +2,7 @@ import { Badge, Container, ProgressBar, Stack } from 'react-bootstrap';
 import {
   getPercentageOfCourses,
   getAverageQualification,
+  getAmountOfCourses,
 } from '../Utils/StatisticFunctions';
 import styled from 'styled-components';
 
@@ -15,39 +16,49 @@ const Statistic = (props) => {
 
   return (
     <StatisticContainer>
-      <h2>Estadísticas</h2>
+      <PorcentageContainer>
+        <ProgressBar>
+          <ProgressBar
+            variant="success"
+            now={approved}
+            label={`${approved}%`}
+          />
+          <ProgressBar
+            variant="primary"
+            now={inProgress}
+            label={`${inProgress}%`}
+          />
+          <ProgressBar
+            variant="secondary"
+            now={pending}
+            label={`${pending}%`}
+          />
+        </ProgressBar>
+      </PorcentageContainer>
       <Container>
-        <StyledStack direction="horizontal" gap={1}>
-          <Badge bg="secondary">Pendientes</Badge>
-          <Badge bg="primary">Cursando</Badge>
-          <Badge bg="success">Aprobadas</Badge>
-        </StyledStack>
+        <Container>
+          <StyledStack direction="horizontal" gap={1}>
+            <Badge bg="success"> </Badge>
+            <StyledSpan>
+              Aprobadas {getAmountOfCourses(data, 'Aprobada')}
+            </StyledSpan>
+            <Badge bg="primary"> </Badge>
+            <StyledSpan>
+              Cursando {getAmountOfCourses(data, 'Cursando')}
+            </StyledSpan>
+            <Badge pill bg="secondary">
+              {' '}
+            </Badge>
+            <StyledSpan>
+              Pendientes {getAmountOfCourses(data, 'Pendiente')}
+            </StyledSpan>
+          </StyledStack>
+        </Container>
+        <AverageContainer>
+          <h6>Promedio</h6>
+          <h6>{average}/10</h6>
+        </AverageContainer>
       </Container>
-      <Container>
-        <PorcentageContainer>
-          <ProgressBar>
-            <ProgressBar
-              variant="secondary"
-              now={pending}
-              label={`${pending}%`}
-            />{' '}
-            <ProgressBar
-              variant="primary"
-              now={inProgress}
-              label={`${inProgress}%`}
-            />
-            <ProgressBar
-              variant="success"
-              now={approved}
-              label={`${approved}%`}
-            />
-          </ProgressBar>
-        </PorcentageContainer>
-      </Container>
-      <AverageContainer>
-        <h5>Promedio</h5>
-        <h5>{average}/10</h5>
-      </AverageContainer>
     </StatisticContainer>
   );
 };
@@ -62,6 +73,7 @@ const PorcentageContainer = styled(Container)`
 const StatisticContainer = styled(Container)`
   padding: 1rem 0;
   max-width: 800px;
+  border-top: 1px solid black;
 `;
 
 const AverageContainer = styled(Container)`
@@ -71,4 +83,8 @@ const AverageContainer = styled(Container)`
 const StyledStack = styled(Stack)`
   justify-content: center;
   margin: 1rem 0;
+`;
+
+const StyledSpan = styled.span`
+  font-size: 1rem;
 `;

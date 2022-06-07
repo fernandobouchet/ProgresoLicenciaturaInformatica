@@ -12,11 +12,13 @@ const Main = (props) => {
       <TitleContainer>
         <h1>{careerName}</h1>
       </TitleContainer>
-      <AccordionMain Materias={state} changeState={changeState} />
       <Statistic data={state} />
-      <Link to={'/'}>
-        <Button>Volver</Button>
-      </Link>
+      <AccordionMain Materias={state} changeState={changeState} />
+      <LinkContainer>
+        <Link to={'/'}>
+          <Button>Volver</Button>
+        </Link>
+      </LinkContainer>
     </Container>
   );
 };
@@ -25,4 +27,8 @@ export default Main;
 
 const TitleContainer = styled(Container)`
   margin: 2rem 0;
+`;
+
+const LinkContainer = styled(Container)`
+  margin-top: 5rem;
 `;

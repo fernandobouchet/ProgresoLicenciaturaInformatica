@@ -7,6 +7,21 @@ const getCourses = (career) => {
   return coursesArray;
 };
 
+const getCoursesSimplified = (career) => {
+  var coursesArray = [];
+  const ca = career?.map((careers) => careers.materias);
+  ca?.forEach((element) => {
+    element.forEach((course) =>
+      coursesArray.push({
+        asignatura: course.asignatura,
+        estado: course.estado,
+        calificacion: course.calificacion,
+      })
+    );
+  });
+  return coursesArray;
+};
+
 const getCoursesSize = (coursesArray) => {
   return getCourses(coursesArray).length;
 };
@@ -22,6 +37,12 @@ const getPercentageOfCourses = (coursesArray, state) => {
   return Math.round(porcentaje);
 };
 
+const getAmountOfCourses = (coursesArray, state) => {
+  return `(${getStateCourses(coursesArray, state).length}/${getCoursesSize(
+    coursesArray
+  )})`;
+};
+
 const getAverageQualification = (coursesArray, state) => {
   var aproved = getStateCourses(coursesArray, state);
   var qualifications = aproved.reduce(
@@ -33,4 +54,9 @@ const getAverageQualification = (coursesArray, state) => {
   return result;
 };
 
-export { getPercentageOfCourses, getAverageQualification };
+export {
+  getPercentageOfCourses,
+  getAverageQualification,
+  getCoursesSimplified,
+  getAmountOfCourses,
+};

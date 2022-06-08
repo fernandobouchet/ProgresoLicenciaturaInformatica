@@ -22,6 +22,7 @@ const AccordionMain = (props) => {
               <Accordion.Header>{materia.bloque}</Accordion.Header>
               <Accordion.Body as={Table} striped hover borderless>
                 <TableInfo
+                  materias={Materias}
                   materia={materia}
                   setCurrent={setCurrent}
                   setModalShow={setModalShow}
@@ -37,6 +38,7 @@ const AccordionMain = (props) => {
         current={current}
         changeState={changeState}
         setCurrent={setCurrent}
+        materias={Materias}
       />
     </>
   );

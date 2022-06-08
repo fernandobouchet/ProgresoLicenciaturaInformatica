@@ -54,7 +54,7 @@ const Statistic = (props) => {
             </StyledSpan>
           </StyledStack>
         </Container>
-        {average >= 1 && (
+        {average > 0 && (
           <AverageContainer>
             <h6>Promedio</h6>
             <h6>{average}/10</h6>

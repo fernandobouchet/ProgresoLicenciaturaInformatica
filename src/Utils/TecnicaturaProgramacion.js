@@ -71,7 +71,7 @@ export const MateriasTecnicaturaProgramacion = [
       },
       {
         id: 7,
-        asignatura: 'Matemática para Informática II',
+        asignatura: 'Matemática para informática II',
         area: 'CB',
         hsSemanales: '4',
         cargaHorariaTotal: '64',

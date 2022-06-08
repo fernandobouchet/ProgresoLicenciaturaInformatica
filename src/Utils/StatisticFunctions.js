@@ -54,9 +54,28 @@ const getAverageQualification = (coursesArray, state) => {
   return result;
 };
 
+function findPendingCorrelatives(career, course) {
+  const pendingCorrelativesArray = [];
+  if (Object.keys(course).length !== 0) {
+    const correlativesArray = course.correlativas;
+    career.map((bloque) =>
+      bloque.materias.forEach((materia) => {
+        if (
+          materia.estado !== 'Aprobada' &&
+          correlativesArray.includes(materia.asignatura)
+        ) {
+          pendingCorrelativesArray.push(materia.asignatura);
+        }
+      })
+    );
+  }
+  return pendingCorrelativesArray;
+}
+
 export {
   getPercentageOfCourses,
   getAverageQualification,
   getCoursesSimplified,
   getAmountOfCourses,
+  findPendingCorrelatives,
 };

@@ -61,6 +61,7 @@ function findPendingCorrelatives(career, course) {
     career.map((bloque) =>
       bloque.materias.forEach((materia) => {
         if (
+          materia.estado !== 'Regularizada' &&
           materia.estado !== 'Aprobada' &&
           correlativesArray.includes(materia.asignatura)
         ) {

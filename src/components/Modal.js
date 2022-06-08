@@ -31,7 +31,7 @@ const ModalEdit = (props) => {
                 </p>
               ) : (
                 <p>
-                  La siguiente materia correlativa estan pendiente de ser
+                  La siguiente materia correlativa esta pendiente de ser
                   aprobada/regularizada:
                 </p>
               )}

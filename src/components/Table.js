@@ -32,6 +32,8 @@ const TableInfo = (props) => {
                       ? 'primary'
                       : mat.estado === 'Aprobada'
                       ? 'success'
+                      : mat.estado === 'Regularizada'
+                      ? 'warning'
                       : 'secondary'
                   }
                 >

@@ -22,6 +22,8 @@ const Buttons = (props) => {
             ? 'primary'
             : state === 'Aprobada'
             ? 'success'
+            : state === 'Regularizada'
+            ? 'warning'
             : 'secondary'
         }
       >
@@ -38,6 +40,13 @@ const Buttons = (props) => {
           onClick={(e) => handleClick(e)}
         >
           Cursando
+        </Dropdown.Item>
+        <Dropdown.Item
+          as="button"
+          value={'Regularizada'}
+          onClick={(e) => handleClick(e)}
+        >
+          Regularizada
         </Dropdown.Item>
         <Dropdown.Item
           as="button"

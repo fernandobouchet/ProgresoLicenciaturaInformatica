@@ -1,4 +1,4 @@
-import { Badge, Container, ProgressBar, Stack } from 'react-bootstrap';
+import { Container, ProgressBar } from 'react-bootstrap';
 import {
   getPercentageOfCourses,
   getAverageQualification,
@@ -12,6 +12,7 @@ const Statistic = (props) => {
   const approved = getPercentageOfCourses(data, 'Aprobada');
   const inProgress = getPercentageOfCourses(data, 'Cursando');
   const pending = getPercentageOfCourses(data, 'Pendiente');
+  const regular = getPercentageOfCourses(data, 'Regularizada');
   const average = getAverageQualification(data, 'Aprobada');
 
   return (
@@ -23,6 +24,7 @@ const Statistic = (props) => {
             now={approved}
             label={`${approved}%`}
           />
+          <ProgressBar variant="warning" now={regular} label={`${regular}%`} />
           <ProgressBar
             variant="primary"
             now={inProgress}
@@ -36,24 +38,32 @@ const Statistic = (props) => {
         </ProgressBar>
       </Container>
       <Container>
-        <Container>
-          <StyledStack direction="horizontal" gap={1}>
-            <Badge bg="success"> </Badge>
+        <StyledContainer>
+          <StyledDiv>
+            <Circle bg="success" />
             <StyledSpan>
               Aprobadas {getAmountOfCourses(data, 'Aprobada')}
             </StyledSpan>
-            <Badge bg="primary"> </Badge>
+          </StyledDiv>
+          <StyledDiv>
+            <Circle bg="warning" />
+            <StyledSpan>
+              Regularizadas {getAmountOfCourses(data, 'Regularizada')}
+            </StyledSpan>
+          </StyledDiv>
+          <StyledDiv>
+            <Circle bg="primary" />
             <StyledSpan>
               Cursando {getAmountOfCourses(data, 'Cursando')}
             </StyledSpan>
-            <Badge pill bg="secondary">
-              {' '}
-            </Badge>
+          </StyledDiv>
+          <StyledDiv>
+            <Circle bg="secondary" />
             <StyledSpan>
               Pendientes {getAmountOfCourses(data, 'Pendiente')}
             </StyledSpan>
-          </StyledStack>
-        </Container>
+          </StyledDiv>
+        </StyledContainer>
         {average > 0 && (
           <AverageContainer>
             <h6>Promedio</h6>
@@ -77,11 +87,36 @@ const AverageContainer = styled(Container)`
   padding: 1rem 0;
 `;
 
-const StyledStack = styled(Stack)`
-  justify-content: center;
-  margin: 1rem 0;
+const StyledContainer = styled(Container)`
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5rem 0;
+  padding: 0;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const StyledSpan = styled.span`
   font-size: 0.8rem;
+`;
+
+const Circle = styled.div`
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgba(var(--bs-${(props) => props.bg}-rgb));
+`;
+
+const StyledDiv = styled(Container)`
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  padding: 0;
+  margin: auto;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
 `;

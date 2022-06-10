@@ -1,31 +1,133 @@
-const SaveData = (career, degree, careerName) => {
-  localStorage.setItem('career', JSON.stringify(career));
-  localStorage.setItem('degree', JSON.stringify(degree));
-  localStorage.setItem('careerName', JSON.stringify(careerName));
+const getCourses = (career) => {
+  var coursesArray = [];
+  const ca = career.map((careers) => careers.materias);
+  ca.forEach((element) => {
+    element.forEach((course) => coursesArray.push(course));
+  });
+  return coursesArray;
 };
 
-const LoadCareers = () => {
-  let savedCareerList = localStorage.getItem('career');
-  if (savedCareerList !== null) {
-    let result = JSON.parse(savedCareerList);
-    return result;
-  } else return null;
+const getCoursesSimplified = (career) => {
+  var coursesArray = [];
+  const ca = career?.map((careers) => careers.materias);
+  ca?.forEach((element) => {
+    element.forEach((course) =>
+      coursesArray.push({
+        asignatura: course.asignatura,
+        estado: course.estado,
+        calificacion: course.calificacion,
+      })
+    );
+  });
+  return coursesArray;
 };
 
-const LoadDegree = () => {
-  let savedDegreeList = localStorage.getItem('degree');
-  if (savedDegreeList !== null) {
-    let result = JSON.parse(savedDegreeList);
-    return result;
-  } else return '';
+const getCoursesSize = (coursesArray) => {
+  return getCourses(coursesArray).length;
 };
 
-const LoadCareerName = () => {
-  let savedCareerName = localStorage.getItem('careerName');
-  if (savedCareerName !== null) {
-    let result = JSON.parse(savedCareerName);
-    return result;
-  } else return '';
+const getStateCourses = (coursesArray, state) => {
+  return getCourses(coursesArray).filter((course) => course.estado === state);
 };
 
-export { SaveData, LoadCareers, LoadDegree, LoadCareerName };
+const getPercentageOfCourses = (coursesArray, state) => {
+  var porcentaje =
+    (getStateCourses(coursesArray, state).length * 100) /
+    getCoursesSize(coursesArray);
+  return Math.round(porcentaje);
+};
+
+const getAmountOfCourses = (coursesArray, state) => {
+  return `(${getStateCourses(coursesArray, state).length}/${getCoursesSize(
+    coursesArray
+  )})`;
+};
+
+const getAverageQualification = (coursesArray, state) => {
+  var aproved = getStateCourses(coursesArray, state);
+  var qualifications = aproved.reduce(
+    (x, mat) => x + Number(mat.calificacion),
+    0
+  );
+  var result =
+    aproved.length >= 1 ? (qualifications / aproved.length).toFixed(1) : 0;
+  return result;
+};
+
+function findPendingCorrelatives(career, course) {
+  const pendingCorrelativesArray = [];
+  if (Object.keys(course).length !== 0) {
+    const correlativesArray = course.correlativas;
+    career.map((bloque) =>
+      bloque.materias.forEach((materia) => {
+        if (
+          materia.estado !== 'Regularizada' &&
+          materia.estado !== 'Aprobada' &&
+          correlativesArray.includes(materia.asignatura)
+        ) {
+          pendingCorrelativesArray.push(materia.asignatura);
+        }
+      })
+    );
+  }
+  return pendingCorrelativesArray;
+}
+
+function itsEquivalent(course) {
+  return (
+    course === 'Matemática para informática II' ||
+    course === 'Programación estructurada' ||
+    course === 'Organización de computadoras II'
+  );
+}
+
+function renameEquivalent(course) {
+  var courseName = course;
+  if (course === 'Matemática para informática II') {
+    courseName = 'Matemática I';
+  } else if (course === 'Programación estructurada') {
+    courseName = 'Introducción a la programación';
+  } else if (course === 'Organización de computadoras II') {
+    courseName = 'Organización de computadoras';
+  }
+  return courseName;
+}
+
+function findFirstEquivalent(course) {
+  var courseName = course;
+  if (course === 'Matemática para informática II') {
+    courseName = 'Matemática para informática I';
+  } else if (course === 'Programación estructurada') {
+    courseName = 'Introducción a lógica y problemas computacionales';
+  } else if (course === 'Organización de computadoras II') {
+    courseName = 'Organización de computadoras I';
+  }
+  return courseName;
+}
+
+function findCourseNote(career, course) {
+  const note = getCoursesSimplified(career).find(
+    (materia) => materia.asignatura === course
+  );
+  return parseInt(note.calificacion);
+}
+
+function equivalentAverageNote(career, course, note) {
+  var courseNote = parseInt(note);
+  var courseEquivalentNote = findCourseNote(
+    career,
+    findFirstEquivalent(course)
+  );
+  return (courseNote + courseEquivalentNote) / 2;
+}
+
+export {
+  getPercentageOfCourses,
+  getAverageQualification,
+  getCoursesSimplified,
+  getAmountOfCourses,
+  findPendingCorrelatives,
+  renameEquivalent,
+  equivalentAverageNote,
+  itsEquivalent,
+};

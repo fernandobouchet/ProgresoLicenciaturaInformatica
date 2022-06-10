@@ -1,7 +1,7 @@
 import { Modal, Button, Row, Col } from 'react-bootstrap';
 import Buttons from './Buttons';
 import styled from 'styled-components';
-import { findPendingCorrelatives } from '../Utils/StatisticFunctions';
+import { findPendingCorrelatives } from '../Utils/Functions';
 
 const ModalEdit = (props) => {
   const { materias, current, changeState, setCurrent, ...other } = props;

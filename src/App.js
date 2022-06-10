@@ -7,9 +7,14 @@ import {
   LoadCareers,
   LoadDegree,
   LoadCareerName,
-} from './Utils/Functions';
+} from './Utils/SaveDataFunctions';
 import Main from './components/Main';
 import { MateriasLicenciaturaInformatica } from './Utils/Licenciatura';
+import {
+  renameEquivalent,
+  equivalentAverageNote,
+  itsEquivalent,
+} from './Utils/Functions';
 
 function App() {
   const [career, setCareer] = useState(LoadCareers());
@@ -77,7 +82,15 @@ function App() {
         };
       })
     );
-    changeCourseStateDegree(courses, state, note);
+    if (itsEquivalent(courses)) {
+      changeCourseStateDegree(
+        renameEquivalent(courses),
+        state,
+        equivalentAverageNote(career, courses, note)
+      );
+    } else {
+      changeCourseStateDegree(courses, state, note);
+    }
   }
 
   return (

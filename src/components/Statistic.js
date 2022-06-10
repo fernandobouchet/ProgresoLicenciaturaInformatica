@@ -3,7 +3,7 @@ import {
   getPercentageOfCourses,
   getAverageQualification,
   getAmountOfCourses,
-} from '../Utils/StatisticFunctions';
+} from '../Utils/Functions';
 import styled from 'styled-components';
 
 const Statistic = (props) => {

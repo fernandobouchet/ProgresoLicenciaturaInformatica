@@ -154,6 +154,7 @@ export const MateriasTecnicaturaProgramacion = [
       {
         id: 14,
         asignatura: 'Electiva I',
+        opciones: ['Programación funcional', 'Programación concurrente'],
         area: 'Elec',
         hsSemanales: '4',
         cargaHorariaTotal: '64',
@@ -164,6 +165,11 @@ export const MateriasTecnicaturaProgramacion = [
       {
         id: 15,
         asignatura: 'Electiva II',
+        opciones: [
+          'Organización de computadoras II',
+          'Redes de computadoras',
+          'Sistemas operativos',
+        ],
         area: 'Elec',
         hsSemanales: '4',
         cargaHorariaTotal: '64',

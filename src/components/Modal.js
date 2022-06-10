@@ -1,7 +1,14 @@
-import { Modal, Button, Row, Col } from 'react-bootstrap';
+import {
+  Modal,
+  Button,
+  Row,
+  Col,
+  DropdownButton,
+  Dropdown,
+} from 'react-bootstrap';
 import Buttons from './Buttons';
 import styled from 'styled-components';
-import { findPendingCorrelatives } from '../Utils/Functions';
+import { findPendingCorrelatives, itsOptative } from '../Utils/Functions';
 
 const ModalEdit = (props) => {
   const { materias, current, changeState, setCurrent, ...other } = props;
@@ -53,6 +60,37 @@ const ModalEdit = (props) => {
             </Modal.Title>
           </ModalHeader>
           <ModalBody>
+            {itsOptative(current) && (
+              <StyledRow md={2}>
+                <StyledCol>
+                  <StyledH5>Asignatura:</StyledH5>
+                </StyledCol>
+                <StyledCol>
+                  <DropdownButton
+                    id="dropdown-item-button"
+                    title={current.asignatura}
+                  >
+                    {current.opciones.map((mat, index) => {
+                      return (
+                        <Dropdown.Item
+                          as="button"
+                          value={mat}
+                          key={index}
+                          onClick={(e) => {
+                            setCurrent((prevState) => ({
+                              ...prevState,
+                              asignatura: e.target.value,
+                            }));
+                          }}
+                        >
+                          {mat}
+                        </Dropdown.Item>
+                      );
+                    })}
+                  </DropdownButton>
+                </StyledCol>
+              </StyledRow>
+            )}
             <StyledRow md={2}>
               <StyledCol>
                 <StyledH5>Estado:</StyledH5>
@@ -98,7 +136,8 @@ const ModalEdit = (props) => {
                 changeState(
                   current.asignatura,
                   current.estado,
-                  current.calificacion
+                  current.calificacion,
+                  current.id
                 );
               }}
             >

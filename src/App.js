@@ -64,15 +64,16 @@ function App() {
     );
   }
 
-  function changeCourseStateCareer(courses, state, note) {
+  function changeCourseStateCareer(courses, state, note, id) {
     setCareer(
       career.map((bloque) => {
         return {
           ...bloque,
           materias: bloque.materias.map((course) => {
-            if (course.asignatura === courses) {
+            if (course.asignatura === courses || course.id === id) {
               return {
                 ...course,
+                asignatura: courses,
                 estado: state,
                 calificacion: note,
               };
@@ -113,8 +114,8 @@ function App() {
           <Main
             state={career}
             careerName={careerName}
-            changeState={(course, state, note) =>
-              changeCourseStateCareer(course, state, note)
+            changeState={(course, state, note, id) =>
+              changeCourseStateCareer(course, state, note, id)
             }
           />
         }

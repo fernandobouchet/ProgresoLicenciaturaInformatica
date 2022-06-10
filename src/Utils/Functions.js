@@ -121,6 +121,10 @@ function equivalentAverageNote(career, course, note) {
   return (courseNote + courseEquivalentNote) / 2;
 }
 
+function itsOptative(course) {
+  return course.hasOwnProperty('opciones');
+}
+
 export {
   getPercentageOfCourses,
   getAverageQualification,
@@ -130,4 +134,5 @@ export {
   renameEquivalent,
   equivalentAverageNote,
   itsEquivalent,
+  itsOptative,
 };

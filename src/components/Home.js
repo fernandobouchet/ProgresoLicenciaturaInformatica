@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Main from './Main';
 
 const Home = (props) => {
-  const { changeCareer, career, careerName, changeState } = props;
+  const { changeCareer, career, careerName, changeState, theme } = props;
 
   return (
     <>
@@ -39,6 +39,7 @@ const Home = (props) => {
             state={career}
             careerName={careerName}
             changeState={changeState}
+            theme={theme}
           />
         )}
       </HomeContainer>

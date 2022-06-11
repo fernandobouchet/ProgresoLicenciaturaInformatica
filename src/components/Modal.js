@@ -16,7 +16,7 @@ const ModalEdit = (props) => {
   const CorrelativesPending = findPendingCorrelatives(materias, current);
 
   return (
-    <Modal
+    <StyledModal
       {...other}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
@@ -24,7 +24,7 @@ const ModalEdit = (props) => {
     >
       {CorrelativesPending.length >= 1 ? (
         <>
-          <ModalHeader closeButton>
+          <ModalHeader>
             <Modal.Title id="contained-modal-title-vcenter">
               {current.asignatura}
             </Modal.Title>
@@ -54,7 +54,7 @@ const ModalEdit = (props) => {
         </>
       ) : (
         <>
-          <ModalHeader closeButton>
+          <ModalHeader>
             <Modal.Title id="contained-modal-title-vcenter">
               {current.asignatura}
             </Modal.Title>
@@ -146,19 +146,26 @@ const ModalEdit = (props) => {
           </Modal.Footer>
         </>
       )}
-    </Modal>
+    </StyledModal>
   );
 };
 
 export default ModalEdit;
 
+const StyledModal = styled(Modal)`
+  .modal-content {
+    background: ${(props) => props.theme.background};
+  }
+  .modal-footer {
+    border-top: 1px solid ${(props) => props.theme.border};
+  }
+`;
+
 const ModalHeader = styled(Modal.Header)`
   .modal-title {
     margin: auto;
   }
-  .btn-close {
-    margin: 0;
-  }
+  border-bottom: 1px solid ${(props) => props.theme.border};
 `;
 
 const StyledRow = styled(Row)`

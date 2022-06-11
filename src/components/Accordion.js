@@ -7,7 +7,7 @@ import ModalEdit from './Modal';
 import TableInfo from './Table';
 
 const AccordionMain = (props) => {
-  const { Materias, changeState } = props;
+  const { Materias, changeState, theme } = props;
 
   const [modalShow, setModalShow] = useState(false);
 
@@ -20,7 +20,13 @@ const AccordionMain = (props) => {
           return (
             <Accordion.Item eventKey={materia.id} key={materia.id}>
               <Accordion.Header>{materia.bloque}</Accordion.Header>
-              <Accordion.Body as={Table} striped hover borderless>
+              <Accordion.Body
+                as={StyledTable}
+                striped
+                hover
+                borderless
+                variant={theme}
+              >
                 <TableInfo
                   materias={Materias}
                   materia={materia}
@@ -49,4 +55,18 @@ export default AccordionMain;
 const StyledAccordion = styled(Accordion)`
   max-width: 800px;
   margin: auto;
+
+  .accordion-item {
+    border: 1px solid ${(props) => props.theme.border};
+    background: inherit;
+  }
+
+  .accordion-button {
+    background: ${(props) => props.theme.background};
+    color: ${(props) => props.theme.text};
+  }
+`;
+
+const StyledTable = styled(Table)`
+  --bs-table-bg: ${(props) => props.theme.background};
 `;

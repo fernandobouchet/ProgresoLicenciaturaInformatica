@@ -125,6 +125,14 @@ function itsOptative(course) {
   return course.hasOwnProperty('opciones');
 }
 
+function courseHasChanged(course1, course2) {
+  return (
+    course1.asignatura === course2.asignatura &&
+    course1.estado === course2.estado &&
+    course1.calificacion === course2.calificacion
+  );
+}
+
 export {
   getPercentageOfCourses,
   getAverageQualification,
@@ -135,4 +143,5 @@ export {
   equivalentAverageNote,
   itsEquivalent,
   itsOptative,
+  courseHasChanged,
 };

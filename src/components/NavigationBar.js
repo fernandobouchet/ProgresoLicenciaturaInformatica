@@ -9,13 +9,13 @@ import ResetButton from './ResetButton';
 import { Link } from 'react-router-dom';
 
 const NavigationBar = (props) => {
-  const { resetData, career } = props;
+  const { resetData, career, changeTheme, theme } = props;
 
   const [modalShow, setModalShow] = useState(false);
 
   return (
     <>
-      <Navbar expand={'sm'} variant="light" bg="light" collapseOnSelect>
+      <Navbar expand={'sm'} variant={theme} collapseOnSelect>
         <Container fluid>
           <Navbar.Brand as={Link} to={'/'}>
             Inicio
@@ -39,15 +39,15 @@ const NavigationBar = (props) => {
                 <Nav.Link as={Link} to={'/licenciatura'} disabled={!career}>
                   Licenciatura
                 </Nav.Link>
-                <NavDropdown
+                <StyledNavDropdown
                   title="Opciones"
                   id={`offcanvasNavbarDropdown-expand-${'sm'}`}
                 >
                   <NavDropdown.Item href="#action3">
                     Iniciar sesión
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Modo oscuro
+                  <NavDropdown.Item onClick={changeTheme}>
+                    {theme === 'light' ? 'Modo oscuro' : 'Modo Claro'}
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item
@@ -56,7 +56,7 @@ const NavigationBar = (props) => {
                   >
                     Borrar Datos
                   </NavDropdown.Item>
-                </NavDropdown>
+                </StyledNavDropdown>
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
@@ -78,4 +78,17 @@ export default NavigationBar;
 const ResetButtonContainer = styled(Container)`
   position: absolute;
   top: 90%;
+`;
+
+const StyledNavDropdown = styled(NavDropdown)`
+  .dropdown-menu {
+    background: ${(props) => props.theme.background};
+    a {
+      color: ${(props) => props.theme.text};
+      &:hover {
+        background: transparent;
+        opacity: 0.5;
+      }
+    }
+  }
 `;

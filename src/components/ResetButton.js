@@ -1,12 +1,13 @@
 import { Modal, Button, Stack } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const ResetButton = (props) => {
   const { resetData, ...otherProps } = props;
 
   return (
     <>
-      <Modal
+      <StyledModal
         {...otherProps}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
@@ -37,9 +38,15 @@ const ResetButton = (props) => {
             <Button onClick={props.onHide}>Cancelar</Button>
           </Stack>
         </Modal.Body>
-      </Modal>
+      </StyledModal>
     </>
   );
 };
 
 export default ResetButton;
+
+const StyledModal = styled(Modal)`
+  .modal-content {
+    background: ${(props) => props.theme.background};
+  }
+`;

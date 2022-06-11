@@ -5,7 +5,7 @@ import Statistic from './Statistic';
 import Home from './Home';
 
 const Main = (props) => {
-  const { state, changeState, careerName } = props;
+  const { state, changeState, careerName, theme } = props;
 
   return (
     <>
@@ -15,7 +15,11 @@ const Main = (props) => {
             <h1>{careerName}</h1>
           </TitleContainer>
           <Statistic data={state} />
-          <AccordionMain Materias={state} changeState={changeState} />
+          <AccordionMain
+            Materias={state}
+            changeState={changeState}
+            theme={theme}
+          />
         </Container>
       ) : (
         <Home />

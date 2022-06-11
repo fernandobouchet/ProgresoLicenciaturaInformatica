@@ -24,7 +24,7 @@ const ModalEdit = (props) => {
     >
       {CorrelativesPending.length >= 1 ? (
         <>
-          <ModalHeader>
+          <ModalHeader closeButton>
             <Modal.Title id="contained-modal-title-vcenter">
               {current.asignatura}
             </Modal.Title>
@@ -54,14 +54,14 @@ const ModalEdit = (props) => {
         </>
       ) : (
         <>
-          <ModalHeader>
+          <ModalHeader closeButton>
             <Modal.Title id="contained-modal-title-vcenter">
               {current.asignatura}
             </Modal.Title>
           </ModalHeader>
           <ModalBody>
             {itsOptative(current) && (
-              <StyledRow md={2}>
+              <StyledRow md={2} xs={1}>
                 <StyledCol>
                   <StyledH5>Asignatura:</StyledH5>
                 </StyledCol>
@@ -158,6 +158,14 @@ const StyledModal = styled(Modal)`
   }
   .modal-footer {
     border-top: 1px solid ${(props) => props.theme.border};
+  }
+  .btn-close {
+    margin: 0;
+    ${(props) =>
+      props.theme.text !== 'black' &&
+      `background: transparent
+      url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27white%27%3e%3cpath d=%27M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z%27/%3e%3c/svg%3e")
+      center/1em auto no-repeat;`}
   }
 `;
 

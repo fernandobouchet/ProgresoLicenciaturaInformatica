@@ -18,47 +18,60 @@ const NavigationBar = (props) => {
       <Navbar expand={'sm'} variant={theme} collapseOnSelect>
         <Container fluid>
           <Navbar.Brand as={Link} to={'/'}>
-            Inicio
+            <img
+              alt=""
+              src="../assets/img/logo.png"
+              width="50"
+              height="39"
+              className="d-inline-block align-top"
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'sm'}`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${'sm'}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${'sm'}`}
             placement="end"
+            style={{
+              width: '60%',
+            }}
           >
-            <Offcanvas.Header closeButton>
+            <StyledOffcanvasHeader closeButton fill={' '}>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${'sm'}`}>
                 Menú
               </Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
+            </StyledOffcanvasHeader>
+            <StyledOffcanvasBody>
               <Nav className="justify-content-start flex-grow-1 pe-3">
-                <Nav.Link as={Link} to={'/'} disabled={!career}>
+                <Nav.Link as={Link} to={'/'} disabled={!career} href="#">
                   Tecnicatura
                 </Nav.Link>
-                <Nav.Link as={Link} to={'/licenciatura'} disabled={!career}>
+                <Nav.Link
+                  as={Link}
+                  to={'/licenciatura'}
+                  disabled={!career}
+                  href="#"
+                >
                   Licenciatura
                 </Nav.Link>
                 <StyledNavDropdown
                   title="Opciones"
                   id={`offcanvasNavbarDropdown-expand-${'sm'}`}
                 >
-                  <NavDropdown.Item href="#action3">
-                    Iniciar sesión
-                  </NavDropdown.Item>
-                  <NavDropdown.Item onClick={changeTheme}>
-                    {theme === 'light' ? 'Modo oscuro' : 'Modo Claro'}
+                  <NavDropdown.Item href="#">Iniciar sesión</NavDropdown.Item>
+                  <NavDropdown.Item onClick={changeTheme} href="#">
+                    {theme === 'light' ? 'Modo oscuro' : 'Modo claro'}
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item
                     onClick={() => setModalShow(true)}
                     disabled={!career}
+                    href="#"
                   >
                     Borrar Datos
                   </NavDropdown.Item>
                 </StyledNavDropdown>
               </Nav>
-            </Offcanvas.Body>
+            </StyledOffcanvasBody>
           </Navbar.Offcanvas>
         </Container>
       </Navbar>
@@ -83,12 +96,35 @@ const ResetButtonContainer = styled(Container)`
 const StyledNavDropdown = styled(NavDropdown)`
   .dropdown-menu {
     background: ${(props) => props.theme.background};
-    a {
+    .dropdown-item {
       color: ${(props) => props.theme.text};
       &:hover {
         background: transparent;
         opacity: 0.5;
       }
     }
+    .disabled {
+      color: #adb5bd;
+    }
+  }
+`;
+
+const StyledOffcanvasHeader = styled(Offcanvas.Header)`
+  background: ${(props) => props.theme.background};
+  color: ${(props) => props.theme.text};
+  .btn-close {
+    ${(props) =>
+      props.theme.text !== 'black' &&
+      `background: transparent
+        url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e")
+        center/1em auto no-repeat;`}
+  }
+`;
+
+const StyledOffcanvasBody = styled(Offcanvas.Body)`
+  background: ${(props) => props.theme.background};
+  color: ${(props) => props.theme.text};
+  a {
+    color: ${(props) => props.theme.text};
   }
 `;

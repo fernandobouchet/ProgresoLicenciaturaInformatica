@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import Statistic from './components/Statistic';
 import { useEffect, useState } from 'react';
 import {
   SaveData,
@@ -15,6 +14,7 @@ import {
   equivalentAverageNote,
   itsEquivalent,
 } from './Utils/Functions';
+import NavigationBar from './components/NavigationBar';
 
 function App() {
   const [career, setCareer] = useState(LoadCareers());
@@ -95,44 +95,36 @@ function App() {
   }
 
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <Home
-            changeCareer={(e, tecnicatura) => changeCareer(e, tecnicatura)}
-            resetData={() => resetData()}
-            career={career}
-            careerName={careerName}
-          />
-        }
-      />
-      <Route path="estadisticas" element={<Statistic />} />
-      <Route
-        path="tecnicatura"
-        element={
-          <Main
-            state={career}
-            careerName={careerName}
-            changeState={(course, state, note, id) =>
-              changeCourseStateCareer(course, state, note, id)
-            }
-          />
-        }
-      />
-      <Route
-        path="licenciatura"
-        element={
-          <Main
-            state={degree}
-            careerName={'Licenciatura en Informática'}
-            changeState={(course, state, note) =>
-              changeCourseStateDegree(course, state, note)
-            }
-          />
-        }
-      />
-    </Routes>
+    <>
+      <NavigationBar resetData={() => resetData()} career={career} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              changeCareer={(e, tecnicatura) => changeCareer(e, tecnicatura)}
+              career={career}
+              careerName={careerName}
+              changeState={(course, state, note, id) =>
+                changeCourseStateCareer(course, state, note, id)
+              }
+            />
+          }
+        />
+        <Route
+          path="licenciatura"
+          element={
+            <Main
+              state={degree}
+              careerName={'Licenciatura en Informática'}
+              changeState={(course, state, note) =>
+                changeCourseStateDegree(course, state, note)
+              }
+            />
+          }
+        />
+      </Routes>
+    </>
   );
 }
 

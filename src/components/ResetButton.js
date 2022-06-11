@@ -1,4 +1,5 @@
 import { Modal, Button, Stack } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const ResetButton = (props) => {
   const { resetData, ...otherProps } = props;
@@ -21,15 +22,18 @@ const ResetButton = (props) => {
             gap={2}
             style={{ justifyContent: 'center' }}
           >
-            <Button
-              variant="danger"
-              onClick={() => {
-                props.onHide();
-                resetData();
-              }}
-            >
-              Borrar Datos
-            </Button>
+            <Link to={'/'}>
+              <Button
+                variant="danger"
+                onClick={() => {
+                  props.onHide();
+                  resetData();
+                }}
+              >
+                Borrar Datos
+              </Button>{' '}
+            </Link>
+
             <Button onClick={props.onHide}>Cancelar</Button>
           </Stack>
         </Modal.Body>

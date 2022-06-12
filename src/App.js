@@ -1,12 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import { useEffect, useState } from 'react';
-import {
-  SaveData,
-  LoadCareers,
-  LoadDegree,
-  LoadCareerName,
-} from './Utils/SaveDataFunctions';
+import { useState } from 'react';
 import Main from './components/Main';
 import { MateriasLicenciaturaInformatica } from './Utils/Licenciatura';
 import {
@@ -22,15 +16,11 @@ import { lightTheme, darkTheme } from './components/theme/Themes';
 function App() {
   const [theme, setTheme] = useState('dark');
 
-  const [career, setCareer] = useState(LoadCareers());
+  const [career, setCareer] = useState(null);
 
-  const [careerName, setCareerName] = useState(LoadCareerName());
+  const [careerName, setCareerName] = useState(null);
 
-  const [degree, setDegree] = useState(LoadDegree());
-
-  useEffect(() => {
-    SaveData(career, degree, careerName);
-  }, [career, degree, careerName]);
+  const [degree, setDegree] = useState(MateriasLicenciaturaInformatica);
 
   function handleClick(e) {
     e.preventDefault();

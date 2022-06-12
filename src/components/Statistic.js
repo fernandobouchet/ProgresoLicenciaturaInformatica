@@ -72,7 +72,7 @@ const Statistic = (props) => {
 export default Statistic;
 
 const StatisticContainer = styled(Container)`
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   max-width: 800px;
   border-top: 1px solid black;
 `;

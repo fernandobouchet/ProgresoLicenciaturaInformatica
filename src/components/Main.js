@@ -31,5 +31,6 @@ const Main = (props) => {
 export default Main;
 
 const TitleContainer = styled(Container)`
-  margin: 2rem 0;
+  max-width: 95%;
+  margin: 1rem auto;
 `;

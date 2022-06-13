@@ -10,8 +10,9 @@ const Home = (props) => {
 
   return (
     <>
-      <HomeContainer>
-        {!career ? (
+      {' '}
+      {!career ? (
+        <HomeContainer>
           <Container>
             <SubTitle>Elegí la tecnicatura:</SubTitle>
             <StyledStack gap={2}>
@@ -34,15 +35,15 @@ const Home = (props) => {
               </Button>
             </StyledStack>
           </Container>
-        ) : (
-          <Main
-            state={career}
-            careerName={careerName}
-            changeState={changeState}
-            theme={theme}
-          />
-        )}
-      </HomeContainer>
+        </HomeContainer>
+      ) : (
+        <Main
+          state={career}
+          careerName={careerName}
+          changeState={changeState}
+          theme={theme}
+        />
+      )}
     </>
   );
 };

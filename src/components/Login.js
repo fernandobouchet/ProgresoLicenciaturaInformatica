@@ -1,5 +1,6 @@
-import { Container, Form, Button } from 'react-bootstrap';
+import { Container, Form, Button, Stack } from 'react-bootstrap';
 import { useState } from 'react';
+import styled from 'styled-components';
 import firebaseApp from '../credentials';
 import {
   getAuth,
@@ -28,45 +29,79 @@ const Login = () => {
   }
 
   return (
-    <Container>
-      <h1>{!registered ? 'Inicia Sesión' : 'Registrate'}</h1>
-      <Form onSubmit={(e) => handlerSubmit(e)}>
+    <StyledLoginContainer>
+      <StyledTitleContainer>
+        <h1>{!registered ? 'Inicia Sesión' : 'Registrate'}</h1>
+      </StyledTitleContainer>
+      <StyledForm onSubmit={(e) => handlerSubmit(e)}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Label>Correo</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Ingresa tu correo electrónico"
+          />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Label>Contraseña</Form.Label>
+          <Form.Control type="password" placeholder="Contraseña" />
         </Form.Group>
 
-        <Button variant="dark" type="submit">
-          {!registered ? 'Inicia sesión!' : 'Registrate!'}
-        </Button>
-      </Form>
+        <StyledSubmitButton variant="primary" type="submit">
+          {!registered ? 'Iniciar sesión' : 'Registrarme'}
+        </StyledSubmitButton>
+      </StyledForm>
 
-      <Container>
-        <Button
-          type="submit"
-          onClick={() => setRegistered(!registered)}
-          variant="secondary"
-        >
-          {registered
-            ? '¿Tienes cuenta? Inicia sesión!'
-            : '¿No tienes cuenta? Registrate!'}
-        </Button>
+      <StyledStackContainer>
+        <Stack gap={4}>
+          <Button
+            type="submit"
+            onClick={() => setRegistered(!registered)}
+            variant="secondary"
+          >
+            {registered
+              ? '¿Tienes cuenta? Inicia sesión!'
+              : '¿No tienes cuenta? Registrate!'}
+          </Button>
 
-        <Button
-          type="submit"
-          variant="primary"
-          onClick={() => signInWithRedirect(auth, googleProvider)}
-        >
-          Acceder con Google
-        </Button>
-      </Container>
-    </Container>
+          <Button
+            type="submit"
+            variant="primary"
+            onClick={() => signInWithRedirect(auth, googleProvider)}
+          >
+            Acceder con Google
+          </Button>
+        </Stack>
+      </StyledStackContainer>
+    </StyledLoginContainer>
   );
 };
 
 export default Login;
+
+const StyledLoginContainer = styled(Container)`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+`;
+
+const StyledForm = styled(Form)`
+  width: 17rem;
+`;
+
+const StyledStackContainer = styled(Container)`
+  width: 17rem;
+  padding: 0;
+`;
+
+const StyledSubmitButton = styled(Button)`
+  width: 17rem;
+  margin: 1rem auto;
+`;
+
+const StyledTitleContainer = styled(Container)`
+  margin: 1rem;
+`;

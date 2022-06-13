@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Main from './components/Main';
 import { MateriasLicenciaturaInformatica } from './Utils/Licenciatura';
 import {
@@ -12,18 +12,97 @@ import NavigationBar from './components/NavigationBar';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './components/theme/GlobalStyles';
 import { lightTheme, darkTheme } from './components/theme/Themes';
+import Login from './components/Login';
+import firebaseApp from './credentials';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  updateDoc,
+  deleteField,
+} from 'firebase/firestore';
+
+const auth = getAuth(firebaseApp);
+const firestore = getFirestore(firebaseApp);
 
 function App() {
+  const [user, setUser] = useState(null);
+
   const [theme, setTheme] = useState('dark');
 
   const [career, setCareer] = useState(null);
 
   const [careerName, setCareerName] = useState(null);
 
-  const [degree, setDegree] = useState(MateriasLicenciaturaInformatica);
+  const [degree, setDegree] = useState(null);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (userExist) => {
+      if (userExist) {
+        setUser(userExist);
+      } else {
+        setUser(null);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await getOrCreateDoc(user.email);
+        setCareer(data.data.choosenCareer);
+        setCareerName(data.data.careerName);
+        setDegree(data.data.choosenDegree);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    user !== null && fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user]);
+
+  useEffect(() => {
+    async function updateDatabase() {
+      try {
+        const docRef = doc(firestore, `users/${user.email}`);
+        updateDoc(docRef, {
+          data: {
+            careerName: careerName,
+            choosenCareer: [...career],
+            choosenDegree: [...degree],
+          },
+        });
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    user !== null && updateDatabase();
+  }, [careerName, degree, career, user]);
+
+  async function getOrCreateDoc(idDoc) {
+    const docRef = doc(firestore, `users/${idDoc}`);
+    const docPromise = await getDoc(docRef);
+
+    if (docPromise.exists()) {
+      const docInfo = docPromise.data();
+      return docInfo;
+    } else {
+      await setDoc(docRef, {
+        data: {
+          careerName: careerName,
+          choosenCareer: [...career],
+          choosenDegree: [...degree],
+        },
+      });
+      const docPromise = await getDoc(docRef);
+      const docInfo = docPromise.data();
+      return docInfo;
+    }
+  }
 
   function handleClick(e) {
-    e.preventDefault();
     setCareerName(e.target.innerText);
   }
 
@@ -33,10 +112,14 @@ function App() {
     setDegree(MateriasLicenciaturaInformatica);
   }
 
-  function resetData() {
+  async function resetData() {
+    const docRef = doc(firestore, `users/${user.email}`);
     setCareer(null);
     setCareerName('');
     setDegree(null);
+    await updateDoc(docRef, {
+      data: deleteField(),
+    });
   }
 
   function changeCourseStateDegree(courses, state, note) {
@@ -97,41 +180,51 @@ function App() {
     <>
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyles />
-        <NavigationBar
-          resetData={() => resetData()}
-          career={career}
-          changeTheme={() => changeTheme()}
-          theme={theme}
-        />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                changeCareer={(e, tecnicatura) => changeCareer(e, tecnicatura)}
-                career={career}
-                careerName={careerName}
-                changeState={(course, state, note, id) =>
-                  changeCourseStateCareer(course, state, note, id)
+        {!user ? (
+          <Login />
+        ) : (
+          <>
+            <NavigationBar
+              resetData={() => resetData()}
+              career={career}
+              changeTheme={() => changeTheme()}
+              theme={theme}
+              user={user}
+            />
+
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Home
+                    changeCareer={(e, tecnicatura) =>
+                      changeCareer(e, tecnicatura)
+                    }
+                    career={career}
+                    careerName={careerName}
+                    changeState={(course, state, note, id) =>
+                      changeCourseStateCareer(course, state, note, id)
+                    }
+                    theme={theme}
+                  />
                 }
-                theme={theme}
               />
-            }
-          />
-          <Route
-            path="licenciatura"
-            element={
-              <Main
-                state={degree}
-                careerName={'Licenciatura en Informática'}
-                changeState={(course, state, note) =>
-                  changeCourseStateDegree(course, state, note)
+              <Route
+                path="licenciatura"
+                element={
+                  <Main
+                    state={degree}
+                    careerName={'Licenciatura en Informática'}
+                    changeState={(course, state, note) =>
+                      changeCourseStateDegree(course, state, note)
+                    }
+                    theme={theme}
+                  />
                 }
-                theme={theme}
               />
-            }
-          />
-        </Routes>
+            </Routes>
+          </>
+        )}
       </ThemeProvider>
     </>
   );

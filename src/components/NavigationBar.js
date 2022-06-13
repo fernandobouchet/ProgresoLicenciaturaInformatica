@@ -7,9 +7,13 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import ResetButton from './ResetButton';
 import { Link } from 'react-router-dom';
+import firebaseApp from '../credentials';
+import { getAuth, signOut } from 'firebase/auth';
+
+const auth = getAuth(firebaseApp);
 
 const NavigationBar = (props) => {
-  const { resetData, career, changeTheme, theme } = props;
+  const { resetData, career, changeTheme, theme, user } = props;
 
   const [modalShow, setModalShow] = useState(false);
 
@@ -54,7 +58,16 @@ const NavigationBar = (props) => {
                   title="Opciones"
                   id={`offcanvasNavbarDropdown-expand-${'sm'}`}
                 >
-                  <NavDropdown.Item href="#">Iniciar sesión</NavDropdown.Item>
+                  {user && (
+                    <NavDropdown.Item
+                      as={Link}
+                      to={'/'}
+                      href="#"
+                      onClick={() => signOut(auth)}
+                    >
+                      Cerrar sesión
+                    </NavDropdown.Item>
+                  )}
                   <NavDropdown.Item onClick={changeTheme} href="#">
                     {theme === 'light' ? 'Modo oscuro' : 'Modo claro'}
                   </NavDropdown.Item>

@@ -23,6 +23,7 @@ import {
   updateDoc,
   deleteField,
 } from 'firebase/firestore';
+import Loader from './components/Loader';
 
 const auth = getAuth(firebaseApp);
 const firestore = getFirestore(firebaseApp);
@@ -38,6 +39,8 @@ function App() {
 
   const [degree, setDegree] = useState(null);
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     onAuthStateChanged(auth, (userExist) => {
       if (userExist) {
@@ -49,15 +52,18 @@ function App() {
   }, []);
 
   useEffect(() => {
+    setLoading(true);
     async function fetchData() {
       try {
         const data = await getOrCreateDoc(user.email);
         setCareer(data.data.choosenCareer);
         setCareerName(data.data.careerName);
         setDegree(data.data.choosenDegree);
+        setLoading(false);
       } catch (err) {
         console.log(err);
       }
+      setLoading(false);
     }
     user !== null && fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -182,6 +188,8 @@ function App() {
         <GlobalStyles />
         {!user ? (
           <Login />
+        ) : loading ? (
+          <Loader />
         ) : (
           <>
             <NavigationBar
@@ -191,7 +199,6 @@ function App() {
               theme={theme}
               user={user}
             />
-
             <Routes>
               <Route
                 path="/"

@@ -10,7 +10,6 @@ const Home = (props) => {
 
   return (
     <>
-      {' '}
       {!career ? (
         <HomeContainer>
           <Container>

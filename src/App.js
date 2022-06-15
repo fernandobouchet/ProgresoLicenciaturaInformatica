@@ -42,14 +42,16 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     onAuthStateChanged(auth, (userExist) => {
       if (userExist) {
         setUser(userExist);
       } else {
         setUser(null);
+        setLoading(false);
       }
     });
-  }, []);
+  }, [user]);
 
   useEffect(() => {
     setLoading(true);
@@ -186,7 +188,7 @@ function App() {
     <>
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyles />
-        {!user ? (
+        {!user && !loading ? (
           <Login />
         ) : loading ? (
           <Loader />

@@ -54,6 +54,14 @@ const NavigationBar = (props) => {
                 >
                   Licenciatura
                 </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to={'/estadisticas'}
+                  disabled={!career}
+                  href="#"
+                >
+                  Estadísticas
+                </Nav.Link>
                 <StyledNavDropdown
                   title="Opciones"
                   id={`offcanvasNavbarDropdown-expand-${'sm'}`}

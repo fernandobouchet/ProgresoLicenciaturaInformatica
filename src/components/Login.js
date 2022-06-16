@@ -31,7 +31,8 @@ const Login = () => {
   return (
     <StyledLoginContainer>
       <StyledTitleContainer>
-        <h1>{!registered ? 'Inicia Sesión' : 'Registrate'}</h1>
+        <h1>Bienvenido! </h1>
+        <h2>{!registered ? 'Inicia Sesión' : 'Registrate'}</h2>
       </StyledTitleContainer>
       <StyledForm onSubmit={(e) => handlerSubmit(e)}>
         <Form.Group className="mb-3" controlId="formBasicEmail">

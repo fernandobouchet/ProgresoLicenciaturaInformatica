@@ -1,8 +1,9 @@
 import AccordionMain from './Accordion';
 import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
-import Statistic from './Statistic';
+import CoursesProgressBar from './ProgressBar';
 import Home from './Home';
+import ProgressBarInfo from './ProgressBarInfo';
 
 const Main = (props) => {
   const { state, changeState, careerName, theme } = props;
@@ -14,7 +15,8 @@ const Main = (props) => {
           <TitleContainer>
             <h1>{careerName}</h1>
           </TitleContainer>
-          <Statistic data={state} />
+          <CoursesProgressBar data={state} />
+          <ProgressBarInfo />
           <AccordionMain
             Materias={state}
             changeState={changeState}

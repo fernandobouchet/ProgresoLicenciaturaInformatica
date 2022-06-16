@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { useState } from 'react';
 import ResetButton from './ResetButton';
 import { Link } from 'react-router-dom';
@@ -13,13 +13,16 @@ import { getAuth, signOut } from 'firebase/auth';
 const auth = getAuth(firebaseApp);
 
 const NavigationBar = (props) => {
-  const { resetData, career, changeTheme, theme, user } = props;
+  const { resetData, career, changeTheme, user } = props;
 
   const [modalShow, setModalShow] = useState(false);
 
+  const theme = useTheme();
+  console.log(theme);
+
   return (
     <>
-      <StyledNavBar expand={'sm'} variant={theme} collapseOnSelect>
+      <StyledNavBar expand={'sm'} variant={theme.variant} collapseOnSelect>
         <Container fluid>
           <Navbar.Brand as={Link} to={'/'}>
             <img

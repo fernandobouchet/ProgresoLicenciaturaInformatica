@@ -40,12 +40,18 @@ const Login = () => {
           <Form.Control
             type="email"
             placeholder="Ingresa tu correo electrónico"
+            required
           />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Contraseña</Form.Label>
-          <Form.Control type="password" placeholder="Contraseña" />
+          <Form.Control
+            type="password"
+            placeholder="Contraseña"
+            required
+            minLength={6}
+          />
         </Form.Group>
 
         <StyledSubmitButton variant="primary" type="submit">

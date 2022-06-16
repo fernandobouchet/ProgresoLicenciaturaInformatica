@@ -3,6 +3,7 @@ export const lightTheme = {
   background: 'white',
   invertText: 'white',
   border: '#dee2e6',
+  variant: 'light',
 };
 
 export const darkTheme = {
@@ -10,4 +11,5 @@ export const darkTheme = {
   text: 'white',
   background: '#222222',
   border: '#3b3b3b',
+  variant: 'dark',
 };

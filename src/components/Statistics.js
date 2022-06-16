@@ -15,7 +15,7 @@ const Statistics = (props) => {
 
   return (
     <>
-      <Container>
+      <StatisticContainer>
         <h1>Estadísticas</h1>
         <SingleStatisticContainer>
           <h2>{careerName}</h2>
@@ -93,12 +93,16 @@ const Statistics = (props) => {
             )}
           </Container>
         </SingleStatisticContainer>
-      </Container>
+      </StatisticContainer>
     </>
   );
 };
 
 export default Statistics;
+
+const StatisticContainer = styled(Container)`
+  max-width: 800px;
+`;
 
 const AverageContainer = styled(Container)`
   padding: 1rem 0;

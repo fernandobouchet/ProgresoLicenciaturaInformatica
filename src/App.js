@@ -25,6 +25,7 @@ import {
   deleteField,
 } from 'firebase/firestore';
 import Loader from './components/Loader';
+import { useDarkMode } from './components/DarkMode';
 
 const auth = getAuth(firebaseApp);
 const firestore = getFirestore(firebaseApp);
@@ -32,7 +33,7 @@ const firestore = getFirestore(firebaseApp);
 function App() {
   const [user, setUser] = useState(null);
 
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useDarkMode();
 
   const [career, setCareer] = useState(null);
 
@@ -181,13 +182,11 @@ function App() {
     }
   }
 
-  function changeTheme() {
-    theme === 'light' ? setTheme('dark') : setTheme('light');
-  }
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
   return (
     <>
-      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <ThemeProvider theme={themeMode}>
         <GlobalStyles />
         {!user && !loading ? (
           <Login />
@@ -198,7 +197,7 @@ function App() {
             <NavigationBar
               resetData={() => resetData()}
               career={career}
-              changeTheme={() => changeTheme()}
+              changeTheme={() => setTheme()}
               theme={theme}
               user={user}
             />

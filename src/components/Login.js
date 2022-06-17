@@ -1,6 +1,7 @@
-import { Container, Form, Button, Stack } from 'react-bootstrap';
+import { Container, Form, Button } from 'react-bootstrap';
 import { useState } from 'react';
 import styled from 'styled-components';
+import { FcGoogle } from 'react-icons/fc';
 import firebaseApp from '../credentials';
 import {
   getAuth,
@@ -31,8 +32,14 @@ const Login = () => {
   return (
     <StyledLoginContainer>
       <StyledTitleContainer>
-        <h1>Bienvenido! </h1>
-        <h2>{!registered ? 'Inicia Sesión' : 'Registrate'}</h2>
+        <img
+          alt=""
+          src="../assets/img/logo.png"
+          width="70"
+          height="59"
+          className="d-inline-block align-top"
+        />
+        <h1>Progreso de Licenciatura Informática</h1>
       </StyledTitleContainer>
       <StyledForm onSubmit={(e) => handlerSubmit(e)}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -57,28 +64,32 @@ const Login = () => {
         <StyledSubmitButton variant="primary" type="submit">
           {!registered ? 'Iniciar sesión' : 'Registrarme'}
         </StyledSubmitButton>
-      </StyledForm>
-
-      <StyledStackContainer>
-        <Stack gap={4}>
-          <Button
+        <p>
+          {registered ? '¿Tenes cuenta? ' : '¿No tenes cuenta? '}
+          <StyledButtonA
             type="submit"
-            onClick={() => setRegistered(!registered)}
+            onClick={(e) => {
+              e.preventDefault();
+              registered ? setRegistered(false) : setRegistered(true);
+            }}
             variant="secondary"
           >
-            {registered
-              ? '¿Tienes cuenta? Inicia sesión!'
-              : '¿No tienes cuenta? Registrate!'}
-          </Button>
-
-          <Button
-            type="submit"
-            variant="primary"
-            onClick={() => signInWithRedirect(auth, googleProvider)}
-          >
-            Acceder con Google
-          </Button>
-        </Stack>
+            {registered ? 'Inicia sesión!' : 'Registrate!'}
+          </StyledButtonA>
+        </p>
+      </StyledForm>
+      <DivC>
+        <StyledSpan>Ó</StyledSpan>
+      </DivC>
+      <StyledStackContainer>
+        <GoogleButton
+          type="submit"
+          variant="light"
+          onClick={() => signInWithRedirect(auth, googleProvider)}
+        >
+          <FcGoogle style={{ margin: '0 0.5rem' }} />
+          Acceder con Google
+        </GoogleButton>
       </StyledStackContainer>
     </StyledLoginContainer>
   );
@@ -110,5 +121,80 @@ const StyledSubmitButton = styled(Button)`
 `;
 
 const StyledTitleContainer = styled(Container)`
-  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 1rem 0;
+`;
+
+const StyledButtonA = styled(Button)`
+  background-color: inherit;
+  border: none;
+  color: #0d6efd;
+  text-decoration: underline;
+  box-shadow: none !important;
+  padding: 0;
+
+  &:hover {
+    background-color: inherit;
+    border: none;
+    color: ${(props) => props.theme.text};
+  }
+  &:focus {
+    background-color: inherit;
+    border: none;
+    color: #0d6efd;
+  }
+  &::selection {
+    background-color: inherit;
+    border: none;
+    color: #0d6efd;
+  }
+`;
+
+const GoogleButton = styled(Button)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17rem;
+  border-color: ${(props) => props.theme.border};
+  margin-top: 1rem;
+
+  &:hover {
+    border-color: ${(props) => props.theme.border};
+    background-color: #ced4da;
+  }
+`;
+
+const DivC = styled.div`
+  width: 17rem;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+  padding: 24px 0 0;
+  padding: var(--spacing-3) 0 0 0;
+  &::before {
+    content: '';
+    border-bottom: 1px solid #c2c8d0;
+    flex: 1 0 auto;
+    height: 50%;
+    margin: 0;
+  }
+  &::after {
+    content: '';
+    border-bottom: 1px solid #c2c8d0;
+    flex: 1 0 auto;
+    height: 50%;
+    margin: 0;
+  }
+`;
+
+const StyledSpan = styled.span`
+  text-align: center;
+  flex: 0.2 0 auto;
+  margin: 0;
 `;

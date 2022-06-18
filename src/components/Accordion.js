@@ -74,4 +74,5 @@ const StyledAccordion = styled(Accordion)`
 
 const StyledTable = styled(Table)`
   --bs-table-bg: ${(props) => props.theme.background};
+  --bs-table-striped-bg: ${(props) => props.theme.stripped};
 `;

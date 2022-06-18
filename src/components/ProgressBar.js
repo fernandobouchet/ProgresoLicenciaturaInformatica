@@ -11,26 +11,16 @@ const CoursesProgressBar = (props) => {
 
   return (
     <StatisticContainer>
-      <Container>
-        <ProgressBar>
-          <ProgressBar
-            variant="success"
-            now={approved}
-            label={`${approved}%`}
-          />
-          <ProgressBar variant="warning" now={regular} label={`${regular}%`} />
-          <ProgressBar
-            variant="primary"
-            now={inProgress}
-            label={`${inProgress}%`}
-          />
-          <ProgressBar
-            variant="secondary"
-            now={pending}
-            label={`${pending}%`}
-          />
-        </ProgressBar>
-      </Container>
+      <ProgressBar>
+        <ProgressBar variant="success" now={approved} label={`${approved}%`} />
+        <ProgressBar variant="warning" now={regular} label={`${regular}%`} />
+        <ProgressBar
+          variant="primary"
+          now={inProgress}
+          label={`${inProgress}%`}
+        />
+        <ProgressBar variant="secondary" now={pending} label={`${pending}%`} />
+      </ProgressBar>
     </StatisticContainer>
   );
 };
@@ -38,7 +28,6 @@ const CoursesProgressBar = (props) => {
 export default CoursesProgressBar;
 
 const StatisticContainer = styled(Container)`
-  padding: 1.5rem 0 1rem 0;
+  padding: 1rem 0;
   max-width: 800px;
-  border-top: 1px solid black;
 `;

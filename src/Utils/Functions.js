@@ -38,9 +38,7 @@ const getPercentageOfCourses = (coursesArray, state) => {
 };
 
 const getAmountOfCourses = (coursesArray, state) => {
-  return `(${getStateCourses(coursesArray, state).length}/${getCoursesSize(
-    coursesArray
-  )})`;
+  return getStateCourses(coursesArray, state).length;
 };
 
 const getAverageQualification = (coursesArray, state) => {

@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import { useState, useEffect } from 'react';
 import Main from './components/Main';
-import Statistics from './components/Statistics';
 import { MateriasLicenciaturaInformatica } from './Utils/Licenciatura';
 import {
   renameEquivalent,
@@ -228,16 +227,6 @@ function App() {
                       changeCourseStateDegree(course, state, note)
                     }
                     theme={theme}
-                  />
-                }
-              />
-              <Route
-                path="estadisticas"
-                element={
-                  <Statistics
-                    careerName={careerName}
-                    career={career}
-                    degree={degree}
                   />
                 }
               />

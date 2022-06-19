@@ -21,7 +21,7 @@ import {
   getDoc,
   setDoc,
   updateDoc,
-  deleteField,
+  deleteDoc,
 } from 'firebase/firestore';
 import Loader from './components/Loader';
 import { useDarkMode } from './components/DarkMode';
@@ -55,14 +55,12 @@ function App() {
   }, [user]);
 
   useEffect(() => {
-    setLoading(true);
     async function fetchData() {
       try {
         const data = await getOrCreateDoc(user.email);
         setCareer(data.data.choosenCareer);
         setCareerName(data.data.careerName);
         setDegree(data.data.choosenDegree);
-        setLoading(false);
       } catch (err) {
         console.log(err);
       }
@@ -70,13 +68,13 @@ function App() {
     }
     user !== null && fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user]);
+  }, [user, careerName]);
 
   useEffect(() => {
     async function updateDatabase() {
       try {
         const docRef = doc(firestore, `users/${user.email}`);
-        updateDoc(docRef, {
+        await updateDoc(docRef, {
           data: {
             careerName: careerName,
             choosenCareer: [...career],
@@ -88,7 +86,8 @@ function App() {
       }
     }
     user !== null && updateDatabase();
-  }, [careerName, degree, career, user]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [degree, career]);
 
   async function getOrCreateDoc(idDoc) {
     const docRef = doc(firestore, `users/${idDoc}`);
@@ -121,14 +120,12 @@ function App() {
     setDegree(MateriasLicenciaturaInformatica);
   }
 
-  async function resetData() {
+  function resetData() {
     const docRef = doc(firestore, `users/${user.email}`);
     setCareer(null);
-    setCareerName('');
+    setCareerName(null);
     setDegree(null);
-    await updateDoc(docRef, {
-      data: deleteField(),
-    });
+    deleteDoc(docRef);
   }
 
   function changeCourseStateDegree(courses, state, note) {

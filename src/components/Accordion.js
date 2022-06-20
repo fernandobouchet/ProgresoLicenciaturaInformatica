@@ -53,7 +53,7 @@ const AccordionMain = (props) => {
 export default AccordionMain;
 
 const StyledAccordion = styled(Accordion)`
-  margin: 1rem auto 3rem auto;
+  margin: 0.5rem auto 1rem auto;
   .accordion-item {
     border: 1px solid ${(props) => props.theme.border};
     background: inherit;

@@ -60,7 +60,10 @@ const StatisticContainer = styled(Container)`
 `;
 
 const AverageContainer = styled(Container)`
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+  h6 {
+    margin: 0;
+  }
 `;
 
 const StyledContainer = styled(Container)`

@@ -13,5 +13,5 @@ export const darkTheme = {
   background: '#222222',
   border: '#3b3b3b',
   variant: 'dark',
-  stripped: '#202020',
+  stripped: '#2d2d2d',
 };

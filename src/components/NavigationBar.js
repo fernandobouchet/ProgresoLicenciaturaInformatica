@@ -25,8 +25,8 @@ const NavigationBar = (props) => {
             <img
               alt=""
               src="../assets/img/logo.png"
-              width="50"
-              height="39"
+              width="45"
+              height="auto"
               className="d-inline-block align-top"
             />
           </Navbar.Brand>
@@ -50,7 +50,7 @@ const NavigationBar = (props) => {
                   as={Link}
                   to={'/licenciatura'}
                   disabled={!career}
-                  href="#"
+                  href="#licenciatura"
                 >
                   Licenciatura
                 </Nav.Link>

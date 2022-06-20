@@ -56,7 +56,6 @@ const Statistics = (props) => {
 export default Statistics;
 
 const StatisticContainer = styled(Container)`
-  max-width: 800px;
   padding: 0;
 `;
 

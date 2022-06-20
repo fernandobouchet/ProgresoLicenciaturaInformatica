@@ -29,5 +29,4 @@ export default CoursesProgressBar;
 
 const StatisticContainer = styled(Container)`
   padding: 0.5rem 0;
-  max-width: 800px;
 `;

@@ -36,7 +36,7 @@ const Login = () => {
           alt=""
           src="../assets/img/logo.png"
           width="70"
-          height="59"
+          height="auto"
           className="d-inline-block align-top"
         />
         <h1>Progreso de Licenciatura Informática</h1>

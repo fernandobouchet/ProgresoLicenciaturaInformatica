@@ -10,7 +10,7 @@ const Main = (props) => {
   return (
     <>
       {state ? (
-        <Container>
+        <MainContainer>
           <TitleContainer>
             <h1>{careerName}</h1>
           </TitleContainer>
@@ -19,8 +19,9 @@ const Main = (props) => {
             Materias={state}
             changeState={changeState}
             theme={theme}
+            careerName={careerName}
           />
-        </Container>
+        </MainContainer>
       ) : (
         <Home />
       )}
@@ -30,7 +31,13 @@ const Main = (props) => {
 
 export default Main;
 
-const TitleContainer = styled(Container)`
+const TitleContainer = styled.div`
   max-width: 95%;
   margin: 1rem auto;
+`;
+
+const MainContainer = styled(Container)`
+  @media (min-width: 1024px) {
+    max-width: 900px;
+  }
 `;

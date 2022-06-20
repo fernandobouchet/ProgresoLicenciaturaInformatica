@@ -28,6 +28,6 @@ const CoursesProgressBar = (props) => {
 export default CoursesProgressBar;
 
 const StatisticContainer = styled(Container)`
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   max-width: 800px;
 `;

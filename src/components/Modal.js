@@ -61,7 +61,7 @@ const ModalEdit = (props) => {
           </ModalHeader>
           <ModalBody>
             {itsOptative(current) && (
-              <StyledRow md={2} xs={1}>
+              <StyledRow lg={2} xs={1}>
                 <StyledCol>
                   <StyledH5>Asignatura:</StyledH5>
                 </StyledCol>

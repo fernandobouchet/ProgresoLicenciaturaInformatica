@@ -12,14 +12,30 @@ const CoursesProgressBar = (props) => {
   return (
     <StatisticContainer>
       <ProgressBar>
-        <ProgressBar variant="success" now={approved} label={`${approved}%`} />
-        <ProgressBar variant="warning" now={regular} label={`${regular}%`} />
+        <ProgressBar
+          variant="success"
+          now={approved}
+          label={`${approved}%`}
+          key={1}
+        />
+        <ProgressBar
+          variant="warning"
+          now={regular}
+          label={`${regular}%`}
+          key={2}
+        />
         <ProgressBar
           variant="primary"
           now={inProgress}
           label={`${inProgress}%`}
+          key={3}
         />
-        <ProgressBar variant="secondary" now={pending} label={`${pending}%`} />
+        <ProgressBar
+          variant="secondary"
+          now={pending}
+          label={`${pending}%`}
+          key={4}
+        />
       </ProgressBar>
     </StatisticContainer>
   );

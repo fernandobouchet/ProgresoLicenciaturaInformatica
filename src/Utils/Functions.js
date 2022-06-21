@@ -75,7 +75,7 @@ const getPercentageOfCourses = (coursesArray, state) => {
   let porcentaje =
     (getStateCourses(coursesArray, state).length * 100) /
     getCoursesSize(coursesArray);
-  return Math.round(porcentaje);
+  return Math.round(porcentaje * 10) / 10;
 };
 
 const getAmountOfCourses = (coursesArray, state) => {

@@ -7,6 +7,9 @@ import {
   renameEquivalent,
   equivalentAverageNote,
   itsEquivalent,
+  getCoursesSimplified,
+  updateFullCourses,
+  getCareer,
 } from './Utils/Functions';
 import NavigationBar from './components/NavigationBar';
 import { ThemeProvider } from 'styled-components';
@@ -38,7 +41,7 @@ function App() {
 
   const [careerName, setCareerName] = useState(null);
 
-  const [degree, setDegree] = useState(null);
+  const [degree, setDegree] = useState(MateriasLicenciaturaInformatica);
 
   const [loading, setLoading] = useState(true);
 
@@ -57,10 +60,15 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await getOrCreateDoc(user.email);
-        setCareer(data.data.choosenCareer);
-        setCareerName(data.data.careerName);
-        setDegree(data.data.choosenDegree);
+        const result = await getOrCreateDoc(user.email);
+        setCareerName(result.data.careerName);
+        setCareer(
+          updateFullCourses(
+            getCareer(result.data.careerName),
+            result.data.choosenCareer
+          )
+        );
+        setDegree(updateFullCourses(degree, result.data.choosenDegree));
       } catch (err) {
         console.log(err);
       }
@@ -77,8 +85,8 @@ function App() {
         await updateDoc(docRef, {
           data: {
             careerName: careerName,
-            choosenCareer: [...career],
-            choosenDegree: [...degree],
+            choosenCareer: getCoursesSimplified(career),
+            choosenDegree: getCoursesSimplified(degree),
           },
         });
       } catch (err) {
@@ -100,8 +108,8 @@ function App() {
       await setDoc(docRef, {
         data: {
           careerName: careerName,
-          choosenCareer: [...career],
-          choosenDegree: [...degree],
+          choosenCareer: getCoursesSimplified(career),
+          choosenDegree: getCoursesSimplified(degree),
         },
       });
       const docPromise = await getDoc(docRef);
@@ -117,7 +125,6 @@ function App() {
   function changeCareer(e, tecnicatura) {
     handleClick(e);
     setCareer(tecnicatura);
-    setDegree(MateriasLicenciaturaInformatica);
   }
 
   function resetData() {

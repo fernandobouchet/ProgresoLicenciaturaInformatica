@@ -1,5 +1,9 @@
+import { MateriasTecnicaturaInformatica } from './TecnicaturaInformatica';
+import { MateriasTecnicaturaProgramacion } from './TecnicaturaProgramacion';
+import { MateriasTecnicaturaRedes } from './TecnicaturaRedes';
+
 const getCourses = (career) => {
-  var coursesArray = [];
+  let coursesArray = [];
   const ca = career.map((careers) => careers.materias);
   ca.forEach((element) => {
     element.forEach((course) => coursesArray.push(course));
@@ -8,7 +12,7 @@ const getCourses = (career) => {
 };
 
 const getCoursesSimplified = (career) => {
-  var coursesArray = [];
+  let coursesArray = [];
   const ca = career?.map((careers) => careers.materias);
   ca?.forEach((element) => {
     element.forEach((course) =>
@@ -22,6 +26,43 @@ const getCoursesSimplified = (career) => {
   return coursesArray;
 };
 
+const updateFullCourses = (career, firebaseData) => {
+  return career?.map((bloque) => {
+    return {
+      ...bloque,
+      materias: bloque.materias.map((courses) => {
+        const savedCourse = firebaseData.find(
+          (course) => course.asignatura === courses.asignatura
+        );
+        if (
+          savedCourse.estado !== courses.estado ||
+          savedCourse.calificacion !== courses.calificacion
+        ) {
+          return {
+            ...courses,
+            estado: savedCourse.estado,
+            calificacion: savedCourse.calificacion,
+          };
+        }
+        return courses;
+      }),
+    };
+  });
+};
+
+const getCareer = (careerName) => {
+  if (careerName !== null) {
+    if (careerName === 'Tecnicatura en Programación') {
+      return MateriasTecnicaturaProgramacion;
+    } else if (careerName === 'Tecnicatura en Redes y Operaciones') {
+      return MateriasTecnicaturaRedes;
+    } else {
+      return MateriasTecnicaturaInformatica;
+    }
+  }
+  return;
+};
+
 const getCoursesSize = (coursesArray) => {
   return getCourses(coursesArray).length;
 };
@@ -31,7 +72,7 @@ const getStateCourses = (coursesArray, state) => {
 };
 
 const getPercentageOfCourses = (coursesArray, state) => {
-  var porcentaje =
+  let porcentaje =
     (getStateCourses(coursesArray, state).length * 100) /
     getCoursesSize(coursesArray);
   return Math.round(porcentaje);
@@ -42,12 +83,12 @@ const getAmountOfCourses = (coursesArray, state) => {
 };
 
 const getAverageQualification = (coursesArray, state) => {
-  var aproved = getStateCourses(coursesArray, state);
-  var qualifications = aproved.reduce(
+  let aproved = getStateCourses(coursesArray, state);
+  let qualifications = aproved.reduce(
     (x, mat) => x + Number(mat.calificacion),
     0
   );
-  var result =
+  let result =
     aproved.length >= 1 ? (qualifications / aproved.length).toFixed(1) : 0;
   return result;
 };
@@ -80,7 +121,7 @@ function itsEquivalent(course) {
 }
 
 function renameEquivalent(course) {
-  var courseName = course;
+  let courseName = course;
   if (course === 'Matemática para informática II') {
     courseName = 'Matemática I';
   } else if (course === 'Programación estructurada') {
@@ -92,7 +133,7 @@ function renameEquivalent(course) {
 }
 
 function findFirstEquivalent(course) {
-  var courseName = course;
+  let courseName = course;
   if (course === 'Matemática para informática II') {
     courseName = 'Matemática para informática I';
   } else if (course === 'Programación estructurada') {
@@ -111,8 +152,8 @@ function findCourseNote(career, course) {
 }
 
 function equivalentAverageNote(career, course, note) {
-  var courseNote = parseInt(note);
-  var courseEquivalentNote = findCourseNote(
+  let courseNote = parseInt(note);
+  let courseEquivalentNote = findCourseNote(
     career,
     findFirstEquivalent(course)
   );
@@ -121,14 +162,6 @@ function equivalentAverageNote(career, course, note) {
 
 function itsOptative(course) {
   return course.hasOwnProperty('opciones');
-}
-
-function courseHasChanged(course1, course2) {
-  return (
-    course1.asignatura === course2.asignatura &&
-    course1.estado === course2.estado &&
-    course1.calificacion === course2.calificacion
-  );
 }
 
 export {
@@ -141,5 +174,6 @@ export {
   equivalentAverageNote,
   itsEquivalent,
   itsOptative,
-  courseHasChanged,
+  updateFullCourses,
+  getCareer,
 };

@@ -61,10 +61,20 @@ function App() {
     async function fetchData() {
       try {
         const result = await getOrCreateDoc(user.email);
-        setCareerName(result.data.careerName);
-        const choosenCareer = await getCareer(result.data.careerName);
-        setCareer(updateFullCourses(choosenCareer, result.data.choosenCareer));
-        setDegree(updateFullCourses(degree, result.data.choosenDegree));
+        if (result.data.careerName !== null) {
+          const getFetchedCareer = getCareer(result.data.careerName);
+          const fetchedCareer = updateFullCourses(
+            getFetchedCareer,
+            result.data.choosenCareer
+          );
+          const fetchedDegree = updateFullCourses(
+            degree,
+            result.data.choosenDegree
+          );
+          setCareerName(result.data.careerName);
+          setCareer(fetchedCareer);
+          setDegree(fetchedDegree);
+        }
       } catch (err) {
         console.log(err);
       }
@@ -89,7 +99,7 @@ function App() {
         console.log(err);
       }
     }
-    user !== null && updateDatabase();
+    user !== null && careerName !== null && updateDatabase();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [degree, career]);
 

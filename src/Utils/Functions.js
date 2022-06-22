@@ -17,6 +17,7 @@ const getCoursesSimplified = (career) => {
   ca?.forEach((element) => {
     element.forEach((course) =>
       coursesArray.push({
+        id: course.id,
         asignatura: course.asignatura,
         estado: course.estado,
         calificacion: course.calificacion,
@@ -27,19 +28,21 @@ const getCoursesSimplified = (career) => {
 };
 
 const updateFullCourses = (career, firebaseData) => {
-  return career?.map((bloque) => {
+  return career.map((bloque) => {
     return {
       ...bloque,
       materias: bloque.materias.map((courses) => {
-        const savedCourse = firebaseData?.find(
-          (course) => course.asignatura === courses.asignatura
+        const savedCourse = firebaseData.find(
+          (course) => course.id === courses.id
         );
         if (
-          savedCourse?.estado !== courses?.estado ||
-          savedCourse?.calificacion !== courses.calificacion
+          savedCourse.estado !== courses.estado ||
+          savedCourse.calificacion !== courses.calificacion ||
+          savedCourse.asignatura !== courses.asignatura
         ) {
           return {
             ...courses,
+            asignatura: savedCourse.asignatura,
             estado: savedCourse.estado,
             calificacion: savedCourse.calificacion,
           };
@@ -50,7 +53,7 @@ const updateFullCourses = (career, firebaseData) => {
   });
 };
 
-const getCareer = async (careerName) => {
+const getCareer = (careerName) => {
   if (careerName === 'Tecnicatura en Programación') {
     return MateriasTecnicaturaProgramacion;
   } else if (careerName === 'Tecnicatura en Redes y Operaciones') {

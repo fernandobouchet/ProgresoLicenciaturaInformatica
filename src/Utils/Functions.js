@@ -31,12 +31,12 @@ const updateFullCourses = (career, firebaseData) => {
     return {
       ...bloque,
       materias: bloque.materias.map((courses) => {
-        const savedCourse = firebaseData.find(
+        const savedCourse = firebaseData?.find(
           (course) => course.asignatura === courses.asignatura
         );
         if (
-          savedCourse.estado !== courses.estado ||
-          savedCourse.calificacion !== courses.calificacion
+          savedCourse?.estado !== courses?.estado ||
+          savedCourse?.calificacion !== courses.calificacion
         ) {
           return {
             ...courses,
@@ -50,17 +50,14 @@ const updateFullCourses = (career, firebaseData) => {
   });
 };
 
-const getCareer = (careerName) => {
-  if (careerName !== null) {
-    if (careerName === 'Tecnicatura en Programación') {
-      return MateriasTecnicaturaProgramacion;
-    } else if (careerName === 'Tecnicatura en Redes y Operaciones') {
-      return MateriasTecnicaturaRedes;
-    } else {
-      return MateriasTecnicaturaInformatica;
-    }
+const getCareer = async (careerName) => {
+  if (careerName === 'Tecnicatura en Programación') {
+    return MateriasTecnicaturaProgramacion;
+  } else if (careerName === 'Tecnicatura en Redes y Operaciones') {
+    return MateriasTecnicaturaRedes;
+  } else {
+    return MateriasTecnicaturaInformatica;
   }
-  return;
 };
 
 const getCoursesSize = (coursesArray) => {

@@ -62,12 +62,8 @@ function App() {
       try {
         const result = await getOrCreateDoc(user.email);
         setCareerName(result.data.careerName);
-        setCareer(
-          updateFullCourses(
-            getCareer(result.data.careerName),
-            result.data.choosenCareer
-          )
-        );
+        const choosenCareer = await getCareer(result.data.careerName);
+        setCareer(updateFullCourses(choosenCareer, result.data.choosenCareer));
         setDegree(updateFullCourses(degree, result.data.choosenDegree));
       } catch (err) {
         console.log(err);
@@ -131,7 +127,6 @@ function App() {
     const docRef = doc(firestore, `users/${user.email}`);
     setCareer(null);
     setCareerName(null);
-    setDegree(null);
     deleteDoc(docRef);
   }
 

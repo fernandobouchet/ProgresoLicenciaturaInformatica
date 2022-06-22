@@ -51,7 +51,7 @@ function App() {
       if (userExist) {
         setUser(userExist);
       } else {
-        setUser(null);
+        resetDefaults();
         setLoading(false);
       }
     });
@@ -121,6 +121,13 @@ function App() {
   function changeCareer(e, tecnicatura) {
     handleClick(e);
     setCareer(tecnicatura);
+  }
+
+  function resetDefaults() {
+    setUser(null);
+    setCareer(null);
+    setCareerName(null);
+    setDegree(MateriasLicenciaturaInformatica);
   }
 
   function resetData() {
@@ -194,6 +201,7 @@ function App() {
           <>
             <NavigationBar
               resetData={() => resetData()}
+              resetDefaults={() => resetDefaults()}
               career={career}
               changeTheme={() => setTheme()}
               theme={theme}

@@ -47,14 +47,18 @@ function App() {
 
   useEffect(() => {
     setLoading(true);
-    onAuthStateChanged(auth, (userExist) => {
-      if (userExist) {
-        setUser(userExist);
-      } else {
-        resetDefaults();
-        setLoading(false);
-      }
-    });
+    if (user !== 'invited') {
+      onAuthStateChanged(auth, (userExist) => {
+        if (userExist) {
+          setUser(userExist);
+        } else {
+          resetDefaults();
+          setLoading(false);
+        }
+      });
+    } else {
+      setLoading(false);
+    }
   }, [user]);
 
   useEffect(() => {
@@ -80,7 +84,7 @@ function App() {
       }
       setLoading(false);
     }
-    user !== null && fetchData();
+    user !== null && user !== 'invited' && fetchData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, careerName]);
 
@@ -99,7 +103,10 @@ function App() {
         console.log(err);
       }
     }
-    user !== null && careerName !== null && updateDatabase();
+    user !== null &&
+      user !== 'invited' &&
+      careerName !== null &&
+      updateDatabase();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [degree, career]);
 
@@ -204,7 +211,7 @@ function App() {
       <ThemeProvider theme={themeMode}>
         <GlobalStyles />
         {!user && !loading ? (
-          <Login />
+          <Login setUser={setUser} />
         ) : loading ? (
           <Loader />
         ) : (
@@ -231,6 +238,7 @@ function App() {
                       changeCourseStateCareer(course, state, note, id)
                     }
                     theme={theme}
+                    user={user}
                   />
                 }
               />

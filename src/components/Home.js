@@ -4,9 +4,10 @@ import { MateriasTecnicaturaProgramacion } from '../Utils/TecnicaturaProgramacio
 import { MateriasTecnicaturaRedes } from '../Utils/TecnicaturaRedes';
 import styled from 'styled-components';
 import Main from './Main';
+import WarningModal from './WarningModal';
 
 const Home = (props) => {
-  const { changeCareer, career, careerName, changeState, theme } = props;
+  const { changeCareer, career, careerName, changeState, theme, user } = props;
 
   return (
     <>
@@ -34,6 +35,7 @@ const Home = (props) => {
               </Button>
             </StyledStack>
           </Container>
+          {user === 'invited' && <WarningModal />}
         </HomeContainer>
       ) : (
         <Main

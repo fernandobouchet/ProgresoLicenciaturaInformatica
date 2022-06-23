@@ -13,7 +13,7 @@ import { getAuth, signOut } from 'firebase/auth';
 const auth = getAuth(firebaseApp);
 
 const NavigationBar = (props) => {
-  const { resetData, career, changeTheme, user, theme } = props;
+  const { resetData, career, changeTheme, user, theme, setUser } = props;
 
   const [modalShow, setModalShow] = useState(false);
 
@@ -63,7 +63,11 @@ const NavigationBar = (props) => {
                       as={Link}
                       to={'/'}
                       href="#"
-                      onClick={() => signOut(auth)}
+                      onClick={
+                        user === 'invited'
+                          ? () => setUser(null)
+                          : () => signOut(auth)
+                      }
                     >
                       Cerrar sesión
                     </NavDropdown.Item>

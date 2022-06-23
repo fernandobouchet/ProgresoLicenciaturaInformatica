@@ -1,4 +1,4 @@
-import { Container, Form, Button } from 'react-bootstrap';
+import { Container, Form, Button, Stack } from 'react-bootstrap';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { FcGoogle } from 'react-icons/fc';
@@ -14,7 +14,9 @@ import {
 const auth = getAuth(firebaseApp);
 const googleProvider = new GoogleAuthProvider();
 
-const Login = () => {
+const Login = (props) => {
+  const { setUser } = props;
+
   const [registered, setRegistered] = useState(false);
 
   async function handlerSubmit(e) {
@@ -30,68 +32,73 @@ const Login = () => {
   }
 
   return (
-    <StyledLoginContainer>
-      <StyledTitleContainer>
-        <img
-          alt=""
-          src="../assets/img/logo.png"
-          width="70"
-          height="auto"
-          className="d-inline-block align-top"
-        />
-        <h1>Progreso de Licenciatura Informática</h1>
-      </StyledTitleContainer>
-      <StyledForm onSubmit={(e) => handlerSubmit(e)}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Correo</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Ingresa tu correo electrónico"
-            required
+    <>
+      <StyledLoginContainer>
+        <StyledTitleContainer>
+          <img
+            alt=""
+            src="../assets/img/logo.png"
+            width="70"
+            height="auto"
+            className="d-inline-block align-top"
           />
-        </Form.Group>
+          <h1>Progreso de Licenciatura Informática</h1>
+        </StyledTitleContainer>
+        <StyledForm onSubmit={(e) => handlerSubmit(e)}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Correo</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Ingresa tu correo electrónico"
+              required
+            />
+          </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Contraseña</Form.Label>
-          <Form.Control
-            type="password"
-            placeholder="Contraseña"
-            required
-            minLength={6}
-          />
-        </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Contraseña</Form.Label>
+            <Form.Control
+              type="password"
+              placeholder="Contraseña"
+              required
+              minLength={6}
+            />
+          </Form.Group>
 
-        <StyledSubmitButton variant="primary" type="submit">
-          {!registered ? 'Iniciar sesión' : 'Registrarme'}
-        </StyledSubmitButton>
-        <p>
-          {registered ? '¿Tenes cuenta? ' : '¿No tenes cuenta? '}
-          <StyledButtonA
+          <StyledSubmitButton variant="primary" type="submit">
+            {!registered ? 'Iniciar sesión' : 'Registrarme'}
+          </StyledSubmitButton>
+          <p>
+            {registered ? '¿Tenes cuenta? ' : '¿No tenes cuenta? '}
+            <StyledButtonA
+              type="submit"
+              onClick={(e) => {
+                e.preventDefault();
+                registered ? setRegistered(false) : setRegistered(true);
+              }}
+              variant="secondary"
+            >
+              {registered ? 'Inicia sesión!' : 'Registrate!'}
+            </StyledButtonA>
+          </p>
+        </StyledForm>
+        <DivC>
+          <StyledSpan>Ó</StyledSpan>
+        </DivC>
+        <StyledStackContainer gap={4}>
+          <GoogleButton
             type="submit"
-            onClick={(e) => {
-              e.preventDefault();
-              registered ? setRegistered(false) : setRegistered(true);
-            }}
-            variant="secondary"
+            variant="light"
+            onClick={() => signInWithRedirect(auth, googleProvider)}
           >
-            {registered ? 'Inicia sesión!' : 'Registrate!'}
-          </StyledButtonA>
-        </p>
-      </StyledForm>
-      <DivC>
-        <StyledSpan>Ó</StyledSpan>
-      </DivC>
-      <StyledStackContainer>
-        <GoogleButton
-          type="submit"
-          variant="light"
-          onClick={() => signInWithRedirect(auth, googleProvider)}
-        >
-          <FcGoogle style={{ margin: '0 0.5rem' }} />
-          Acceder con Google
-        </GoogleButton>
-      </StyledStackContainer>
-    </StyledLoginContainer>
+            <FcGoogle style={{ margin: '0 0.5rem' }} />
+            Acceder con Google
+          </GoogleButton>
+          <Button onClick={() => setUser('invited')}>
+            Acceder como invitado
+          </Button>
+        </StyledStackContainer>
+      </StyledLoginContainer>
+    </>
   );
 };
 
@@ -110,9 +117,11 @@ const StyledForm = styled(Form)`
   width: 17rem;
 `;
 
-const StyledStackContainer = styled(Container)`
+const StyledStackContainer = styled(Stack)`
   width: 17rem;
   padding: 0;
+  margin: 0 auto;
+  flex: none;
 `;
 
 const StyledSubmitButton = styled(Button)`

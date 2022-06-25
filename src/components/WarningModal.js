@@ -1,16 +1,15 @@
 import { Modal, Button } from 'react-bootstrap';
-import { useState } from 'react';
 import styled from 'styled-components';
 
-const WarningModal = () => {
-  const [show, setShow] = useState(true);
+const WarningModal = (props) => {
+  const { showInvitedWarning, setShowInvitedWarning, setUser } = props;
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => setShowInvitedWarning(false);
 
   return (
     <>
       <StyledModal
-        show={show}
+        show={showInvitedWarning}
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
@@ -19,11 +18,18 @@ const WarningModal = () => {
           <Modal.Title>Atención</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Al haber ingresado como "Invitado" los datos no se guardarán.
+          Al acceder como "Invitado" los datos no se guardarán.
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="danger" onClick={handleClose}>
-            Entendido
+          <Button onClick={handleClose}>Volver</Button>
+          <Button
+            variant="danger"
+            onClick={() => {
+              handleClose();
+              setUser('invited');
+            }}
+          >
+            De acuerdo
           </Button>
         </Modal.Footer>
       </StyledModal>
@@ -42,5 +48,8 @@ const StyledModal = styled(Modal)`
   .modal-footer {
     border: 0;
     margin: auto;
+  }
+  .modal-footer {
+    gap: 4rem;
   }
 `;

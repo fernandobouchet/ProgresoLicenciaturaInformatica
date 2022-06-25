@@ -78,6 +78,7 @@ const StyledTitleContainer = styled(Container)`
   gap: 2rem;
   align-items: center;
   padding: 1rem 0;
+  max-width: 450px;
 `;
 
 const GoogleButton = styled(Button)`

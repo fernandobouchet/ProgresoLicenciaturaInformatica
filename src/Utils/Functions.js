@@ -95,14 +95,14 @@ const getAverageQualification = (coursesArray, state) => {
 
 function findPendingCorrelatives(career, course) {
   const pendingCorrelativesArray = [];
+  const currentCorrelatives = course.correlativas;
 
-  if (Object.keys(course).length >= 1) {
-    const correlativesArray = course.correlativas;
+  if (currentCorrelatives?.length >= 1) {
     career.map((bloque) =>
       bloque.materias.forEach((materia) => {
         if (
-          materia.estado === 'Pendiente' &&
-          correlativesArray.includes(materia.asignatura)
+          (materia.estado === 'Pendiente' || materia.estado === 'Cursando') &&
+          currentCorrelatives.includes(materia.asignatura)
         ) {
           pendingCorrelativesArray.push(materia.asignatura);
         }

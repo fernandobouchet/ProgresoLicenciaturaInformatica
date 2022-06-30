@@ -42,4 +42,8 @@ const MainContainer = styled(Container)`
   @media (min-width: 1024px) {
     max-width: 900px;
   }
+  @media (max-width: 728px) {
+    max-width: 95%;
+  }
+  padding: 0 0 8rem 0;
 `;

@@ -43,11 +43,11 @@ const Statistics = (props) => {
             <StyledSpan>Pendientes</StyledSpan>
           </StyledDiv>
         </StyledContainer>
-        {Average(data) > 0 && (
+        {/*        {Average(data) > 0 && (
           <AverageContainer>
             <h6>Promedio: {Average(data)}</h6>
           </AverageContainer>
-        )}
+        )} */}
       </StatisticContainer>
     </>
   );

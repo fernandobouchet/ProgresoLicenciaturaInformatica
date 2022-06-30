@@ -66,6 +66,6 @@ const StyledTabs = styled(Tabs)`
     background-color: inherit;
     border-color: ${(props) => props.theme.border}
       ${(props) => props.theme.border} ${(props) => props.theme.background};
-    color: #0d6efd;
+    color: ${(props) => props.theme.text};
   }
 `;

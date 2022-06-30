@@ -1,6 +1,6 @@
 export const MateriasTecnicaturaInformatica = [
   {
-    bloque: 'Primer Cuatrimestre',
+    bloque: '1er',
     id: 1,
     materias: [
       {
@@ -46,7 +46,7 @@ export const MateriasTecnicaturaInformatica = [
     ],
   },
   {
-    bloque: 'Segundo Cuatrimestre',
+    bloque: '2do',
     id: 2,
     materias: [
       {
@@ -92,7 +92,7 @@ export const MateriasTecnicaturaInformatica = [
     ],
   },
   {
-    bloque: 'Tercer Cuatrimestre',
+    bloque: '3er',
     id: 3,
     materias: [
       {
@@ -141,7 +141,7 @@ export const MateriasTecnicaturaInformatica = [
     ],
   },
   {
-    bloque: 'Cuarto Cuatrimestre',
+    bloque: '4to',
     id: 4,
     materias: [
       {
@@ -197,7 +197,7 @@ export const MateriasTecnicaturaInformatica = [
     ],
   },
   {
-    bloque: 'Quinto Cuatrimestre',
+    bloque: '5to',
     id: 5,
     materias: [
       {
@@ -266,7 +266,7 @@ export const MateriasTecnicaturaInformatica = [
     ],
   },
   {
-    bloque: 'Sexto Cuatrimestre',
+    bloque: '6to',
     id: 6,
     materias: [
       {

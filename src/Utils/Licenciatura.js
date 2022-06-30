@@ -1,6 +1,6 @@
 export const MateriasLicenciaturaInformatica = [
   {
-    bloque: 'Primer Año',
+    bloque: '1er',
     id: 1,
     materias: [
       {
@@ -86,7 +86,7 @@ export const MateriasLicenciaturaInformatica = [
     ],
   },
   {
-    bloque: 'Segundo Año',
+    bloque: '2do',
     id: 2,
     materias: [
       {
@@ -185,7 +185,7 @@ export const MateriasLicenciaturaInformatica = [
     ],
   },
   {
-    bloque: 'Tercer Año',
+    bloque: '3er',
     id: 3,
     materias: [
       {
@@ -295,7 +295,7 @@ export const MateriasLicenciaturaInformatica = [
     ],
   },
   {
-    bloque: 'Cuarto Año',
+    bloque: '4to',
     id: 4,
     materias: [
       {
@@ -404,7 +404,7 @@ export const MateriasLicenciaturaInformatica = [
     ],
   },
   {
-    bloque: 'Quinto Año',
+    bloque: '5to',
     id: 5,
     materias: [
       {

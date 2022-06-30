@@ -1,6 +1,6 @@
 export const MateriasTecnicaturaRedes = [
   {
-    bloque: 'Primer Cuatrimestre',
+    bloque: '1er',
     id: 1,
     materias: [
       {
@@ -46,7 +46,7 @@ export const MateriasTecnicaturaRedes = [
     ],
   },
   {
-    bloque: 'Segundo Cuatrimestre',
+    bloque: '2do',
     id: 2,
     materias: [
       {
@@ -92,7 +92,7 @@ export const MateriasTecnicaturaRedes = [
     ],
   },
   {
-    bloque: 'Tercer Cuatrimestre',
+    bloque: '3er',
     id: 3,
     materias: [
       {
@@ -144,7 +144,7 @@ export const MateriasTecnicaturaRedes = [
     ],
   },
   {
-    bloque: 'Cuarto Cuatrimestre',
+    bloque: '4to',
     id: 4,
     materias: [
       {
@@ -212,7 +212,7 @@ export const MateriasTecnicaturaRedes = [
     ],
   },
   {
-    bloque: 'Quinto Cuatrimestre',
+    bloque: '5to',
     id: 5,
     materias: [
       {

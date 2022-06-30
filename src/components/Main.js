@@ -1,8 +1,9 @@
-import AccordionMain from './Accordion';
+import TabMain from './Tab';
 import { Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import Home from './Home';
 import Statistics from './Statistics';
+import DividerLine from './Divider';
 
 const Main = (props) => {
   const { state, changeState, careerName, theme } = props;
@@ -15,7 +16,8 @@ const Main = (props) => {
             <h1>{careerName}</h1>
           </TitleContainer>
           <Statistics data={state} />
-          <AccordionMain
+          <DividerLine />
+          <TabMain
             Materias={state}
             changeState={changeState}
             theme={theme}

@@ -8,7 +8,7 @@ const TableInfo = (props) => {
     <>
       <thead>
         <tr>
-          <th>Asignatura</th>
+          <th style={{ width: '80%' }}>Asignatura</th>
           <th>Estado</th>
         </tr>
       </thead>

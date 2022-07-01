@@ -21,7 +21,7 @@ const TabMain = (props) => {
       <StyledTabs defaultActiveKey="1">
         {Materias.map((materia, index) => (
           <Tab key={index} eventKey={materia.id} title={materia.bloque}>
-            <StyledTable striped hover borderless variant={theme}>
+            <StyledTable striped hover variant={theme}>
               <TableInfo
                 materia={materia}
                 setCurrent={setCurrent}
@@ -49,6 +49,10 @@ export default TabMain;
 const StyledTable = styled(Table)`
   --bs-table-bg: ${(props) => props.theme.background};
   --bs-table-striped-bg: ${(props) => props.theme.stripped};
+
+  > :not(:first-child) {
+    border-top: none;
+  }
 `;
 
 const StyledTabs = styled(Tabs)`

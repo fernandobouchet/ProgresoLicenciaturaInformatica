@@ -53,9 +53,6 @@ const StyledTable = styled(Table)`
   > :not(:first-child) {
     border-top: none;
   }
-  @media (max-width: 728px) {
-    font-size: 0.9rem;
-  }
 `;
 
 const StyledTabs = styled(Tabs)`
@@ -74,9 +71,5 @@ const StyledTabs = styled(Tabs)`
     border-color: ${(props) => props.theme.border}
       ${(props) => props.theme.border} ${(props) => props.theme.background};
     color: ${(props) => props.theme.text};
-  }
-
-  @media (max-width: 728px) {
-    font-size: 0.9rem;
   }
 `;

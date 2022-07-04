@@ -153,8 +153,8 @@ const StyledOffcanvasBody = styled(Offcanvas.Body)`
   color: ${(props) => props.theme.text};
   a {
     color: ${(props) => props.theme.text};
-    @media (max-width: 728px) {
-      font-size: 1.1rem;
+    @media (max-width: 425px) {
+      font-size: 1.2rem;
     }
   }
   .navbar-nav {

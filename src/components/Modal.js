@@ -153,15 +153,8 @@ const ModalEdit = (props) => {
 export default ModalEdit;
 
 const StyledModal = styled(Modal)`
-  @media (max-width: 728px) {
-    font-size: 0.9rem;
-  }
   .modal-content {
     background: ${(props) => props.theme.background};
-    @media (max-width: 728px) {
-      width: 90%;
-      margin: auto;
-    }
   }
   .modal-footer {
     border-top: 1px solid ${(props) => props.theme.border};
@@ -179,14 +172,8 @@ const StyledModal = styled(Modal)`
 const ModalHeader = styled(Modal.Header)`
   .modal-title {
     margin: auto;
-    @media (max-width: 728px) {
-      font-size: 1.2rem;
-    }
   }
   border-bottom: 1px solid ${(props) => props.theme.border};
-  @media (max-width: 728px) {
-    font-size: 0.9rem;
-  }
 `;
 
 const StyledRow = styled(Row)`
@@ -210,9 +197,6 @@ const StyledInput = styled.input`
 
 const StyledH5 = styled.h5`
   margin: 0;
-  @media (max-width: 728px) {
-    font-size: 1rem;
-  }
 `;
 
 const StyledList = styled.ul`

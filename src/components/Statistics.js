@@ -43,11 +43,9 @@ const Statistics = (props) => {
             <StyledSpan>Pendientes</StyledSpan>
           </StyledDiv>
         </StyledContainer>
-        {/*        {Average(data) > 0 && (
-          <AverageContainer>
-            <h6>Promedio: {Average(data)}</h6>
-          </AverageContainer>
-        )} */}
+        {Average(data) > 0 && (
+          <AverageBadge pill>Promedio: {Average(data)}</AverageBadge>
+        )}
       </StatisticContainer>
     </>
   );
@@ -59,10 +57,14 @@ const StatisticContainer = styled(Container)`
   padding: 0;
 `;
 
-const AverageContainer = styled(Container)`
-  padding: 0.5rem 0;
-  h6 {
-    margin: 0;
+const AverageBadge = styled(Badge)`
+  background-color: ${(props) => props.theme.stripped} !important;
+  color: ${(props) => props.theme.text};
+  border: 1px solid ${(props) => props.theme.border};
+  font-weight: 500;
+  font-size: 0.9rem;
+  @media (max-width: 375px) {
+    font-size: 0.8rem;
   }
 `;
 

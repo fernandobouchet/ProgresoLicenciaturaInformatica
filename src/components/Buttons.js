@@ -1,4 +1,5 @@
 import { DropdownButton, Dropdown } from 'react-bootstrap';
+import styled from 'styled-components';
 
 const Buttons = (props) => {
   const { state, setCurrent } = props;
@@ -14,7 +15,7 @@ const Buttons = (props) => {
 
   return (
     <>
-      <DropdownButton
+      <StyledDropdownButton
         id="dropdown-item-button"
         title={state}
         variant={
@@ -55,9 +56,17 @@ const Buttons = (props) => {
         >
           Aprobada
         </Dropdown.Item>
-      </DropdownButton>
+      </StyledDropdownButton>
     </>
   );
 };
 
 export default Buttons;
+
+const StyledDropdownButton = styled(DropdownButton)`
+  button {
+    @media (max-width: 728px) {
+      font-size: 1rem;
+    }
+  }
+`;

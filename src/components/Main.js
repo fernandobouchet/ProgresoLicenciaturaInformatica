@@ -13,7 +13,7 @@ const Main = (props) => {
       {state ? (
         <MainContainer>
           <TitleContainer>
-            <h1>{careerName}</h1>
+            <StyledH1>{careerName}</StyledH1>
           </TitleContainer>
           <Statistics data={state} />
           <DividerLine />
@@ -32,6 +32,10 @@ const Main = (props) => {
 };
 
 export default Main;
+
+const StyledH1 = styled.h1`
+  font-size: calc(1.3rem + 1vw);
+`;
 
 const TitleContainer = styled.div`
   max-width: 95%;

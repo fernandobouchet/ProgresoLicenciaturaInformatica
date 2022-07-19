@@ -66,6 +66,9 @@ const AverageBadge = styled(Badge)`
   @media (max-width: 375px) {
     font-size: 0.8rem;
   }
+  @media (max-width: 425px) {
+    font-size: 12px;
+  }
 `;
 
 const StyledContainer = styled(Container)`
@@ -78,6 +81,9 @@ const StyledSpan = styled.span`
   font-size: 0.8rem;
   @media (max-width: 375px) {
     font-size: 0.7rem;
+  }
+  @media (max-width: 425px) {
+    font-size: 12px;
   }
 `;
 
@@ -96,4 +102,7 @@ const StyledDiv = styled(Container)`
 const StyledBadge = styled(Badge)`
   font-size: 0.6rem;
   padding: 0.3em 0.6em;
+  @media (max-width: 425px) {
+    font-size: 12px;
+  }
 `;

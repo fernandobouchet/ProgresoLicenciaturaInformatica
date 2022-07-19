@@ -21,20 +21,20 @@ const NavigationBar = (props) => {
     <>
       <StyledNavBar expand={'sm'} variant={theme} collapseOnSelect>
         <Container fluid>
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'sm'}`} />
           <Navbar.Brand as={Link} to={'/'}>
             <img
               alt=""
               src="../assets/img/logo.png"
-              width="45"
+              width="35"
               height="auto"
               className="d-inline-block align-top"
             />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${'sm'}`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${'sm'}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${'sm'}`}
-            placement="end"
+            placement="start"
             style={{ width: '65%', border: 'none' }}
           >
             <StyledOffcanvasHeader
@@ -54,39 +54,49 @@ const NavigationBar = (props) => {
                 >
                   Licenciatura
                 </Nav.Link>
-                <StyledNavDropdown
-                  title="Opciones"
-                  id={`offcanvasNavbarDropdown-expand-${'sm'}`}
-                >
-                  {user && (
-                    <NavDropdown.Item
-                      as={Link}
-                      to={'/'}
-                      href="#"
-                      onClick={
-                        user === 'invited'
-                          ? () => setUser(null)
-                          : () => signOut(auth)
-                      }
-                    >
-                      Cerrar sesión
-                    </NavDropdown.Item>
-                  )}
-                  <NavDropdown.Item onClick={changeTheme} href="#">
-                    {theme === 'light' ? 'Modo oscuro' : 'Modo claro'}
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item
-                    onClick={() => setModalShow(true)}
-                    disabled={!career}
-                    href="#"
-                  >
-                    Borrar Datos
-                  </NavDropdown.Item>
-                </StyledNavDropdown>
               </Nav>
             </StyledOffcanvasBody>
           </Navbar.Offcanvas>
+          <Nav className="justify-content-end flex-grow-1 flex-row">
+            <StyledNavDropdown
+              title={
+                <img
+                  src={user ? user.photoURL : '/assets/img/user-icon.png'}
+                  className="rounded-circle"
+                  height="30"
+                  alt="Current user"
+                  loading="lazy"
+                />
+              }
+              id={`offcanvasNavbarDropdown-expand-${'sm'}`}
+            >
+              {user && (
+                <NavDropdown.Item
+                  as={Link}
+                  to={'/'}
+                  href="#"
+                  onClick={
+                    user === 'invited'
+                      ? () => setUser(null)
+                      : () => signOut(auth)
+                  }
+                >
+                  Cerrar sesión
+                </NavDropdown.Item>
+              )}
+              <NavDropdown.Item onClick={changeTheme} href="#">
+                {theme === 'light' ? 'Modo oscuro' : 'Modo claro'}
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                onClick={() => setModalShow(true)}
+                disabled={!career}
+                href="#"
+              >
+                Borrar Datos
+              </NavDropdown.Item>
+            </StyledNavDropdown>
+          </Nav>
         </Container>
       </StyledNavBar>
       <ResetButtonContainer>
@@ -103,6 +113,9 @@ const NavigationBar = (props) => {
 export default NavigationBar;
 
 const StyledNavBar = styled(Navbar)`
+  .dropdown-toggle {
+    padding: 0.25rem 0.75rem;
+  }
   .navbar-toggler {
     border: none;
     &:focus {
@@ -111,6 +124,14 @@ const StyledNavBar = styled(Navbar)`
   }
   .offcanvas {
     width: 50%;
+  }
+  @media (max-width: 425px) {
+    .navbar-brand {
+      margin: 0;
+    }
+    .flex-grow-1 {
+      flex-grow: unset !important;
+    }
   }
 `;
 
@@ -121,7 +142,15 @@ const ResetButtonContainer = styled(Container)`
 
 const StyledNavDropdown = styled(NavDropdown)`
   .dropdown-menu {
+    border: 1px solid ${(props) => props.theme.border};
+    text-align: center;
+    position: absolute;
+    left: unset;
+    right: 0;
     background: ${(props) => props.theme.background};
+    hr {
+      color: ${(props) => props.theme.text};
+    }
     .dropdown-item {
       color: ${(props) => props.theme.text};
       &:hover {
@@ -160,16 +189,5 @@ const StyledOffcanvasBody = styled(Offcanvas.Body)`
   .navbar-nav {
     width: 50%;
     margin: auto;
-  }
-  .nav-item {
-    .dropdown-menu {
-      border: 1px solid ${(props) => props.theme.border};
-      text-align: center;
-      position: absolute;
-      left: -25px;
-      hr {
-        color: ${(props) => props.theme.text};
-      }
-    }
   }
 `;

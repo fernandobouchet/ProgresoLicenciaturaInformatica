@@ -61,7 +61,11 @@ const NavigationBar = (props) => {
             <StyledNavDropdown
               title={
                 <img
-                  src={user ? user.photoURL : '/assets/img/user-icon.png'}
+                  src={
+                    user === 'invited'
+                      ? '../assets/img/user-icon.png'
+                      : user.photoURL
+                  }
                   className="rounded-circle"
                   height="30"
                   alt="Current user"

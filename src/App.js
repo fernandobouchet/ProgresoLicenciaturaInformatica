@@ -151,6 +151,7 @@ function App() {
     const docRef = doc(firestore, `users/${user.email}`);
     setCareer(null);
     setCareerName(null);
+    setDegree(MateriasLicenciaturaInformatica);
     deleteDoc(docRef);
   }
 

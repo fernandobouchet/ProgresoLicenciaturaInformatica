@@ -11,7 +11,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 2,
@@ -21,7 +21,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 3,
@@ -31,7 +31,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 4,
@@ -41,7 +41,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 5,
@@ -51,7 +51,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: ['Introducción a la programación'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 6,
@@ -61,7 +61,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: ['Introducción a la programación'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 7,
@@ -71,7 +71,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Matemática I'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 8,
@@ -81,7 +81,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
     ],
   },
@@ -97,7 +97,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Matemática I'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 10,
@@ -107,7 +107,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos I'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 11,
@@ -117,7 +117,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Organización de Computadoras'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 12,
@@ -130,7 +130,7 @@ export const MateriasLicenciaturaInformatica = [
           'Introducción a la programación',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 13,
@@ -140,7 +140,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Estructuras de datos'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 14,
@@ -150,7 +150,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con objetos II'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 15,
@@ -160,7 +160,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación funcional'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 16,
@@ -170,7 +170,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con objetos II', 'Bases de datos'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 17,
@@ -180,7 +180,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Redes de computadoras', 'Sistemas operativos'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
     ],
   },
@@ -196,7 +196,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Matemática II'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 19,
@@ -206,7 +206,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Matemática I', 'Introducción a la programación'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 20,
@@ -216,7 +216,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con objetos II'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 21,
@@ -226,7 +226,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Laboratorio de sistemas operativos y redes'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 22,
@@ -236,7 +236,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 23,
@@ -246,7 +246,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: ['Inglés I'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 24,
@@ -256,7 +256,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Matemática II'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 25,
@@ -266,7 +266,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Estructuras de datos'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 26,
@@ -276,7 +276,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Elementos de ingeniería de software'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 27,
@@ -290,7 +290,7 @@ export const MateriasLicenciaturaInformatica = [
           'Elementos de ingeniería de software',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
     ],
   },
@@ -306,7 +306,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Matemática III'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 29,
@@ -316,7 +316,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Ingeniería de requerimientos'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 30,
@@ -326,7 +326,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Lógica y programación'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 31,
@@ -336,7 +336,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Programación con objetos II'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 32,
@@ -346,12 +346,12 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 33,
         asignatura: 'Práctica profesional supervisada',
-        area: '',
+        area: null,
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: [
@@ -361,7 +361,7 @@ export const MateriasLicenciaturaInformatica = [
           'Desarrollo de aplicaciones',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 34,
@@ -371,7 +371,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Lenguajes formales y autómatas'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 35,
@@ -386,7 +386,7 @@ export const MateriasLicenciaturaInformatica = [
           'Gestión de proyectos de desarrollo de software',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 36,
@@ -399,7 +399,7 @@ export const MateriasLicenciaturaInformatica = [
           'Programación concurrente',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
     ],
   },
@@ -419,7 +419,7 @@ export const MateriasLicenciaturaInformatica = [
           'Programación con objetos III',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 38,
@@ -445,7 +445,7 @@ export const MateriasLicenciaturaInformatica = [
           'Programación concurrente',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 39,
@@ -455,7 +455,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Lógica y programación'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 40,
@@ -468,7 +468,7 @@ export const MateriasLicenciaturaInformatica = [
           'Sistemas distribuidos y tiempo real',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 41,
@@ -478,7 +478,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Laboratorio de sistemas operativos y redes'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 42,
@@ -504,7 +504,7 @@ export const MateriasLicenciaturaInformatica = [
           'Programación concurrente',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 43,
@@ -517,7 +517,7 @@ export const MateriasLicenciaturaInformatica = [
           'Características de lenguajes de programación',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 44,
@@ -527,7 +527,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '48',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 45,
@@ -537,7 +537,7 @@ export const MateriasLicenciaturaInformatica = [
         cargaHorariaTotal: '48',
         correlativas: ['Ejercicio profesional'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
     ],
   },

@@ -124,7 +124,15 @@ const ModalEdit = (props) => {
               </StyledCol>
             </StyledRow>
           </ModalBody>
-          <Modal.Footer>
+          <ModalFooter>
+            <Button
+              onClick={() => {
+                props.onHide();
+                changeState(current.asignatura, 'Pendiente', null, current.id);
+              }}
+            >
+              Reset
+            </Button>
             <Button
               disabled={
                 current.estado === 'Aprobada' && current.calificacion === ''
@@ -141,9 +149,9 @@ const ModalEdit = (props) => {
                 );
               }}
             >
-              Guardar y cerrar
+              Guardar
             </Button>
-          </Modal.Footer>
+          </ModalFooter>
         </>
       )}
     </StyledModal>
@@ -174,6 +182,10 @@ const ModalHeader = styled(Modal.Header)`
     margin: auto;
   }
   border-bottom: 1px solid ${(props) => props.theme.border};
+`;
+
+const ModalFooter = styled(Modal.Footer)`
+  justify-content: space-around;
 `;
 
 const StyledRow = styled(Row)`

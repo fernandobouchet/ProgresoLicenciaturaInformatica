@@ -11,7 +11,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 2,
@@ -21,7 +21,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 3,
@@ -31,7 +31,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 4,
@@ -41,7 +41,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
     ],
   },
@@ -57,7 +57,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: ['Introducción a la programación'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 6,
@@ -67,7 +67,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '128',
         correlativas: ['Introducción a la programación'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 7,
@@ -77,7 +77,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Matemática I'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 8,
@@ -87,7 +87,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
     ],
   },
@@ -103,7 +103,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Matemática I'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 10,
@@ -113,7 +113,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con Objetos I'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 11,
@@ -123,7 +123,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Organización de computadoras'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 12,
@@ -136,7 +136,7 @@ export const MateriasTecnicaturaInformatica = [
           'Introducción a la programación',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
     ],
   },
@@ -152,7 +152,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con objetos II'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 14,
@@ -162,7 +162,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Estructuras de datos'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 15,
@@ -172,7 +172,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con objetos II', 'Bases de datos'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 16,
@@ -182,7 +182,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '96',
         correlativas: ['Programación con objetos II'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 17,
@@ -192,7 +192,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: ['Inglés I'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
     ],
   },
@@ -208,7 +208,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Estructuras de datos'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 19,
@@ -218,7 +218,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '64',
         correlativas: ['Redes de computadoras', 'Sistemas operativos'],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 20,
@@ -233,7 +233,7 @@ export const MateriasTecnicaturaInformatica = [
           'Matemática II',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 21,
@@ -261,7 +261,7 @@ export const MateriasTecnicaturaInformatica = [
           'Programación concurrente',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
     ],
   },
@@ -272,7 +272,7 @@ export const MateriasTecnicaturaInformatica = [
       {
         id: 22,
         asignatura: 'Práctica profesional supervisada',
-        area: '',
+        area: null,
         hsSemanales: '6',
         cargaHorariaTotal: '96',
         correlativas: [
@@ -283,7 +283,7 @@ export const MateriasTecnicaturaInformatica = [
           'Operativos y redes',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 23,
@@ -293,7 +293,7 @@ export const MateriasTecnicaturaInformatica = [
         cargaHorariaTotal: '32',
         correlativas: [],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
       {
         id: 24,
@@ -321,7 +321,7 @@ export const MateriasTecnicaturaInformatica = [
           'Programación concurrente',
         ],
         estado: 'Pendiente',
-        calificacion: '',
+        calificacion: null,
       },
     ],
   },

@@ -6,7 +6,7 @@ import Statistics from './Statistics';
 import DividerLine from './Divider';
 
 const Main = (props) => {
-  const { state, changeState, careerName, theme } = props;
+  const { state, changeState, careerName, career, theme } = props;
 
   return (
     <>
@@ -22,6 +22,7 @@ const Main = (props) => {
             changeState={changeState}
             theme={theme}
             careerName={careerName}
+            career={career}
           />
         </MainContainer>
       ) : (

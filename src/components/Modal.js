@@ -8,10 +8,22 @@ import {
 } from 'react-bootstrap';
 import Buttons from './Buttons';
 import styled from 'styled-components';
-import { findPendingCorrelatives, itsOptative } from '../Utils/Functions';
+import {
+  findPendingCorrelatives,
+  itsOnCareer,
+  itsOptative,
+} from '../Utils/Functions';
 
 const ModalEdit = (props) => {
-  const { materias, current, changeState, setCurrent, ...other } = props;
+  const {
+    materias,
+    current,
+    changeState,
+    setCurrent,
+    careerName,
+    career,
+    ...other
+  } = props;
 
   const CorrelativesPending = findPendingCorrelatives(materias, current);
 
@@ -49,6 +61,20 @@ const ModalEdit = (props) => {
                   return <li key={index}>{item}</li>;
                 })}
               </StyledList>
+            </StyledRow>
+          </ModalBody>
+        </>
+      ) : careerName === 'Licenciatura en Informática' &&
+        itsOnCareer(career, current) ? (
+        <>
+          <ModalHeader closeButton>
+            <Modal.Title id="contained-modal-title-vcenter">
+              {current.asignatura}
+            </Modal.Title>
+          </ModalHeader>
+          <ModalBody>
+            <StyledRow>
+              <p>Esta materia debe ser modificada desde la Tecnicatura.</p>
             </StyledRow>
           </ModalBody>
         </>

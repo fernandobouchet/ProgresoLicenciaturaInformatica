@@ -253,6 +253,7 @@ function App() {
                       changeCourseStateDegree(course, state, note)
                     }
                     theme={theme}
+                    career={career}
                   />
                 }
               />

@@ -38,6 +38,7 @@ const Home = (props) => {
       ) : (
         <Main
           state={career}
+          career={career}
           careerName={careerName}
           changeState={changeState}
           theme={theme}

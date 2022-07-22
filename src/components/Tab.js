@@ -7,7 +7,7 @@ import ModalEdit from './Modal';
 import TableInfo from './Table';
 
 const TabMain = (props) => {
-  const { Materias, changeState, theme, careerName } = props;
+  const { Materias, changeState, theme, careerName, career } = props;
 
   const [modalShow, setModalShow] = useState(false);
 
@@ -39,6 +39,8 @@ const TabMain = (props) => {
         changeState={changeState}
         setCurrent={setCurrent}
         materias={Materias}
+        career={career}
+        careerName={careerName}
       />
     </>
   );

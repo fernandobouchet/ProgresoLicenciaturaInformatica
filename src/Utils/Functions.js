@@ -27,6 +27,15 @@ const getCoursesSimplified = (career) => {
   return coursesArray;
 };
 
+const getArrrayOfCoursesNames = (career) => {
+  let coursesArray = [];
+  const ca = career?.map((careers) => careers.materias);
+  ca?.forEach((element) => {
+    element.forEach((course) => coursesArray.push(course.asignatura));
+  });
+  return coursesArray;
+};
+
 const updateFullCourses = (career, firebaseData) => {
   return career.map((bloque) => {
     return {
@@ -120,6 +129,14 @@ function itsEquivalent(course) {
   );
 }
 
+function hasEquivalent(course) {
+  return (
+    course === 'Matemática I' ||
+    course === 'Introducción a la programación' ||
+    course === 'Organización de computadoras'
+  );
+}
+
 function renameEquivalent(course) {
   let courseName = course;
   if (course === 'Matemática para informática II') {
@@ -164,16 +181,26 @@ function itsOptative(course) {
   return course.hasOwnProperty('opciones');
 }
 
+function itsOnCareer(career, course) {
+  return (
+    getArrrayOfCoursesNames(career).includes(course.asignatura) ||
+    hasEquivalent(course.asignatura)
+  );
+}
+
 export {
   getPercentageOfCourses,
   getAverageQualification,
   getCoursesSimplified,
+  getArrrayOfCoursesNames,
   getAmountOfCourses,
   findPendingCorrelatives,
   renameEquivalent,
   equivalentAverageNote,
   itsEquivalent,
+  hasEquivalent,
   itsOptative,
   updateFullCourses,
   getCareer,
+  itsOnCareer,
 };

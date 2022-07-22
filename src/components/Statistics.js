@@ -74,7 +74,7 @@ const AverageBadge = styled(Badge)`
 const StyledContainer = styled(Container)`
   display: flex;
   justify-content: space-around;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 1rem 0;
 `;
 
 const StyledSpan = styled.span`

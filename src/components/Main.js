@@ -49,5 +49,4 @@ const MainContainer = styled(Container)`
   @media (max-width: 728px) {
     max-width: 95%;
   }
-  padding: 0 0 8rem 0;
 `;

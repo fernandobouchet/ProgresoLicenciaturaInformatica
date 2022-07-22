@@ -18,10 +18,10 @@ const TabMain = (props) => {
       <h6>
         {careerName === 'Licenciatura en Informática' ? 'Año' : 'Cuatrimestre'}
       </h6>
-      <StyledTabs defaultActiveKey="1">
+      <StyledTabs defaultActiveKey="1" justify>
         {Materias.map((materia, index) => (
           <Tab key={index} eventKey={materia.id} title={materia.bloque}>
-            <StyledTable striped hover variant={theme}>
+            <StyledTable striped hover variant={theme} borderless>
               <TableInfo
                 materia={materia}
                 setCurrent={setCurrent}
@@ -47,6 +47,7 @@ const TabMain = (props) => {
 export default TabMain;
 
 const StyledTable = styled(Table)`
+  margin: 1rem auto;
   --bs-table-bg: ${(props) => props.theme.background};
   --bs-table-striped-bg: ${(props) => props.theme.stripped};
 
@@ -60,19 +61,20 @@ const StyledTable = styled(Table)`
 
 const StyledTabs = styled(Tabs)`
   justify-content: space-evenly;
-  border-bottom: 1px solid ${(props) => props.theme.border};
+  border-bottom: 2px solid ${(props) => props.theme.border};
 
   .nav-link {
     color: #495057;
   }
   .nav-link:hover {
-    border-color: ${(props) => props.theme.border};
+    border-color: transparent;
   }
   .nav-tabs,
   .nav-link.active {
     background-color: inherit;
-    border-color: ${(props) => props.theme.border}
-      ${(props) => props.theme.border} ${(props) => props.theme.background};
+    border-color: transparent;
+    border-bottom: 2px solid;
+    border-bottom-color: #356feb;
     color: ${(props) => props.theme.text};
   }
   @media (max-width: 425px) {

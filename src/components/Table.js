@@ -24,8 +24,8 @@ const TableInfo = (props) => {
               }}
             >
               <StyledTCourses>{mat.asignatura}</StyledTCourses>
-              <td>
-                <Badge
+              <td style={{ verticalAlign: 'middle' }}>
+                <StyledBagde
                   pill
                   bg={
                     mat.estado === 'Cursando'
@@ -38,7 +38,7 @@ const TableInfo = (props) => {
                   }
                 >
                   {mat.estado}
-                </Badge>
+                </StyledBagde>
               </td>
             </tr>
           );
@@ -53,4 +53,9 @@ export default TableInfo;
 const StyledTCourses = styled.td`
   vertical-align: middle;
   text-align: left;
+`;
+
+const StyledBagde = styled(Badge)`
+  font-weight: 500;
+  line-height: 16px;
 `;

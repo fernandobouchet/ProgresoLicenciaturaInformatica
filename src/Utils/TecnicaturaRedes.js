@@ -170,7 +170,7 @@ export const MateriasTecnicaturaRedes = [
       {
         id: 15,
         asignatura: 'Electiva I',
-        opciones: ['Matemática para Informática II'],
+        opciones: ['Matemática para informática II'],
         area: 'Elec',
         hsSemanales: '4',
         cargaHorariaTotal: '64',

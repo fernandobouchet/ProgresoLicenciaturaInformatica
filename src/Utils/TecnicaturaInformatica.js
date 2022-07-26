@@ -61,7 +61,7 @@ export const MateriasTecnicaturaInformatica = [
       },
       {
         id: 6,
-        asignatura: 'Programación con Objetos I',
+        asignatura: 'Programación con objetos I',
         area: 'AyL',
         hsSemanales: '8',
         cargaHorariaTotal: '128',
@@ -107,11 +107,11 @@ export const MateriasTecnicaturaInformatica = [
       },
       {
         id: 10,
-        asignatura: 'Programación con Objetos II',
+        asignatura: 'Programación con objetos II',
         area: 'AyL',
         hsSemanales: '6',
         cargaHorariaTotal: '96',
-        correlativas: ['Programación con Objetos I'],
+        correlativas: ['Programación con objetos I'],
         estado: 'Pendiente',
         calificacion: null,
       },

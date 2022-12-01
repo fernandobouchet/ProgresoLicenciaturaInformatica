@@ -14,7 +14,7 @@ This project was created with [Create React App](https://github.com/facebook/cre
 
 ## Screenshots
 
-![App Screenshot](https://github.com/fernandobouchet/ProgresoLicenciaturaInformatica/blob/main/progresolicenciatura_preview.png?raw=true)
+![App Screenshot](https://github.com/fernandobouchet/ProgresoLicenciaturaInformatica/blob/main/progresolicenciatura_preview.webp)
 
 ## Getting started
 
